@@ -1,1 +1,11 @@
 **/.DS_Store
+
+## for clash
+**/*.mmdb
+**/*.dat
+**/*.log
+**/*.db
+
+## iterm2
+iterm2
+
