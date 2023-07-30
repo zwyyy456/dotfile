@@ -1,0 +1,100 @@
+21:02:59 INF [API] listening addr=127.0.0.1:60449
+21:02:59 INF [Inbound] Mixed(http+socks) listening addr=127.0.0.1:7890
+21:02:59 INF [Config] initial compatible provider name=故障转移
+21:02:59 INF [Config] initial compatible provider name=自动选择
+21:02:59 INF [Config] initial compatible provider name=一元机场
+21:03:11 INF [Config] initial compatible provider name=一元机场
+21:03:11 INF [Config] initial compatible provider name=故障转移
+21:03:11 INF [Config] initial compatible provider name=自动选择
+21:04:45 INF [Config] initial compatible provider name=🌍 国外媒体
+21:04:45 INF [Config] initial compatible provider name=📹 油管视频
+21:04:45 INF [Config] initial compatible provider name=🇨🇳 台湾节点
+21:04:45 INF [Config] initial compatible provider name=♻️ 自动选择
+21:04:45 INF [Config] initial compatible provider name=📺 哔哩哔哩
+21:04:45 INF [Config] initial compatible provider name=🔯 故障转移
+21:04:45 INF [Config] initial compatible provider name=🆎 AdBlock
+21:04:45 INF [Config] initial compatible provider name=Ⓜ️ 微软云盘
+21:04:45 INF [Config] initial compatible provider name=🐟 漏网之鱼
+21:04:45 INF [Config] initial compatible provider name=🇯🇵 日本节点
+21:04:45 INF [Config] initial compatible provider name=🇭🇰 香港节点
+21:04:45 INF [Config] initial compatible provider name=🔮 负载均衡
+21:04:45 INF [Config] initial compatible provider name=📢 谷歌FCM
+21:04:45 INF [Config] initial compatible provider name=🎮 游戏平台
+21:04:45 INF [Config] initial compatible provider name=🇰🇷 韩国节点
+21:04:45 INF [Config] initial compatible provider name=🛑 广告拦截
+21:04:45 INF [Config] initial compatible provider name=📺 巴哈姆特
+21:04:45 INF [Config] initial compatible provider name=🚀 手动切换
+21:04:45 INF [Config] initial compatible provider name=🇺🇲 美国节点
+21:04:45 INF [Config] initial compatible provider name=🍃 应用净化
+21:04:45 INF [Config] initial compatible provider name=🌏 国内媒体
+21:04:45 INF [Config] initial compatible provider name=🇸🇬 狮城节点
+21:04:45 INF [Config] initial compatible provider name=🚀 节点选择
+21:04:45 INF [Config] initial compatible provider name=🛡️ 隐私防护
+21:04:45 INF [Config] initial compatible provider name=🎶 网易音乐
+21:04:45 INF [Config] initial compatible provider name=🎥 奈飞节点
+21:04:45 INF [Config] initial compatible provider name=🎯 全球直连
+21:04:45 INF [Config] initial compatible provider name=💬 OpenAi
+21:04:45 INF [Config] initial compatible provider name=Ⓜ️ 微软服务
+21:04:45 INF [Config] initial compatible provider name=📲 电报消息
+21:04:45 INF [Config] initial compatible provider name=🎥 奈飞视频
+21:04:45 INF [Config] initial compatible provider name=🍎 苹果服务
+21:04:49 INF [Config] initial compatible provider name=Auto - UrlTest
+21:04:49 INF [Config] initial compatible provider name=AdBlock
+21:04:49 INF [Config] initial compatible provider name=Steam
+21:04:49 INF [Config] initial compatible provider name=Microsoft
+21:04:49 INF [Config] initial compatible provider name=Proxies
+21:04:49 INF [Config] initial compatible provider name=Speedtest
+21:04:49 INF [Config] initial compatible provider name=Netease Music
+21:04:49 INF [Config] initial compatible provider name=Netflix
+21:04:49 INF [Config] initial compatible provider name=Domestic
+21:04:49 INF [Config] initial compatible provider name=Telegram
+21:04:49 INF [Config] initial compatible provider name=Scholar
+21:04:49 INF [Config] initial compatible provider name=GlobalTV
+21:04:49 INF [Config] initial compatible provider name=Spotify
+21:04:49 INF [Config] initial compatible provider name=Apple
+21:04:49 INF [Config] initial compatible provider name=AsianTV
+21:04:49 INF [Config] initial compatible provider name=PayPal
+21:04:49 INF [Config] initial compatible provider name=Others
+21:05:10 INF [Config] initial compatible provider name=Microsoft
+21:05:10 INF [Config] initial compatible provider name=Apple
+21:05:10 INF [Config] initial compatible provider name=Proxies
+21:05:10 INF [Config] initial compatible provider name=PayPal
+21:05:10 INF [Config] initial compatible provider name=AsianTV
+21:05:10 INF [Config] initial compatible provider name=Steam
+21:05:10 INF [Config] initial compatible provider name=Domestic
+21:05:10 INF [Config] initial compatible provider name=GlobalTV
+21:05:10 INF [Config] initial compatible provider name=Netflix
+21:05:10 INF [Config] initial compatible provider name=Netease Music
+21:05:10 INF [Config] initial compatible provider name=Scholar
+21:05:10 INF [Config] initial compatible provider name=Others
+21:05:10 INF [Config] initial compatible provider name=Spotify
+21:05:10 INF [Config] initial compatible provider name=Speedtest
+21:05:10 INF [Config] initial compatible provider name=Auto - UrlTest
+21:05:10 INF [Config] initial compatible provider name=Telegram
+21:05:10 INF [Config] initial compatible provider name=AdBlock
+21:57:52 INF [TCP] connected lAddr=127.0.0.1:64147 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本 2]
+23:14:04 INF [TCP] connected lAddr=127.0.0.1:52426 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区3线]
+23:58:28 INF [TCP] connected lAddr=127.0.0.1:55135 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区2线]
+03:17:05 INF [TCP] connected lAddr=127.0.0.1:60181 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+03:17:05 INF [TCP] connected lAddr=127.0.0.1:60180 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+03:17:05 INF [TCP] connected lAddr=127.0.0.1:60177 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+03:18:29 INF [TCP] connected lAddr=127.0.0.1:60208 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+03:18:29 INF [TCP] connected lAddr=127.0.0.1:60206 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+03:18:29 INF [TCP] connected lAddr=127.0.0.1:60207 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+05:41:35 INF [TCP] connected lAddr=127.0.0.1:63135 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区3线]
+05:41:35 INF [TCP] connected lAddr=127.0.0.1:63136 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区3线]
+06:41:35 INF [TCP] connected lAddr=127.0.0.1:64506 rAddr=steamstore-a.akamaihd.net:443 mode=rule rule=Domain(steamstore-a.akamaihd.net) proxy=DIRECT
+07:53:05 INF [TCP] connected lAddr=127.0.0.1:49282 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区2线]
+08:29:59 INF [TCP] connected lAddr=127.0.0.1:50779 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区3线]
+08:53:11 INF [TCP] connected lAddr=127.0.0.1:51246 rAddr=steamstore-a.akamaihd.net:443 mode=rule rule=Domain(steamstore-a.akamaihd.net) proxy=DIRECT
+09:53:17 INF [TCP] connected lAddr=127.0.0.1:53031 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区2线]
+09:53:17 INF [TCP] connected lAddr=127.0.0.1:53026 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区2线]
+10:30:59 INF [TCP] connected lAddr=127.0.0.1:57879 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区2线]
+11:53:29 INF [TCP] connected lAddr=127.0.0.1:52423 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇯🇵 日本区3线]
+12:53:35 INF [TCP] connected lAddr=127.0.0.1:55107 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区2线]
+12:53:35 INF [TCP] connected lAddr=127.0.0.1:55106 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区2线]
+12:53:35 INF [TCP] connected lAddr=127.0.0.1:55108 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区2线]
+13:31:11 INF [TCP] connected lAddr=127.0.0.1:55899 rAddr=cdn.steamstatic.com:443 mode=rule rule=DomainSuffix(steamstatic.com) proxy=Steam[🇭🇰 香港区3线]
+13:59:05 INF [TCP] connected lAddr=127.0.0.1:60950 rAddr=api.steampowered.com:443 mode=rule rule=DomainSuffix(steampowered.com) proxy=Steam[🇭🇰 香港区2线]
+13:59:05 INF [TCP] connected lAddr=127.0.0.1:60953 rAddr=api.steampowered.com:443 mode=rule rule=DomainSuffix(steampowered.com) proxy=Steam[🇭🇰 香港区2线]
+13:59:05 INF [TCP] connected lAddr=127.0.0.1:60893 rAddr=api.steampowered.com:443 mode=rule rule=DomainSuffix(steampowered.com) proxy=Steam[🇭🇰 香港区2线]

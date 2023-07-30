@@ -1,0 +1,15 @@
+# Profiles Config for Clash Verge
+
+current: rGRsohBQFWyp
+chain: null
+valid:
+- dns
+items:
+- uid: rGRsohBQFWyp
+  type: remote
+  name: Remote File
+  file: rGRsohBQFWyp.yaml
+  url: https://v1.mk/oeMzkrD
+  updated: 1690386435
+  option:
+    update_interval: 1440

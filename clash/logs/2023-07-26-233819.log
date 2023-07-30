@@ -1,0 +1,84 @@
+23:38:19 INF [API] listening addr=127.0.0.1:63447
+23:38:19 INF [Inbound] Mixed(http+socks) listening addr=127.0.0.1:7890
+23:38:19 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63486 rAddr=v1.mk:443 proxy=DIRECT
+23:38:19 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63485 rAddr=raw.githubusercontent.com:443 proxy=DIRECT
+23:38:19 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63487 rAddr=api.github.com:443 proxy=DIRECT
+23:38:19 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63477 rAddr=i.taosky.com:443 proxy=DIRECT
+23:38:19 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63497 rAddr=spclient.wg.spotify.com:443 proxy=DIRECT
+23:38:19 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63469 rAddr=spclient.wg.spotify.com:443 proxy=DIRECT
+23:38:20 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63461 rAddr=dealer.spotify.com:443 proxy=DIRECT
+23:38:20 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63482 rAddr=spclient.wg.spotify.com:443 proxy=DIRECT
+23:38:20 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63463 rAddr=rr2---sn-a5mekn6z.googlevideo.com:443 proxy=DIRECT
+23:38:20 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63504 rAddr=detectportal.firefox.com:80 proxy=DIRECT
+23:38:20 INF [Config] initial compatible provider name=故障转移
+23:38:20 INF [Config] initial compatible provider name=自动选择
+23:38:20 INF [Config] initial compatible provider name=一元机场
+23:38:20 INF [TCP] connected, doesn't match any rule lAddr=127.0.0.1:63472 rAddr=firestore.googleapis.com:443 proxy=DIRECT
+23:38:21 INF [TCP] connected lAddr=127.0.0.1:63533 rAddr=detectportal.firefox.com:80 mode=rule rule=Match() proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:21 INF [TCP] connected lAddr=127.0.0.1:63513 rAddr=v1.mk:443 mode=rule rule=Match() proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:21 INF [TCP] connected lAddr=127.0.0.1:63466 rAddr=dealer.spotify.com:443 mode=rule rule=DomainSuffix(spotify.com) proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:21 INF [TCP] connected lAddr=127.0.0.1:63531 rAddr=detectportal.firefox.com:80 mode=rule rule=Match() proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:21 INF [TCP] connected lAddr=127.0.0.1:63541 rAddr=api.v1.mk:443 mode=rule rule=Match() proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:21 INF [TCP] connected lAddr=127.0.0.1:63543 rAddr=i.taosky.com:443 mode=rule rule=Match() proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:23 INF [TCP] connected lAddr=127.0.0.1:63591 rAddr=github.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:26 INF [TCP] connected lAddr=127.0.0.1:63617 rAddr=objects.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:27 INF [TCP] connected lAddr=127.0.0.1:63622 rAddr=vscode-sync.trafficmanager.net:443 mode=rule rule=Match() proxy=一元机场[（看这里）每月刷新订阅获取新节点]
+23:38:30 INF [TCP] connected lAddr=127.0.0.1:63632 rAddr=mobile.events.data.microsoft.com:443 mode=rule rule=DomainSuffix(microsoft.com) proxy=DIRECT
+23:38:30 INF [TCP] connected lAddr=127.0.0.1:63635 rAddr=self.events.data.microsoft.com:443 mode=rule rule=DomainSuffix(microsoft.com) proxy=DIRECT
+23:38:43 INF [TCP] connected lAddr=127.0.0.1:63681 rAddr=login.live.com:443 mode=rule rule=DomainSuffix(live.com) proxy=一元机场[美国06| 专线]
+23:38:45 INF [TCP] connected lAddr=127.0.0.1:63683 rAddr=login.live.com:443 mode=rule rule=DomainSuffix(live.com) proxy=一元机场[美国06| 专线]
+23:38:51 INF [TCP] connected lAddr=127.0.0.1:63695 rAddr=roaming.officeapps.live.com:443 mode=rule rule=DomainSuffix(live.com) proxy=一元机场[美国06| 专线]
+23:38:52 INF [TCP] connected lAddr=127.0.0.1:63698 rAddr=www.youtube.com:443 mode=rule rule=DomainKeyword(youtube) proxy=一元机场[美国06| 专线]
+23:38:56 INF [TCP] connected lAddr=127.0.0.1:63710 rAddr=roaming.officeapps.live.com:443 mode=rule rule=DomainSuffix(live.com) proxy=一元机场[美国06| 专线]
+23:38:56 INF [TCP] connected lAddr=127.0.0.1:63715 rAddr=www.baidu.com:443 mode=rule rule=DomainKeyword(baidu) proxy=DIRECT
+23:38:56 INF [TCP] connected lAddr=127.0.0.1:63716 rAddr=s1.music.126.net:443 mode=rule rule=DomainSuffix(126.net) proxy=DIRECT
+23:38:57 INF [TCP] connected lAddr=127.0.0.1:63728 rAddr=whois.pconline.com.cn:443 mode=rule rule=DomainSuffix(cn) proxy=DIRECT
+23:38:57 INF [TCP] connected lAddr=127.0.0.1:63717 rAddr=github.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:38:57 INF [TCP] connected lAddr=127.0.0.1:63721 rAddr=api.ipify.org:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:38:57 INF [TCP] connected lAddr=127.0.0.1:63726 rAddr=www.youtube.com:443 mode=rule rule=DomainKeyword(youtube) proxy=一元机场[美国06| 专线]
+23:38:58 INF [TCP] connected lAddr=127.0.0.1:63730 rAddr=login.live.com:443 mode=rule rule=DomainSuffix(live.com) proxy=一元机场[美国06| 专线]
+23:38:58 INF [TCP] connected lAddr=127.0.0.1:63733 rAddr=api-ipv4.ip.sb:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:01 INF [TCP] connected lAddr=127.0.0.1:63739 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:01 INF [TCP] connected lAddr=127.0.0.1:63741 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:01 INF [TCP] connected lAddr=127.0.0.1:63743 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:01 INF [TCP] connected lAddr=127.0.0.1:63745 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:02 INF [TCP] connected lAddr=127.0.0.1:63749 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:02 INF [TCP] connected lAddr=127.0.0.1:63751 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:02 INF [TCP] connected lAddr=127.0.0.1:63753 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:02 INF [TCP] connected lAddr=127.0.0.1:63755 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:02 INF [TCP] connected lAddr=127.0.0.1:63757 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:02 INF [TCP] connected lAddr=127.0.0.1:63759 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:03 INF [TCP] connected lAddr=127.0.0.1:63761 rAddr=profile.accounts.firefox.com:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:03 INF [TCP] connected lAddr=127.0.0.1:63762 rAddr=sync-1-us-west1-g.sync.services.mozilla.com:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:05 INF [TCP] connected lAddr=127.0.0.1:63767 rAddr=www.google.com.hk:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:06 INF [TCP] connected lAddr=127.0.0.1:63771 rAddr=self.events.data.microsoft.com:443 mode=rule rule=DomainSuffix(microsoft.com) proxy=DIRECT
+23:39:07 INF [TCP] connected lAddr=127.0.0.1:63773 rAddr=incoming.telemetry.mozilla.org:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:08 INF [TCP] connected lAddr=127.0.0.1:63775 rAddr=incoming.telemetry.mozilla.org:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:08 INF [TCP] connected lAddr=127.0.0.1:63783 rAddr=i.ytimg.com:443 mode=rule rule=DomainSuffix(ytimg.com) proxy=一元机场[美国06| 专线]
+23:39:09 INF [TCP] connected lAddr=127.0.0.1:63781 rAddr=fonts.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=一元机场[美国06| 专线]
+23:39:10 INF [TCP] connected lAddr=127.0.0.1:63787 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=一元机场[美国06| 专线]
+23:39:11 INF [TCP] connected lAddr=127.0.0.1:63789 rAddr=apresolve.spotify.com:443 mode=rule rule=DomainSuffix(spotify.com) proxy=一元机场[美国06| 专线]
+23:39:12 INF [TCP] connected lAddr=127.0.0.1:63793 rAddr=fonts.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=一元机场[美国06| 专线]
+23:39:15 INF [TCP] connected lAddr=127.0.0.1:63798 rAddr=jnn-pa.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=一元机场[美国06| 专线]
+23:39:18 INF [TCP] connected lAddr=127.0.0.1:63801 rAddr=detectportal.firefox.com:80 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:22 INF [TCP] connected lAddr=127.0.0.1:63808 rAddr=detectportal.firefox.com:80 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:22 INF [TCP] connected lAddr=127.0.0.1:63807 rAddr=detectportal.firefox.com:80 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:39:38 INF [TCP] connected lAddr=127.0.0.1:63844 rAddr=github.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:43 INF [TCP] connected lAddr=127.0.0.1:63862 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:43 INF [TCP] connected lAddr=127.0.0.1:63864 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:43 INF [TCP] connected lAddr=127.0.0.1:63870 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:43 INF [TCP] connected lAddr=127.0.0.1:63868 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:43 INF [TCP] connected lAddr=127.0.0.1:63869 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:43 INF [TCP] connected lAddr=127.0.0.1:63866 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63878 rAddr=camo.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63877 rAddr=camo.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63881 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63876 rAddr=camo.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63882 rAddr=avatars.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63880 rAddr=camo.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:47 INF [TCP] connected lAddr=127.0.0.1:63879 rAddr=camo.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:48 INF [TCP] connected lAddr=127.0.0.1:63893 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=一元机场[美国06| 专线]
+23:39:57 INF [TCP] connected lAddr=127.0.0.1:63907 rAddr=spclient.wg.spotify.com:443 mode=rule rule=DomainSuffix(spotify.com) proxy=一元机场[美国06| 专线]
+23:39:57 INF [TCP] connected lAddr=127.0.0.1:63914 rAddr=spclient.wg.spotify.com:443 mode=rule rule=DomainSuffix(spotify.com) proxy=一元机场[美国06| 专线]
+23:39:58 INF [TCP] connected lAddr=127.0.0.1:63921 rAddr=cdn.steamstatic.com:443 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
+23:40:05 INF [TCP] connected lAddr=127.0.0.1:63932 rAddr=ipv6.msftconnecttest.com:80 mode=rule rule=Match() proxy=一元机场[美国06| 专线]
