@@ -53,29 +53,30 @@ proxies:
   - {name: 🇺🇸 美国 06 | 专线, server: us6.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
   - {name: 🇺🇸 美国 07 | 专线, server: us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
   - {name: 🇺🇸 美国 08 | 专线, server: us8.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 1, server: hk1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk1.hneko.online, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 2, server: hk2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk2.hneko.online, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 3, server: hk3.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk3.hneko.online, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 4, server: hk4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk4.hneko.online, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 1, server: hk1.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk1.hneko.online}}}
+  - {name: 🇭🇰 香港 2, server: hk2.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk2.hneko.online}}}
+  - {name: 🇭🇰 香港 3, server: hk3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk3.hneko.online}}}
+  - {name: 🇭🇰 香港 4, server: hk4.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk4.hneko.online}}}
   - {name: 🇯🇵 日本 1, server: jp1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp1.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 2, server: jp2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp2.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 2, server: jp1.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp1.hneko.online, skip-cert-verify: false}
   - {name: 🇯🇵 日本 3, server: jp33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp33.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 4, server: jp44.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp44.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 4, server: jp33.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp33.hneko.online, skip-cert-verify: false}
   - {name: 🇯🇵 日本 5, server: jp55.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp55.hneko.online, skip-cert-verify: false}
   - {name: 🇯🇵 日本 6, server: jp55.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp55.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 7, server: jp77.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp77.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 8, server: jp77.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp77.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 7, server: jp88.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp88.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 8, server: jp88.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp88.hneko.online, skip-cert-verify: false}
   - {name: 🇸🇬 新加坡 1, server: sg1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg1.hneko.online, skip-cert-verify: false}
   - {name: 🇸🇬 新加坡 2, server: sg2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg2.hneko.online, skip-cert-verify: false}
-  - {name: 🇸🇬 新加坡 3, server: sg3.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg3.hneko.online, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 3, server: sg3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: sg3.hneko.online}}}
   - {name: 🇸🇬 新加坡 4, server: sg4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg4.hneko.online, skip-cert-verify: false}
-  - {name: 🇸🇬 新加坡 5, server: sg5.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg5.hneko.online, skip-cert-verify: false}
   - {name: 🇺🇸 美国 1, server: us11.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us11.hneko.online, skip-cert-verify: false}
   - {name: 🇺🇸 美国 2, server: us22.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us22.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 3, server: us33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us33.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 4, server: usa4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: usa4.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 5, server: usa5.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: usa5.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 6, server: usa9.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: usa9.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 3, server: us33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 4, server: us44.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us44.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 5, server: us5.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us5.hneko.online}}}
+  - {name: 🇺🇸 美国 6, server: us66.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us66.hneko.online}}}
+  - {name: 🇺🇸 美国 7, server: us7.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us7.hneko.online}}}
+  - {name: 🇺🇸 美国 8, server: us8.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us8.hneko.online}}}
 proxy-groups:
   - name: Proxies
     type: select
@@ -136,13 +137,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: Domestic
     type: select
     proxies:
@@ -207,13 +209,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: Others
     type: select
     proxies:
@@ -306,13 +309,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: Netflix
     type: select
     proxies:
@@ -372,13 +376,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: Spotify
     type: select
     proxies:
@@ -438,13 +443,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: Telegram
     type: select
     proxies:
@@ -504,13 +510,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: Steam
     type: select
     proxies:
@@ -576,13 +583,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: PayPal
     type: select
     proxies:
@@ -657,13 +665,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
 rules:
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
@@ -10805,9 +10814,7 @@ rules:
   - DOMAIN-SUFFIX,yorkbbs.ca,Proxies
   - DOMAIN-SUFFIX,youmaker.com,Proxies
   - DOMAIN-SUFFIX,yourlisten.com,Proxies
-  - DOMAIN-SUFFIX,youtu.be,Proxies
   - DOMAIN-SUFFIX,yoyo.org,Proxies
-  - DOMAIN-SUFFIX,ytimg.com,Proxies
   - DOMAIN-SUFFIX,zacebook.com,Proxies
   - DOMAIN-SUFFIX,zalmos.com,Proxies
   - DOMAIN-SUFFIX,zaobao.com.sg,Proxies

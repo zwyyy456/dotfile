@@ -16,15 +16,18 @@ dns:
     - https://public.dns.iij.jp/dns-query
 
 proxies:
-  - {name: 日本区1线,type: vmess,server: v2jp1.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 日本区2线,type: vmess,server: v2jp2.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 日本区3线,type: vmess,server: v2jp3.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 香港区1线,type: vmess,server: v2hk1.ee112358.com,port: 33089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 香港区2线,type: vmess,server: v2hk2.ee112358.com,port: 33089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 香港区3线,type: vmess,server: v2hk3.ee112358.com,port: 33089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 新加坡1线,type: vmess,server: v2sg1.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 新加坡2线,type: vmess,server: v2sg2.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
-  - {name: 新加坡3线,type: vmess,server: v2sg3.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+
+
+
+  - {name: 日本区1线,type: vmess,server: v2jp1.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 日本区2线,type: vmess,server: v2jp2.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 日本区3线,type: vmess,server: v2jp3.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 香港区1线,type: vmess,server: v2hk1.ee112358.com,port: 33089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 香港区2线,type: vmess,server: v2hk2.ee112358.com,port: 33089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 香港区3线,type: vmess,server: v2hk3.ee112358.com,port: 33089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 新加坡1线,type: vmess,server: v2sg1.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 新加坡2线,type: vmess,server: v2sg2.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
+  - {name: 新加坡3线,type: vmess,server: v2sg3.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /wss/2,tls: true}
 
 proxy-groups:
   - name: 节点选择
@@ -39,7 +42,7 @@ proxy-groups:
     type: select
     proxies: [节点选择,日本区1线,日本区2线,日本区3线,香港区1线,香港区2线,香港区3线,新加坡1线,新加坡2线,新加坡3线]
 
-  - name: 剩余流量 12832MB
+  - name: 剩余流量 10037MB
     type: select
     proxies:
       - DIRECT
@@ -57,6 +60,7 @@ proxy-groups:
 rules:
   - DOMAIN-SUFFIX,gstatic.com,节点选择
   - DOMAIN-SUFFIX,googleapis.com,节点选择
+  - DOMAIN,services.googleapis.cn,节点选择
   - DOMAIN-SUFFIX,bing.com,节点选择
   - DOMAIN-SUFFIX,bing.com.cn,节点选择
   - DOMAIN-SUFFIX,bing.net,节点选择

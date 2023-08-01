@@ -53,29 +53,30 @@ proxies:
   - {name: 🇺🇸 美国 06 | 专线, server: us6.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
   - {name: 🇺🇸 美国 07 | 专线, server: us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
   - {name: 🇺🇸 美国 08 | 专线, server: us8.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 1, server: hk1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk1.hneko.online, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 2, server: hk2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk2.hneko.online, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 3, server: hk3.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk3.hneko.online, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 4, server: hk4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: hk4.hneko.online, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 1, server: hk1.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk1.hneko.online}}}
+  - {name: 🇭🇰 香港 2, server: hk2.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk2.hneko.online}}}
+  - {name: 🇭🇰 香港 3, server: hk3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk3.hneko.online}}}
+  - {name: 🇭🇰 香港 4, server: hk4.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk4.hneko.online}}}
   - {name: 🇯🇵 日本 1, server: jp1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp1.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 2, server: jp2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp2.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 2, server: jp1.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp1.hneko.online, skip-cert-verify: false}
   - {name: 🇯🇵 日本 3, server: jp33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp33.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 4, server: jp44.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp44.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 4, server: jp33.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp33.hneko.online, skip-cert-verify: false}
   - {name: 🇯🇵 日本 5, server: jp55.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp55.hneko.online, skip-cert-verify: false}
   - {name: 🇯🇵 日本 6, server: jp55.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp55.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 7, server: jp77.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp77.hneko.online, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 8, server: jp77.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp77.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 7, server: jp88.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp88.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 8, server: jp88.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp88.hneko.online, skip-cert-verify: false}
   - {name: 🇸🇬 新加坡 1, server: sg1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg1.hneko.online, skip-cert-verify: false}
   - {name: 🇸🇬 新加坡 2, server: sg2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg2.hneko.online, skip-cert-verify: false}
-  - {name: 🇸🇬 新加坡 3, server: sg3.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg3.hneko.online, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 3, server: sg3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: sg3.hneko.online}}}
   - {name: 🇸🇬 新加坡 4, server: sg4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg4.hneko.online, skip-cert-verify: false}
-  - {name: 🇸🇬 新加坡 5, server: sg5.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg5.hneko.online, skip-cert-verify: false}
   - {name: 🇺🇸 美国 1, server: us11.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us11.hneko.online, skip-cert-verify: false}
   - {name: 🇺🇸 美国 2, server: us22.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us22.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 3, server: us33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us33.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 4, server: usa4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: usa4.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 5, server: usa5.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: usa5.hneko.online, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 6, server: usa9.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: usa9.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 3, server: us33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 4, server: us44.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us44.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 5, server: us5.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us5.hneko.online}}}
+  - {name: 🇺🇸 美国 6, server: us66.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us66.hneko.online}}}
+  - {name: 🇺🇸 美国 7, server: us7.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us7.hneko.online}}}
+  - {name: 🇺🇸 美国 8, server: us8.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us8.hneko.online}}}
 proxy-groups:
   - name: 🚀 全局设置
     type: select
@@ -147,13 +148,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -213,13 +215,14 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
       - 🇺🇸 美国 1
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: 🎯 国内网络
     type: select
     proxies:
@@ -477,6 +480,8 @@ proxy-groups:
       - 🇺🇸 美国 4
       - 🇺🇸 美国 5
       - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
   - name: 🇸🇬 新加坡节点
     type: select
     proxies:
@@ -493,7 +498,6 @@ proxy-groups:
       - 🇸🇬 新加坡 2
       - 🇸🇬 新加坡 3
       - 🇸🇬 新加坡 4
-      - 🇸🇬 新加坡 5
   - name: 🇨🇳 台湾节点
     type: select
     proxies:
@@ -597,11 +601,12 @@ rules:
   - DOMAIN,app.adjust.com,🎯 国内网络
   - DOMAIN,bdtj.tagtic.cn,🎯 国内网络
   - DOMAIN,rewards.hypixel.net,🎯 国内网络
+  - DOMAIN-SUFFIX,koodomobile.com,🎯 国内网络
+  - DOMAIN-SUFFIX,koodomobile.ca,🎯 国内网络
   - DOMAIN-KEYWORD,admarvel,🛑 广告拦截
   - DOMAIN-KEYWORD,admaster,🛑 广告拦截
   - DOMAIN-KEYWORD,adsage,🛑 广告拦截
   - DOMAIN-KEYWORD,adsensor,🛑 广告拦截
-  - DOMAIN-KEYWORD,adservice,🛑 广告拦截
   - DOMAIN-KEYWORD,adsmogo,🛑 广告拦截
   - DOMAIN-KEYWORD,adsrvmedia,🛑 广告拦截
   - DOMAIN-KEYWORD,adsserving,🛑 广告拦截
@@ -2296,6 +2301,7 @@ rules:
   - DOMAIN-SUFFIX,aaplimg.com,🍎 苹果服务
   - DOMAIN-SUFFIX,akadns.net,🍎 苹果服务
   - DOMAIN-SUFFIX,apple-cloudkit.com,🍎 苹果服务
+  - DOMAIN-SUFFIX,apple-dns.net,🍎 苹果服务
   - DOMAIN-SUFFIX,apple-mapkit.com,🍎 苹果服务
   - DOMAIN-SUFFIX,apple.co,🍎 苹果服务
   - DOMAIN-SUFFIX,apple.com,🍎 苹果服务
@@ -2455,6 +2461,7 @@ rules:
   - IP-CIDR,192.173.64.0/18,🎥 Netflix,no-resolve
   - IP-CIDR,198.38.96.0/19,🎥 Netflix,no-resolve
   - IP-CIDR,198.45.48.0/20,🎥 Netflix,no-resolve
+  - IP-CIDR,203.75.84.0/24,🎥 Netflix,no-resolve
   - IP-CIDR,207.45.72.0/22,🎥 Netflix,no-resolve
   - IP-CIDR,208.75.76.0/22,🎥 Netflix,no-resolve
   - DOMAIN,bahamut.akamaized.net,📺 巴哈姆特
@@ -2526,6 +2533,7 @@ rules:
   - DOMAIN-SUFFIX,aiv-cdn.net,🌍 国外媒体
   - DOMAIN-SUFFIX,aiv-delivery.net,🌍 国外媒体
   - DOMAIN-SUFFIX,amazon.jobs,🌍 国外媒体
+  - DOMAIN-SUFFIX,amazontools.com,🌍 国外媒体
   - DOMAIN-SUFFIX,amazonuniversity.jobs,🌍 国外媒体
   - DOMAIN-SUFFIX,amazonvideo.com,🌍 国外媒体
   - DOMAIN-SUFFIX,media-amazon.com,🌍 国外媒体
@@ -2712,6 +2720,7 @@ rules:
   - IP-CIDR,192.173.64.0/18,🌍 国外媒体,no-resolve
   - IP-CIDR,198.38.96.0/19,🌍 国外媒体,no-resolve
   - IP-CIDR,198.45.48.0/20,🌍 国外媒体,no-resolve
+  - IP-CIDR,203.75.84.0/24,🌍 国外媒体,no-resolve
   - IP-CIDR,207.45.72.0/22,🌍 国外媒体,no-resolve
   - IP-CIDR,208.75.76.0/22,🌍 国外媒体,no-resolve
   - DOMAIN-SUFFIX,dmc.nico,🌍 国外媒体
@@ -5147,6 +5156,7 @@ rules:
   - DOMAIN-SUFFIX,greenreadings.com,🚀 全局设置
   - DOMAIN-SUFFIX,greenvpn.net,🚀 全局设置
   - DOMAIN-SUFFIX,greenvpn.org,🚀 全局设置
+  - DOMAIN-SUFFIX,grindr.com,🚀 全局设置
   - DOMAIN-SUFFIX,grotty-monday.com,🚀 全局设置
   - DOMAIN-SUFFIX,grow.google,🚀 全局设置
   - DOMAIN-SUFFIX,gs-discuss.com,🚀 全局设置
@@ -5527,6 +5537,7 @@ rules:
   - DOMAIN-SUFFIX,imb.org,🚀 全局设置
   - DOMAIN-SUFFIX,imdb.com,🚀 全局设置
   - DOMAIN-SUFFIX,img.ly,🚀 全局设置
+  - DOMAIN-SUFFIX,imgasd.com,🚀 全局设置
   - DOMAIN-SUFFIX,imgchili.net,🚀 全局设置
   - DOMAIN-SUFFIX,imgmega.com,🚀 全局设置
   - DOMAIN-SUFFIX,imgur.com,🚀 全局设置
@@ -5611,7 +5622,6 @@ rules:
   - DOMAIN-SUFFIX,israbox.com,🚀 全局设置
   - DOMAIN-SUFFIX,issuu.com,🚀 全局设置
   - DOMAIN-SUFFIX,istars.co.nz,🚀 全局设置
-  - DOMAIN-SUFFIX,istarshine.com,🚀 全局设置
   - DOMAIN-SUFFIX,istef.info,🚀 全局设置
   - DOMAIN-SUFFIX,istiqlalhewer.com,🚀 全局设置
   - DOMAIN-SUFFIX,istockphoto.com,🚀 全局设置
@@ -6012,6 +6022,7 @@ rules:
   - DOMAIN-SUFFIX,lzjscript.com,🚀 全局设置
   - DOMAIN-SUFFIX,lzmtnews.org,🚀 全局设置
   - DOMAIN-SUFFIX,m-sport.co.uk,🚀 全局设置
+  - DOMAIN-SUFFIX,m-team.cc,🚀 全局设置
   - DOMAIN-SUFFIX,m.me,🚀 全局设置
   - DOMAIN-SUFFIX,macgamestore.com,🚀 全局设置
   - DOMAIN-SUFFIX,macrovpn.com,🚀 全局设置
@@ -8584,6 +8595,7 @@ rules:
   - DOMAIN-SUFFIX,xiaohexie.com,🚀 全局设置
   - DOMAIN-SUFFIX,xiaolan.me,🚀 全局设置
   - DOMAIN-SUFFIX,xiaoma.org,🚀 全局设置
+  - DOMAIN-SUFFIX,xiaomi.eu,🚀 全局设置
   - DOMAIN-SUFFIX,xiaxiaoqiang.net,🚀 全局设置
   - DOMAIN-SUFFIX,xiezhua.com,🚀 全局设置
   - DOMAIN-SUFFIX,xihua.es,🚀 全局设置
@@ -15387,6 +15399,7 @@ rules:
   - DOMAIN-SUFFIX,pdfwifi.com,🎯 国内网络
   - DOMAIN-SUFFIX,zhenguanyu.biz,🎯 国内网络
   - DOMAIN-SUFFIX,zhenguanyu.com,🎯 国内网络
+  - DOMAIN-SUFFIX,snapdrop.net,🎯 国内网络
   - DOMAIN-SUFFIX,cn,🎯 国内网络
   - DOMAIN-SUFFIX,xn--fiqs8s,🎯 国内网络
   - DOMAIN-SUFFIX,xn--55qx5d,🎯 国内网络
@@ -15707,130 +15720,6 @@ rules:
   - DOMAIN-SUFFIX,zmzapi.com,🎯 国内网络
   - DOMAIN-SUFFIX,zmzapi.net,🎯 国内网络
   - DOMAIN-SUFFIX,zmzfile.com,🎯 国内网络
-  - DOMAIN-KEYWORD,announce,🎯 国内网络
-  - DOMAIN-KEYWORD,torrent,🎯 国内网络
-  - DOMAIN-KEYWORD,tracker,🎯 国内网络
-  - DOMAIN-KEYWORD,announce,🎯 国内网络
-  - DOMAIN-KEYWORD,torrent,🎯 国内网络
-  - DOMAIN-KEYWORD,tracker,🎯 国内网络
-  - DOMAIN-SUFFIX,52pt.site,🎯 国内网络
-  - DOMAIN-SUFFIX,aidoru-online.me,🎯 国内网络
-  - DOMAIN-SUFFIX,alpharatio.cc,🎯 国内网络
-  - DOMAIN-SUFFIX,animebytes.tv,🎯 国内网络
-  - DOMAIN-SUFFIX,animetorrents.me,🎯 国内网络
-  - DOMAIN-SUFFIX,anthelion.me,🎯 国内网络
-  - DOMAIN-SUFFIX,asiancinema.me,🎯 国内网络
-  - DOMAIN-SUFFIX,audiences.me,🎯 国内网络
-  - DOMAIN-SUFFIX,avgv.cc,🎯 国内网络
-  - DOMAIN-SUFFIX,avistaz.to,🎯 国内网络
-  - DOMAIN-SUFFIX,awesome-hd.me,🎯 国内网络
-  - DOMAIN-SUFFIX,beitai.pt,🎯 国内网络
-  - DOMAIN-SUFFIX,beyond-hd.me,🎯 国内网络
-  - DOMAIN-SUFFIX,bibliotik.me,🎯 国内网络
-  - DOMAIN-SUFFIX,bittorrent.com,🎯 国内网络
-  - DOMAIN-SUFFIX,blutopia.xyz,🎯 国内网络
-  - DOMAIN-SUFFIX,broadcasthe.net,🎯 国内网络
-  - DOMAIN-SUFFIX,bt.byr.cn,🎯 国内网络
-  - DOMAIN-SUFFIX,bt.neu6.edu.cn,🎯 国内网络
-  - DOMAIN-SUFFIX,btschool.club,🎯 国内网络
-  - DOMAIN-SUFFIX,bwtorrents.tv,🎯 国内网络
-  - DOMAIN-SUFFIX,byr.pt,🎯 国内网络
-  - DOMAIN-SUFFIX,ccfbits.org,🎯 国内网络
-  - DOMAIN-SUFFIX,cgpeers.com,🎯 国内网络
-  - DOMAIN-SUFFIX,chdbits.co,🎯 国内网络
-  - DOMAIN-SUFFIX,cinemageddon.net,🎯 国内网络
-  - DOMAIN-SUFFIX,cinematik.net,🎯 国内网络
-  - DOMAIN-SUFFIX,cinemaz.to,🎯 国内网络
-  - DOMAIN-SUFFIX,classix-unlimited.co.uk,🎯 国内网络
-  - DOMAIN-SUFFIX,concertos.live,🎯 国内网络
-  - DOMAIN-SUFFIX,dicmusic.club,🎯 国内网络
-  - DOMAIN-SUFFIX,discfan.net,🎯 国内网络
-  - DOMAIN-SUFFIX,dxdhd.com,🎯 国内网络
-  - DOMAIN-SUFFIX,eastgame.org,🎯 国内网络
-  - DOMAIN-SUFFIX,empornium.me,🎯 国内网络
-  - DOMAIN-SUFFIX,et8.org,🎯 国内网络
-  - DOMAIN-SUFFIX,exoticaz.to,🎯 国内网络
-  - DOMAIN-SUFFIX,extremlymtorrents.ws,🎯 国内网络
-  - DOMAIN-SUFFIX,filelist.io,🎯 国内网络
-  - DOMAIN-SUFFIX,gainbound.net,🎯 国内网络
-  - DOMAIN-SUFFIX,gazellegames.net,🎯 国内网络
-  - DOMAIN-SUFFIX,gfxpeers.net,🎯 国内网络
-  - DOMAIN-SUFFIX,hd-space.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hd-torrents.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hd4.xyz,🎯 国内网络
-  - DOMAIN-SUFFIX,hd4fans.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdarea.co,🎯 国内网络
-  - DOMAIN-SUFFIX,hdatmos.club,🎯 国内网络
-  - DOMAIN-SUFFIX,hdbd.us,🎯 国内网络
-  - DOMAIN-SUFFIX,hdbits.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdchina.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdcity.city,🎯 国内网络
-  - DOMAIN-SUFFIX,hddolby.com,🎯 国内网络
-  - DOMAIN-SUFFIX,hdfans.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdhome.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdpost.top,🎯 国内网络
-  - DOMAIN-SUFFIX,hdroute.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdsky.me,🎯 国内网络
-  - DOMAIN-SUFFIX,hdstreet.club,🎯 国内网络
-  - DOMAIN-SUFFIX,hdtime.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hdupt.com,🎯 国内网络
-  - DOMAIN-SUFFIX,hdzone.me,🎯 国内网络
-  - DOMAIN-SUFFIX,hhanclub.top,🎯 国内网络
-  - DOMAIN-SUFFIX,hitpt.com,🎯 国内网络
-  - DOMAIN-SUFFIX,hitpt.org,🎯 国内网络
-  - DOMAIN-SUFFIX,hudbt.hust.edu.cn,🎯 国内网络
-  - DOMAIN-SUFFIX,icetorrent.org,🎯 国内网络
-  - DOMAIN-SUFFIX,iptorrents.com,🎯 国内网络
-  - DOMAIN-SUFFIX,j99.info,🎯 国内网络
-  - DOMAIN-SUFFIX,joyhd.net,🎯 国内网络
-  - DOMAIN-SUFFIX,jpopsuki.eu,🎯 国内网络
-  - DOMAIN-SUFFIX,karagarga.in,🎯 国内网络
-  - DOMAIN-SUFFIX,keepfrds.com,🎯 国内网络
-  - DOMAIN-SUFFIX,landof.tv,🎯 国内网络
-  - DOMAIN-SUFFIX,leaguehd.com,🎯 国内网络
-  - DOMAIN-SUFFIX,lemonhd.org,🎯 国内网络
-  - DOMAIN-SUFFIX,lztr.me,🎯 国内网络
-  - DOMAIN-SUFFIX,m-team.cc,🎯 国内网络
-  - DOMAIN-SUFFIX,madsrevolution.net,🎯 国内网络
-  - DOMAIN-SUFFIX,moecat.best,🎯 国内网络
-  - DOMAIN-SUFFIX,morethan.tv,🎯 国内网络
-  - DOMAIN-SUFFIX,msg.vg,🎯 国内网络
-  - DOMAIN-SUFFIX,myanonamouse.net,🎯 国内网络
-  - DOMAIN-SUFFIX,nanyangpt.com,🎯 国内网络
-  - DOMAIN-SUFFIX,ncore.cc,🎯 国内网络
-  - DOMAIN-SUFFIX,nebulance.io,🎯 国内网络
-  - DOMAIN-SUFFIX,nicept.net,🎯 国内网络
-  - DOMAIN-SUFFIX,npupt.com,🎯 国内网络
-  - DOMAIN-SUFFIX,nwsuaf6.edu.cn,🎯 国内网络
-  - DOMAIN-SUFFIX,open.cd,🎯 国内网络
-  - DOMAIN-SUFFIX,oppaiti.me,🎯 国内网络
-  - DOMAIN-SUFFIX,orpheus.network,🎯 国内网络
-  - DOMAIN-SUFFIX,ourbits.club,🎯 国内网络
-  - DOMAIN-SUFFIX,passthepopcorn.me,🎯 国内网络
-  - DOMAIN-SUFFIX,pornbits.net,🎯 国内网络
-  - DOMAIN-SUFFIX,privatehd.to,🎯 国内网络
-  - DOMAIN-SUFFIX,pterclub.com,🎯 国内网络
-  - DOMAIN-SUFFIX,pthome.net,🎯 国内网络
-  - DOMAIN-SUFFIX,ptsbao.club,🎯 国内网络
-  - DOMAIN-SUFFIX,pttime.org,🎯 国内网络
-  - DOMAIN-SUFFIX,pussytorrents.org,🎯 国内网络
-  - DOMAIN-SUFFIX,redacted.ch,🎯 国内网络
-  - DOMAIN-SUFFIX,sdbits.org,🎯 国内网络
-  - DOMAIN-SUFFIX,sharkpt.net,🎯 国内网络
-  - DOMAIN-SUFFIX,sjtu.edu.cn,🎯 国内网络
-  - DOMAIN-SUFFIX,skyey2.com,🎯 国内网络
-  - DOMAIN-SUFFIX,soulvoice.club,🎯 国内网络
-  - DOMAIN-SUFFIX,springsunday.net,🎯 国内网络
-  - DOMAIN-SUFFIX,tju.pt,🎯 国内网络
-  - DOMAIN-SUFFIX,tjupt.org,🎯 国内网络
-  - DOMAIN-SUFFIX,torrentday.com,🎯 国内网络
-  - DOMAIN-SUFFIX,torrentleech.org,🎯 国内网络
-  - DOMAIN-SUFFIX,torrentseeds.org,🎯 国内网络
-  - DOMAIN-SUFFIX,totheglory.im,🎯 国内网络
-  - DOMAIN-SUFFIX,trontv.com,🎯 国内网络
-  - DOMAIN-SUFFIX,u2.dmhy.org,🎯 国内网络
-  - DOMAIN-SUFFIX,uhdbits.org,🎯 国内网络
-  - DOMAIN-SUFFIX,xauat6.edu.cn,🎯 国内网络
   - DOMAIN-SUFFIX,teamviewer.com,🎯 国内网络
   - IP-CIDR,139.220.243.27/32,🎯 国内网络,no-resolve
   - IP-CIDR,172.16.102.56/32,🎯 国内网络,no-resolve
@@ -15845,6 +15734,10 @@ rules:
   - DOMAIN-SUFFIX,jiasule.com,🎯 国内网络
   - DOMAIN-SUFFIX,staticfile.org,🎯 国内网络
   - DOMAIN-SUFFIX,upaiyun.com,🎯 国内网络
+  - DOMAIN-SUFFIX,doh.pub,🎯 国内网络
+  - DOMAIN-SUFFIX,dns.alidns.com,🎯 国内网络
+  - DOMAIN-SUFFIX,doh.360.cn,🎯 国内网络
+  - IP-CIDR,1.12.12.12/32,🎯 国内网络,no-resolve
   - DOMAIN-SUFFIX,10010.com,🎯 国内网络
   - DOMAIN-SUFFIX,115.com,🎯 国内网络
   - DOMAIN-SUFFIX,12306.com,🎯 国内网络
@@ -15909,6 +15802,7 @@ rules:
   - DOMAIN-SUFFIX,eastday.com,🎯 国内网络
   - DOMAIN-SUFFIX,eastmoney.com,🎯 国内网络
   - DOMAIN-SUFFIX,ecitic.com,🎯 国内网络
+  - DOMAIN-SUFFIX,element-plus.org,🎯 国内网络
   - DOMAIN-SUFFIX,ewqcxz.com,🎯 国内网络
   - DOMAIN-SUFFIX,fang.com,🎯 国内网络
   - DOMAIN-SUFFIX,fantasy.tv,🎯 国内网络
