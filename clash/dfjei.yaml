@@ -1,0 +1,659 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+  - {name: 🇸🇬 （看这里）每月刷新订阅获取新节点, server: 104.17.233.82, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c7.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c7.777655.xyz}}}
+  - {name: 一元机场.com, server: 104.17.233.57, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c8.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c8.777655.xyz}}}
+  - {name: 🇭🇰 香港 01 | 专线, server: hk1.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 02 | 专线, server: hk2.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 03 | 专线, server: hk3.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 04 | 专线, server: hk4.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 05 | 专线, server: hk5.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 06 | 专线, server: hk6.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 07 | 专线, server: hk7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 08 | 专线, server: hk8.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 01 | 专线, server: jp1.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 02 | 专线, server: jp2.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 03 | 专线, server: jp3.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 04 | 专线, server: jp4.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 01 | 专线, server: sg1.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 02 | 专线, server: sg2.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 03 | 专线, server: sg3.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 04 | 专线, server: sg4.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 05 | 专线, server: sg5.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 06 | 专线, server: sg6.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 07 | 专线, server: sg7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 08 | 专线, server: sg8.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国01| 专线, server: 104.16.132.167, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c1.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c1.777655.xyz}}}
+  - {name: 🇺🇸 美国02| 专线, server: 172.64.166.58, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c2.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c2.777655.xyz}}}
+  - {name: 🇺🇸 美国03| 专线, server: 104.17.135.32, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c3.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c3.777655.xyz}}}
+  - {name: 🇺🇸 美国04| 专线, server: 104.17.126.27, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c4.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c4.777655.xyz}}}
+  - {name: 🇺🇸 美国05| 专线, server: 172.64.166.58, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c5.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c5.777655.xyz}}}
+  - {name: 🇺🇸 美国06| 专线, server: 104.17.233.82, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c6.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c6.777655.xyz}}}
+  - {name: 🇺🇸 美国07| 专线, server: 172.67.192.132, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c7.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c7.777655.xyz}}}
+  - {name: 🇺🇸 美国08| 专线, server: 104.18.15.147, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c8.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c8.777655.xyz}}}
+  - {name: 🇺🇸 美国 01 | 专线, server: us1.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 02 | 专线, server: us2.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 03 | 专线, server: us3.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 04 | 专线, server: us4.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 05 | 专线, server: us5.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 06 | 专线, server: us6.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 07 | 专线, server: us7.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 08 | 专线, server: us8.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 13-251-128-188.nhost.00cdn.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 1, server: hk1.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk1.hneko.online}}}
+  - {name: 🇭🇰 香港 2, server: hk2.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk2.hneko.online}}}
+  - {name: 🇭🇰 香港 3, server: hk3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk3.hneko.online}}}
+  - {name: 🇭🇰 香港 4, server: hk4.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: hk4.hneko.online}}}
+  - {name: 🇯🇵 日本 1, server: jp1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp1.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 2, server: jp1.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp1.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 3, server: jp33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp33.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 4, server: jp33.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp33.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 5, server: jp55.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp55.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 6, server: jp55.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp55.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 7, server: jp88.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp88.hneko.online, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 8, server: jp88.hneko.online, port: 4433, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: jp88.hneko.online, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 1, server: sg1.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg1.hneko.online, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 2, server: sg2.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg2.hneko.online, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 3, server: sg3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: sg3.hneko.online}}}
+  - {name: 🇸🇬 新加坡 4, server: sg4.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: sg4.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 1, server: us11.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us11.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 2, server: us22.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us22.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 3, server: us33.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 4, server: us44.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: us44.hneko.online, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 5, server: us5.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us5.hneko.online}}}
+  - {name: 🇺🇸 美国 6, server: us66.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us66.hneko.online}}}
+  - {name: 🇺🇸 美国 7, server: us7.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us7.hneko.online}}}
+  - {name: 🇺🇸 美国 8, server: us8.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us8.hneko.online}}}
+proxy-groups:
+  - name: 🔰 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: 🎥 NETFLIX
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: ⛔️ 广告拦截
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
+      - 🔰 节点选择
+  - name: 🚫 运营劫持
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
+      - 🔰 节点选择
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🔰 节点选择
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
+      - 🇭🇰 香港 01 | 专线
+      - 🇭🇰 香港 02 | 专线
+      - 🇭🇰 香港 03 | 专线
+      - 🇭🇰 香港 04 | 专线
+      - 🇭🇰 香港 05 | 专线
+      - 🇭🇰 香港 06 | 专线
+      - 🇭🇰 香港 07 | 专线
+      - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
+      - 🇭🇰 香港 1
+      - 🇭🇰 香港 2
+      - 🇭🇰 香港 3
+      - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇯🇵 日本 5
+      - 🇯🇵 日本 6
+      - 🇯🇵 日本 7
+      - 🇯🇵 日本 8
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇺🇸 美国 5
+      - 🇺🇸 美国 6
+      - 🇺🇸 美国 7
+      - 🇺🇸 美国 8
+rules:

@@ -1,72 +1,51 @@
 # Your name
-author: Bob
+author: zwyyy456
 # Language of the question description: zh or en
-language: en
-# Code configuration
+language: zh
 code:
   # Language of code generated for questions: go, python, ... 
   # (will be override by project config and flag --lang)
   lang: go
   # The default template to generate filename (without extension), e.g. {{.Id}}.{{.Slug}}
   # Available attributes: Id, Slug, Title, Difficulty, Lang, SlugIsMeaningful
-  # Available functions: lower, upper, trim, padWithZero, toUnderscore
+  # Available functions: lower, upper, trim, padWithZero, toUnderscore, group
   filename_template: '{{ .Id | padWithZero 4 }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}'
-  # Generate question description into a separate file
-  separate_description_file: false
-  # Functions that modify the generated code
+  # Default setting for separate_description_file
+  separate_description_file: true
+  # Default modifiers for all languages
   modifiers:
     - name: removeUselessComments
   go:
     out_dir: go
-    # Overrides the default code.filename_template
-    filename_template: ""
-    # Replace some blocks of the generated code
-    blocks:
-      - name: beforeMarker
-        template: |
-          package main
-
-          {{ if .NeedsDefinition -}} import . "github.com/j178/leetgo/testutils/go" {{- end }}
     # Functions that modify the generated code
     modifiers:
       - name: removeUselessComments
       - name: changeReceiverName
       - name: addNamedReturn
       - name: addMod
-    # Go module path for the generated code
-    go_mod_path: ""
   python3:
     out_dir: python
-    # Overrides the default code.filename_template
-    filename_template: ""
+    # Python executable that creates the venv
+    executable: python3
   cpp:
     out_dir: cpp
-    # Overrides the default code.filename_template
-    filename_template: ""
-  java:
-    out_dir: java
-    # Overrides the default code.filename_template
-    filename_template: ""
+    # C++ compiler
+    cxx: g++
+    # C++ compiler flags (our Leetcode I/O library implementation requires C++17)
+    cxxflags: -O2 -std=c++17
   rust:
     out_dir: rust
-    # Overrides the default code.filename_template
-    filename_template: ""
-# LeetCode configuration
+  java:
+    out_dir: java
 leetcode:
   # LeetCode site, https://leetcode.com or https://leetcode.cn
-  site: https://leetcode.com
+  site: https://leetcode.cn
   # Credentials to access LeetCode
   credentials:
     # How to provide credentials: browser, cookies, password or none
     from: browser
-    # LeetCode cookie: LEETCODE_SESSION
-    session: ""
-    # LeetCode cookie: csrftoken
-    csrftoken: ""
-    # LeetCode username
-    username: ""
-    # Encrypted LeetCode password
-    password: ""
+    # Browsers to get cookies from: chrome, safari, edge or firefox. If empty, all browsers will be tried
+    browsers: []
 contest:
   # Base dir to put generated contest questions
   out_dir: contest
@@ -74,12 +53,15 @@ contest:
   filename_template: '{{ .ContestShortSlug }}/{{ .Id }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}'
   # Open the contest page in browser after generating
   open_in_browser: true
-# The editor to open generated files
+# Editor settings to open generated files
 editor:
   # Use a predefined editor: vim, vscode, goland
   # Set to 'none' to disable, set to 'custom' to provide your own command
   use: none
   # Custom command to open files
   command: ""
-  # Arguments to the command
-  args: []
+  # Arguments to the command.
+  # String contains {{.CodeFile}}, {{.TestFile}}, {{.DescriptionFile}}, {{.TestCasesFile}} will be replaced with corresponding file path.
+  # {{.Folder}} will be substituted with the output directory.
+  # {{.Files}} will be substituted with the list of all file paths.
+  args: ""
