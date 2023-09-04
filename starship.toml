@@ -35,7 +35,11 @@ stashed = "≡"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
+<<<<<<< HEAD
+style = "bright-black"
+=======
 style = "cyan"
+>>>>>>> 8d7fc31ab4778a70b2c9e2a1867c7f5f0b2bedf2
 
 [cmd_duration]
 format = "[$duration]($style) "
