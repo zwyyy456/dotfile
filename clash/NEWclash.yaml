@@ -193,7 +193,7 @@ proxy-groups:
       - 美国区1线
       - 美国区2线
 
-  - name: 剩余流量 29007MB
+  - name: 剩余流量 28347MB
     type: select
     proxies:
       - DIRECT
