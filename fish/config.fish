@@ -9,10 +9,10 @@ if uname | grep -q Linux
         eval /home/zwyyy/miniconda3/bin/conda "shell.fish" hook $argv | source
     end
     # <<< conda initialize <<<
-
     set -gx GOPATH $HOME/go
     set -gx PATH $GOPATH/bin $PATH
     set -gx PATH /opt/riscv/bin $PATH
+
 end
 
 if uname | grep -q Darwin
@@ -24,5 +24,5 @@ if uname | grep -q Darwin
     # <<< conda initialize <<<
 
     # set path
-    set -x PATH /opt/homebrew/bin $path
+    set -x PATH /opt/homebrew/bin $PATH
 end
