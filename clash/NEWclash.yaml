@@ -193,7 +193,7 @@ proxy-groups:
       - 美国区1线
       - 美国区2线
 
-  - name: 剩余流量 28347MB
+  - name: 剩余流量 27326MB
     type: select
     proxies:
       - DIRECT
@@ -229,6 +229,9 @@ rules:
   - IP-CIDR,240.0.0.0/4,DIRECT
   - IP-CIDR,255.255.255.255/32,DIRECT
 # 谷歌
+  - DOMAIN-SUFFIX,google.com,节点选择
+  - DOMAIN-KEYWORD,google,节点选择
+  - DOMAIN,google.com,节点选择
   - DOMAIN-SUFFIX,gstatic.com,节点选择
   - DOMAIN-SUFFIX,googleapis.com,节点选择
   - DOMAIN,services.googleapis.cn,节点选择

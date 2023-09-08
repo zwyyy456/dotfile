@@ -34,12 +34,9 @@ proxies:
   - {name: 🇸🇬 新加坡 3, server: sg3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: sg3.hneko.online}}}
   - {name: 🇸🇬 新加坡 4, server: sg4.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: sg4.hneko.online}}}
   - {name: 🇺🇸 美国 1, server: us11.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us11.hneko.online}}}
-  - {name: 🇺🇸 美国 2, server: us11.hneko.online, port: 4433, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us11.hneko.online}}}
+  - {name: 🇺🇸 美国 2, server: us22.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us22.hneko.online}}}
   - {name: 🇺🇸 美国 3, server: us33.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us33.hneko.online}}}
-  - {name: 🇺🇸 美国 4, server: us33.hneko.online, port: 4433, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us33.hneko.online}}}
-  - {name: 🇺🇸 美国 5, server: us55.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us55.hneko.online}}}
-  - {name: 🇺🇸 美国 6, server: us55.hneko.online, port: 4433, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us55.hneko.online}}}
-  - {name: 🇺🇸 美国 7, server: us77.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us77.hneko.online}}}
+  - {name: 🇺🇸 美国 4, server: us44.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: us44.hneko.online}}}
   - {name: 🇸🇬 （看这里）每月刷新订阅获取新节点, server: 104.17.233.82, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c7.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c7.777655.xyz}}}
   - {name: 一元机场.com, server: 104.17.233.57, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: c8.777655.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: c8.777655.xyz}}}
   - {name: 🇭🇰 香港 01 | 专线, server: hk1.cf4589a1-71ec-429f-b46a-892af2259b8e.yiyuan.cyou, port: 443, client-fingerprint: chrome, type: trojan, password: cd479a4f-072f-4524-a152-ff0d4a986731, tfo: false, sni: 144-22-163-118.nhost.00cdn.com, skip-cert-verify: false}
@@ -115,9 +112,6 @@ proxy-groups:
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
-      - 🇺🇸 美国 5
-      - 🇺🇸 美国 6
-      - 🇺🇸 美国 7
       - 🇸🇬 （看这里）每月刷新订阅获取新节点
       - 一元机场.com
       - 🇭🇰 香港 01 | 专线
@@ -334,10 +328,30 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: select
     proxies:
+      - 🇰🇷 韩国 1
+      - 🇰🇷 韩国 2
+      - 🇰🇷 韩国 3
+      - 🇰🇷 韩国 4
+      - 🇰🇷 韩国 5
+      - 🇰🇷 韩国 6
       - 🇭🇰 香港 1
       - 🇭🇰 香港 2
       - 🇭🇰 香港 3
       - 🇭🇰 香港 4
+      - 🇯🇵 日本 1
+      - 🇯🇵 日本 2
+      - 🇯🇵 日本 3
+      - 🇯🇵 日本 4
+      - 🇸🇬 新加坡 1
+      - 🇸🇬 新加坡 2
+      - 🇸🇬 新加坡 3
+      - 🇸🇬 新加坡 4
+      - 🇺🇸 美国 1
+      - 🇺🇸 美国 2
+      - 🇺🇸 美国 3
+      - 🇺🇸 美国 4
+      - 🇸🇬 （看这里）每月刷新订阅获取新节点
+      - 一元机场.com
       - 🇭🇰 香港 01 | 专线
       - 🇭🇰 香港 02 | 专线
       - 🇭🇰 香港 03 | 专线
@@ -346,6 +360,34 @@ proxy-groups:
       - 🇭🇰 香港 06 | 专线
       - 🇭🇰 香港 07 | 专线
       - 🇭🇰 香港 08 | 专线
+      - 🇯🇵 日本 01 | 专线
+      - 🇯🇵 日本 02 | 专线
+      - 🇯🇵 日本 03 | 专线
+      - 🇯🇵 日本 04 | 专线
+      - 🇸🇬 新加坡 01 | 专线
+      - 🇸🇬 新加坡 02 | 专线
+      - 🇸🇬 新加坡 03 | 专线
+      - 🇸🇬 新加坡 04 | 专线
+      - 🇸🇬 新加坡 05 | 专线
+      - 🇸🇬 新加坡 06 | 专线
+      - 🇸🇬 新加坡 07 | 专线
+      - 🇸🇬 新加坡 08 | 专线
+      - 🇺🇸 美国01| 专线
+      - 🇺🇸 美国02| 专线
+      - 🇺🇸 美国03| 专线
+      - 🇺🇸 美国04| 专线
+      - 🇺🇸 美国05| 专线
+      - 🇺🇸 美国06| 专线
+      - 🇺🇸 美国07| 专线
+      - 🇺🇸 美国08| 专线
+      - 🇺🇸 美国 01 | 专线
+      - 🇺🇸 美国 02 | 专线
+      - 🇺🇸 美国 03 | 专线
+      - 🇺🇸 美国 04 | 专线
+      - 🇺🇸 美国 05 | 专线
+      - 🇺🇸 美国 06 | 专线
+      - 🇺🇸 美国 07 | 专线
+      - 🇺🇸 美国 08 | 专线
   - name: 🇯🇵 日本节点
     type: select
     proxies:
@@ -364,9 +406,6 @@ proxy-groups:
       - 🇺🇸 美国 2
       - 🇺🇸 美国 3
       - 🇺🇸 美国 4
-      - 🇺🇸 美国 5
-      - 🇺🇸 美国 6
-      - 🇺🇸 美国 7
       - 🇺🇸 美国01| 专线
       - 🇺🇸 美国02| 专线
       - 🇺🇸 美国03| 专线

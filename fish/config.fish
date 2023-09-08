@@ -25,4 +25,5 @@ if uname | grep -q Darwin
 
     # set path
     set -x PATH /opt/homebrew/bin $PATH
+    set -x PATH /opt/homebrew/opt/postgresql@15/bin $PATH
 end
