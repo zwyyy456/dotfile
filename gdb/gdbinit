@@ -1,0 +1,2 @@
+add-auto-load-safe-path /home/zwyyy/Documents/code/mit/xv6-labs-2021/.gdbinit
+add-auto-load-safe-path /home/zwyyy/Documents/code/mit/teach/.gdbinit
