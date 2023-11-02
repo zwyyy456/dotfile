@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = "Mariana"
-config.font_size = 13.0
+config.font_size = 12.0
 if wezterm.target_triple == "aarch64-apple-darwin" then
 	-- This is where you actually apply your config choices
 

@@ -1,6 +1,7 @@
 # Clash Verge Config
 
 app_singleton_port: null
+app_log_level: null
 language: zh
 theme_mode: system
 theme_blur: false
@@ -21,3 +22,8 @@ default_latency_test: null
 enable_clash_fields: true
 enable_builtin_enhanced: true
 proxy_layout_column: null
+window_size_position:
+- 1278.6666666666667
+- 718.6666666666666
+- 0.6666666666666666
+- 0.6666666666666666

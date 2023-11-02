@@ -9,8 +9,8 @@ files:
     selected: []
     interval: 24
     subInfo:
-      upload: 287501867
-      download: 5862585777
+      upload: 13334016768
+      download: 25376375856
       total: 536870912000
       expire: 1764948155
     homeWeb: ""
@@ -39,83 +39,48 @@ files:
     homeWeb: ""
     cron: ""
     headers: ""
-  - time: 1683388116474.yml
-    name: k3mItAL
-    url: https://v1.mk/k3mItAL
-    selected:
-      - name: GLOBAL
-        now: DIRECT
-      - name: 🚀 节点选择
-        now: ♻️ 自动选择
-      - name: 🚀 手动切换
-        now: 🇸🇬 新加坡1线
-      - name: 📲 电报消息
-        now: 🚀 节点选择
-      - name: 📹 油管视频
-        now: 🚀 节点选择
-      - name: 🎥 奈飞视频
-        now: 🎥 奈飞节点
-      - name: 📺 巴哈姆特
-        now: 🇨🇳 台湾节点
-      - name: 📺 哔哩哔哩
-        now: 🎯 全球直连
-      - name: 🌍 国外媒体
-        now: 🚀 节点选择
-      - name: 🌏 国内媒体
-        now: DIRECT
-      - name: 📢 谷歌FCM
-        now: 🚀 节点选择
-      - name: Ⓜ️ 微软云盘
-        now: DIRECT
-      - name: Ⓜ️ 微软服务
-        now: 🚀 节点选择
-      - name: 🍎 苹果服务
-        now: 🚀 节点选择
-      - name: OpenAi
-        now: 🇺🇲 美国节点
-      - name: 🎮 游戏平台
-        now: DIRECT
-      - name: 🎶 网易音乐
-        now: DIRECT
-      - name: 🎯 全球直连
-        now: DIRECT
-      - name: 🛑 广告拦截
-        now: REJECT
-      - name: 🍃 应用净化
-        now: REJECT
-      - name: 🐟 漏网之鱼
-        now: 🚀 节点选择
-      - name: 🇺🇲 美国节点
-        now: 🇺🇸 美国区2线
-      - name: 🎥 奈飞节点
-        now: DIRECT
-    interval: 24
-    subInfo:
-      upload: 7902268698
-      download: 35611064000
-      total: 751619276800
-      expire: 1743123891
-    homeWeb: ""
-  - time: 1683390826001.yml
-    name: G7yMyV9
-    url: https://v1.mk/G7yMyV9
-    selected: []
-    interval: 24
-    subInfo:
-      upload: 287501867
-      download: 5862585777
-      total: 536870912000
-      expire: 1764948155
-    homeWeb: ""
   - time: 1683424650088.yml
     name: DaaixnL
     url: https://v1.mk/DaaixnL
     selected: []
     interval: 24
     subInfo:
-      upload: 287501867
-      download: 5862585777
+      upload: 619958656
+      download: 14282778330
       total: 536870912000
       expire: 1764948155
     homeWeb: ""
-index: -1
+  - time: 1694923592609.yml
+    name: ts9pB5A
+    url: https://suo.yt/ts9pB5A
+    selected:
+      - name: GLOBAL
+        now: DIRECT
+      - name: Ⓜ️ 微软服务
+        now: 🇰🇷 韩国 4
+      - name: 🌍 国外媒体
+        now: 🚀 节点选择
+      - name: 🍃 应用净化
+        now: REJECT
+      - name: 🍎 苹果服务
+        now: 🚀 节点选择
+      - name: 🎯 全球直连
+        now: DIRECT
+      - name: 🐟 漏网之鱼
+        now: 🚀 节点选择
+      - name: 📢 谷歌FCM
+        now: 🚀 节点选择
+      - name: 📲 电报信息
+        now: 🚀 节点选择
+      - name: 🚀 节点选择
+        now: ♻️ 自动选择
+      - name: 🛑 全球拦截
+        now: REJECT
+    interval: 24
+    subInfo:
+      upload: 191568647
+      download: 4111690005
+      total: 751619276800
+      expire: 1743123891
+    homeWeb: ""
+index: 4
