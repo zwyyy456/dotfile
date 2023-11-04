@@ -1,0 +1,86 @@
+files:
+  - url: ""
+    time: 1642395865721.yml
+    name: config.yaml
+    selected: []
+  - time: 1680189086131.yml
+    name: 一元机场
+    url: https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a
+    selected: []
+    interval: 24
+    subInfo:
+      upload: 13334016768
+      download: 25376375856
+      total: 536870912000
+      expire: 1764948155
+    homeWeb: ""
+    cron: ""
+    headers: ""
+  - time: 1683386803741.yml
+    name: NEWclash.php
+    url: https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx
+    selected:
+      - name: GLOBAL
+        now: DIRECT
+      - name: 节点选择
+        now: 美国区1线
+      - name: 哔哩哔哩
+        now: 禁用代理
+      - name: 电报信息
+        now: 节点选择
+      - name: 剩余流量 30497MB
+        now: DIRECT
+      - name: 到期时间 2024-01-06
+        now: DIRECT
+      - name: 禁用代理
+        now: DIRECT
+    interval: 0
+    subInfo: {}
+    homeWeb: ""
+    cron: ""
+    headers: ""
+  - time: 1683424650088.yml
+    name: DaaixnL
+    url: https://v1.mk/DaaixnL
+    selected: []
+    interval: 24
+    subInfo:
+      upload: 619958656
+      download: 14282778330
+      total: 536870912000
+      expire: 1764948155
+    homeWeb: ""
+  - time: 1694923592609.yml
+    name: ts9pB5A
+    url: https://suo.yt/ts9pB5A
+    selected:
+      - name: GLOBAL
+        now: DIRECT
+      - name: Ⓜ️ 微软服务
+        now: 🇰🇷 韩国 4
+      - name: 🌍 国外媒体
+        now: 🚀 节点选择
+      - name: 🍃 应用净化
+        now: REJECT
+      - name: 🍎 苹果服务
+        now: 🚀 节点选择
+      - name: 🎯 全球直连
+        now: DIRECT
+      - name: 🐟 漏网之鱼
+        now: 🚀 节点选择
+      - name: 📢 谷歌FCM
+        now: 🚀 节点选择
+      - name: 📲 电报信息
+        now: 🚀 节点选择
+      - name: 🚀 节点选择
+        now: ♻️ 自动选择
+      - name: 🛑 全球拦截
+        now: REJECT
+    interval: 24
+    subInfo:
+      upload: 191568647
+      download: 4111690005
+      total: 751619276800
+      expire: 1743123891
+    homeWeb: ""
+index: 4

@@ -1,10 +1,15 @@
 # Profiles Config for Clash Verge
 
+<<<<<<< HEAD
 current: lvibBQPD8cEm
+=======
+current: l0NylgJqL5kw
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
 chain: null
 valid:
 - dns
 items:
+<<<<<<< HEAD
 - uid: lvibBQPD8cEm
   type: local
   name: clmeta
@@ -16,3 +21,11 @@ items:
     with_proxy: false
     self_proxy: false
     update_interval: 1440
+=======
+- uid: l0NylgJqL5kw
+  type: local
+  name: cv
+  file: l0NylgJqL5kw.yaml
+  desc: for clash verge
+  updated: 1698855041
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd

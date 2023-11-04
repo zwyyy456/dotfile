@@ -11,7 +11,7 @@ enable_tun_mode: null
 enable_auto_launch: false
 enable_silent_start: false
 enable_system_proxy: false
-enable_proxy_guard: false
+enable_proxy_guard: true
 system_proxy_bypass: null
 proxy_guard_duration: 30
 theme_setting: null
@@ -24,7 +24,14 @@ enable_clash_fields: true
 enable_builtin_enhanced: true
 proxy_layout_column: null
 window_size_position:
+<<<<<<< HEAD
 - 800.0
 - 642.0
 - 240.0
 - 157.0
+=======
+- 1278.6666666666667
+- 718.6666666666666
+- 0.6666666666666666
+- 0.6666666666666666
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd

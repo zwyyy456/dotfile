@@ -1,0 +1,183 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://cn-east.iqiqzz.com/dns-query
+    - https://cn-east.iqiqzz.com/cdn
+    - https://cn-south.iqiqzz.com/dns-query
+    - https://cn-south.iqiqzz.com/cdn
+    - https://public.dns.iij.jp/dns-query
+
+proxies:
+  - {name: 新加坡1线,type: vmess,server: v2hk1.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 新加坡2线,type: vmess,server: v2hk2.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 新加坡3线,type: vmess,server: v2hk3.aa112358.com,port: 34089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 日本区1线,type: vmess,server: v2jp1.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 日本区2线,type: vmess,server: v2jp2.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 日本区3线,type: vmess,server: v2jp3.cc112358.com,port: 31089,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 美国区1线,type: vmess,server: v2us1.ee112358.com,port: 38989,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 美国区2线,type: vmess,server: v2us2.ee112358.com,port: 38989,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+  - {name: 美国区3线,type: vmess,server: v2us3.ee112358.com,port: 38989,uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1,alterId: 0,cipher: auto,network: ws,ws-path: /,tls: true}
+
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies: [新加坡1线,新加坡2线,新加坡3线,日本区1线,日本区2线,日本区3线,美国区1线,美国区2线,美国区3线]
+
+  - name: 哔哩哔哩
+    type: select
+    proxies: [禁用代理,新加坡1线,新加坡2线,新加坡3线,日本区1线,日本区2线,日本区3线,美国区1线,美国区2线,美国区3线]
+
+  - name: 电报信息
+    type: select
+    proxies: [节点选择,新加坡1线,新加坡2线,新加坡3线,日本区1线,日本区2线,日本区3线,美国区1线,美国区2线,美国区3线]
+
+  - name: 剩余流量 30497MB
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 到期时间 2024-01-06
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 禁用代理
+    type: select
+    proxies:
+      - DIRECT
+
+rules:
+  - DOMAIN-SUFFIX,gstatic.com,节点选择
+  - DOMAIN-SUFFIX,googleapis.com,节点选择
+
+  - DOMAIN-SUFFIX,bing.com,节点选择
+  - DOMAIN-SUFFIX,bing.com.cn,节点选择
+  - DOMAIN-SUFFIX,bing.net,节点选择
+  - DOMAIN-SUFFIX,bingads.com,节点选择
+  - DOMAIN-SUFFIX,bingagencyawards.com,节点选择
+  - DOMAIN-SUFFIX,bingapis.com,节点选择
+  - DOMAIN-SUFFIX,bingapistatistics.com,节点选择
+  - DOMAIN-SUFFIX,bingsandbox.com,节点选择
+  - DOMAIN-SUFFIX,bingvisualsearch.com,节点选择
+  - DOMAIN-SUFFIX,bingworld.com,节点选择
+  - DOMAIN-SUFFIX,bluehatnights.com,节点选择
+  - DOMAIN-SUFFIX,dictate.ms,节点选择
+  - DOMAIN-SUFFIX,flipwithsurface.com,节点选择
+  - DOMAIN-SUFFIX,masalladeloslimites.com,节点选择
+  - DOMAIN-SUFFIX,microsoft-give.com,节点选择
+  - DOMAIN-SUFFIX,microsoftcloudsummit.com,节点选择
+  - DOMAIN-SUFFIX,microsoftdiplomados.com,节点选择
+  - DOMAIN-SUFFIX,microsoftlatamholiday.com,节点选择
+  - DOMAIN-SUFFIX,microsoftmxfilantropia.com,节点选择
+  - DOMAIN-SUFFIX,microsoftpartnersolutions.com,节点选择
+  - DOMAIN-SUFFIX,msunlimitedcloudsummit.com,节点选择
+  - DOMAIN-SUFFIX,office365love.com,节点选择
+  - DOMAIN-SUFFIX,office365tw.com,节点选择
+  - DOMAIN-SUFFIX,renovacionoffice.com,节点选择
+  - DOMAIN-SUFFIX,sprinklesapp.com,节点选择
+  - DOMAIN-SUFFIX,cn.bing.com,节点选择
+  - DOMAIN-SUFFIX,cn.bing.net,节点选择
+  - DOMAIN-SUFFIX,ditu.live.com,节点选择
+  - DOMAIN,bj1.api.bing.com,节点选择
+  - DOMAIN,emoi-cncdn.bing.com,节点选择
+
+  - DOMAIN-SUFFIX,acg.tv,哔哩哔哩
+  - DOMAIN-SUFFIX,acgvideo.com,哔哩哔哩
+  - DOMAIN-SUFFIX,animetamashi.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,animetamashi.com,哔哩哔哩
+  - DOMAIN-SUFFIX,anitama.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,anitama.net,哔哩哔哩
+  - DOMAIN-SUFFIX,b23.tv,哔哩哔哩
+  - DOMAIN-SUFFIX,bigfun.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bili22.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bili2233.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bili23.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bili33.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,biliapi.com,哔哩哔哩
+  - DOMAIN-SUFFIX,biliapi.net,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibili.cc,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibili.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibili.net,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibili.tv,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibiligame.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibiligame.co,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibiligame.net,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibilipay.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bilibilipay.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilicdn1.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilicdn2.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilicdn3.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilicdn4.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilicdn5.com,哔哩哔哩
+  - DOMAIN-SUFFIX,biligame.co,哔哩哔哩
+  - DOMAIN-SUFFIX,biligame.com,哔哩哔哩
+  - DOMAIN-SUFFIX,biligame.net,哔哩哔哩
+  - DOMAIN-SUFFIX,biligo.com,哔哩哔哩
+  - DOMAIN-SUFFIX,biliintl.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilivideo.cn,哔哩哔哩
+  - DOMAIN-SUFFIX,bilivideo.com,哔哩哔哩
+  - DOMAIN-SUFFIX,bilivideo.net,哔哩哔哩
+  - DOMAIN-SUFFIX,dreamcast.hk,哔哩哔哩
+  - DOMAIN-SUFFIX,hdslb.com,哔哩哔哩
+  - DOMAIN-SUFFIX,hdslb.org,哔哩哔哩
+  - DOMAIN-SUFFIX,im9.com,哔哩哔哩
+  - DOMAIN-SUFFIX,maoercdn.com,哔哩哔哩
+  - DOMAIN-SUFFIX,mincdn.com,哔哩哔哩
+  - DOMAIN-SUFFIX,yo9.com,哔哩哔哩
+  - DOMAIN,upos-hz-mirrorakam.akamaized.net,哔哩哔哩
+
+  - DOMAIN-SUFFIX,comments.app,电报信息
+  - DOMAIN-SUFFIX,contest.com,电报信息
+  - DOMAIN-SUFFIX,graph.org,电报信息
+  - DOMAIN-SUFFIX,quiz.directory,电报信息
+  - DOMAIN-SUFFIX,t.me,电报信息
+  - DOMAIN-SUFFIX,tdesktop.com,电报信息
+  - DOMAIN-SUFFIX,telega.one,电报信息
+  - DOMAIN-SUFFIX,telegra.ph,电报信息
+  - DOMAIN-SUFFIX,telegram-cdn.org,电报信息
+  - DOMAIN-SUFFIX,telegram.dog,电报信息
+  - DOMAIN-SUFFIX,telegram.me,电报信息
+  - DOMAIN-SUFFIX,telegram.org,电报信息
+  - DOMAIN-SUFFIX,telegram.space,电报信息
+  - DOMAIN-SUFFIX,telesco.pe,电报信息
+  - DOMAIN-SUFFIX,tg.dev,电报信息
+  - DOMAIN-SUFFIX,tx.me,电报信息
+  - DOMAIN-SUFFIX,usercontent.dev,电报信息
+  - IP-CIDR,109.239.140.0/24,电报信息
+  - IP-CIDR,149.154.160.0/20,电报信息
+  - IP-CIDR,5.28.195.163/32,电报信息
+  - IP-CIDR,5.28.195.205/32,电报信息
+  - IP-CIDR,91.108.0.0/16,电报信息
+
+  - IP-CIDR,0.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,169.254.0.0/16,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.0.0.0/24,DIRECT
+  - IP-CIDR,192.0.2.0/24,DIRECT
+  - IP-CIDR,192.88.99.0/24,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,198.18.0.0/15,DIRECT
+  - IP-CIDR,198.51.100.0/24,DIRECT
+  - IP-CIDR,203.0.113.0/24,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,233.252.0.0/24,DIRECT
+  - IP-CIDR,240.0.0.0/4,DIRECT
+  - IP-CIDR,255.255.255.255/32,DIRECT
+
+  - GEOIP,CN,DIRECT
+  - MATCH,节点选择

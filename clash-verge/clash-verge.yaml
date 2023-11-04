@@ -4,18 +4,30 @@ mode: rule
 mixed-port: 7890
 allow-lan: true
 log-level: info
+<<<<<<< HEAD
 ipv6: false
+=======
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
 secret: ''
 external-controller: 127.0.0.1:9090
 dns:
   enable: true
   prefer-h3: true
+<<<<<<< HEAD
   listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
   - system
   - https://223.5.5.5/dns-query?
   - https://1.12.12.12/dns-query
+=======
+  listen: 0.0.0.0:1053
+  ipv6: false
+  default-nameserver:
+  - 192.168.6.1
+  - 223.5.5.5
+  - 119.29.29.29
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -91,8 +103,15 @@ dns:
   - '*.360top.com'
   - '*.jd.com'
   nameserver:
+<<<<<<< HEAD
   - system
   - https://dns.alidns.com/dns-query?
+=======
+  - 192.168.6.1
+  - 223.5.5.5
+  - 114.114.114.114
+  - https://dns.alidns.com/dns-query#h3=true
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
   - https://doh.pub/dns-query
 proxies: null
 proxy-groups:
@@ -242,6 +261,10 @@ proxy-providers:
 rules:
 - RULE-SET, private, DIRECT
 - RULE-SET, reject, REJECT
+<<<<<<< HEAD
+=======
+- RULE-SET, lancidr, DIRECT
+>>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
 - RULE-SET, applications, DIRECT
 - RULE-SET, cncidr, DIRECT
 - RULE-SET, apple, DIRECT
