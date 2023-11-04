@@ -73,3 +73,5 @@ plasma-localerc
 kwinrulesrc
 konquerorrc
 
+
+filezilla/*.sqlite3
