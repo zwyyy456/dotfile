@@ -75,3 +75,6 @@ konquerorrc
 
 
 filezilla/*.sqlite3
+filezilla/lockfile
+
+nvim/lazy-lock.json
