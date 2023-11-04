@@ -15,6 +15,7 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
+  - {name: 节点超时10分钟自动修复, server: gw.hneko.online, port: 443, client-fingerprint: chrome, type: trojan, password: b8ada9fa-9775-4253-bae7-ada7109800c7, tfo: false, sni: gw.hneko.online, skip-cert-verify: false}
   - {name: 🇰🇷 韩国 1, server: kr1.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: kr1.hneko.online}}}
   - {name: 🇰🇷 韩国 2, server: kr2.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: kr2.hneko.online}}}
   - {name: 🇰🇷 韩国 3, server: kr3.hneko.online, port: 443, client-fingerprint: chrome, type: vmess, uuid: b8ada9fa-9775-4253-bae7-ada7109800c7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: kr3.hneko.online}}}
@@ -90,6 +91,7 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
+      - 节点超时10分钟自动修复
       - 🇰🇷 韩国 1
       - 🇰🇷 韩国 2
       - 🇰🇷 韩国 3
@@ -328,30 +330,10 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: select
     proxies:
-      - 🇰🇷 韩国 1
-      - 🇰🇷 韩国 2
-      - 🇰🇷 韩国 3
-      - 🇰🇷 韩国 4
-      - 🇰🇷 韩国 5
-      - 🇰🇷 韩国 6
       - 🇭🇰 香港 1
       - 🇭🇰 香港 2
       - 🇭🇰 香港 3
       - 🇭🇰 香港 4
-      - 🇯🇵 日本 1
-      - 🇯🇵 日本 2
-      - 🇯🇵 日本 3
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡 1
-      - 🇸🇬 新加坡 2
-      - 🇸🇬 新加坡 3
-      - 🇸🇬 新加坡 4
-      - 🇺🇸 美国 1
-      - 🇺🇸 美国 2
-      - 🇺🇸 美国 3
-      - 🇺🇸 美国 4
-      - 🇸🇬 （看这里）每月刷新订阅获取新节点
-      - 一元机场.com
       - 🇭🇰 香港 01 | 专线
       - 🇭🇰 香港 02 | 专线
       - 🇭🇰 香港 03 | 专线
@@ -360,34 +342,6 @@ proxy-groups:
       - 🇭🇰 香港 06 | 专线
       - 🇭🇰 香港 07 | 专线
       - 🇭🇰 香港 08 | 专线
-      - 🇯🇵 日本 01 | 专线
-      - 🇯🇵 日本 02 | 专线
-      - 🇯🇵 日本 03 | 专线
-      - 🇯🇵 日本 04 | 专线
-      - 🇸🇬 新加坡 01 | 专线
-      - 🇸🇬 新加坡 02 | 专线
-      - 🇸🇬 新加坡 03 | 专线
-      - 🇸🇬 新加坡 04 | 专线
-      - 🇸🇬 新加坡 05 | 专线
-      - 🇸🇬 新加坡 06 | 专线
-      - 🇸🇬 新加坡 07 | 专线
-      - 🇸🇬 新加坡 08 | 专线
-      - 🇺🇸 美国01| 专线
-      - 🇺🇸 美国02| 专线
-      - 🇺🇸 美国03| 专线
-      - 🇺🇸 美国04| 专线
-      - 🇺🇸 美国05| 专线
-      - 🇺🇸 美国06| 专线
-      - 🇺🇸 美国07| 专线
-      - 🇺🇸 美国08| 专线
-      - 🇺🇸 美国 01 | 专线
-      - 🇺🇸 美国 02 | 专线
-      - 🇺🇸 美国 03 | 专线
-      - 🇺🇸 美国 04 | 专线
-      - 🇺🇸 美国 05 | 专线
-      - 🇺🇸 美国 06 | 专线
-      - 🇺🇸 美国 07 | 专线
-      - 🇺🇸 美国 08 | 专线
   - name: 🇯🇵 日本节点
     type: select
     proxies:
@@ -5666,7 +5620,6 @@ rules:
   - DOMAIN-SUFFIX,israbox.com,🚀 节点选择
   - DOMAIN-SUFFIX,issuu.com,🚀 节点选择
   - DOMAIN-SUFFIX,istars.co.nz,🚀 节点选择
-  - DOMAIN-SUFFIX,istarshine.com,🚀 节点选择
   - DOMAIN-SUFFIX,istef.info,🚀 节点选择
   - DOMAIN-SUFFIX,istiqlalhewer.com,🚀 节点选择
   - DOMAIN-SUFFIX,istockphoto.com,🚀 节点选择

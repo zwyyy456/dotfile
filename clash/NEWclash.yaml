@@ -25,39 +25,11 @@ proxies:
 
 
 
-  - name: 日本区1线
-    type: vmess
-    server: v2jp1.cc112358.com
-    port: 31089
-    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
-    alterId: 0
-    cipher: auto
-    udp: false
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /wss/2
-      headers:
-        Host: v2jp1.cc112358.com
 
-  - name: 日本区2线
-    type: vmess
-    server: v2jp2.cc112358.com
-    port: 31089
-    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
-    alterId: 0
-    cipher: auto
-    udp: false
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /wss/2
-      headers:
-        Host: v2jp2.cc112358.com
 
-  - name: 香港区1线
+
+
+  - name: 旧协议1HK
     type: vmess
     server: v2hk1.ee112358.com
     port: 33089
@@ -73,7 +45,7 @@ proxies:
       headers:
         Host: v2hk1.ee112358.com
 
-  - name: 香港区2线
+  - name: 旧协议2HK
     type: vmess
     server: v2hk2.ee112358.com
     port: 33089
@@ -89,10 +61,10 @@ proxies:
       headers:
         Host: v2hk2.ee112358.com
 
-  - name: 新加坡1线
+  - name: 旧协议1US
     type: vmess
-    server: v2sg1.aa112358.com
-    port: 34089
+    server: v2us1old.ee112358.com
+    port: 38089
     uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
     alterId: 0
     cipher: auto
@@ -103,12 +75,12 @@ proxies:
     ws-opts:
       path: /wss/2
       headers:
-        Host: v2sg1.aa112358.com
+        Host: v2us1old.ee112358.com
 
-  - name: 新加坡2线
+  - name: 旧协议2US
     type: vmess
-    server: v2sg2.aa112358.com
-    port: 34089
+    server: v2us2old.ee112358.com
+    port: 38089
     uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
     alterId: 0
     cipher: auto
@@ -119,81 +91,37 @@ proxies:
     ws-opts:
       path: /wss/2
       headers:
-        Host: v2sg2.aa112358.com
-
-  - name: 美国区1线
-    type: vmess
-    server: v2us1.ee112358.com
-    port: 35089
-    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
-    alterId: 0
-    cipher: auto
-    udp: false
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /wss/2
-      headers:
-        Host: v2us1.ee112358.com
-
-  - name: 美国区2线
-    type: vmess
-    server: v2us2.ee112358.com
-    port: 35089
-    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
-    alterId: 0
-    cipher: auto
-    udp: false
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /wss/2
-      headers:
-        Host: v2us2.ee112358.com
+        Host: v2us2old.ee112358.com
 
 
 proxy-groups:
   - name: 节点选择
     type: select
     proxies:
-      - 日本区1线
-      - 日本区2线
-      - 香港区1线
-      - 香港区2线
-      - 新加坡1线
-      - 新加坡2线
-      - 美国区1线
-      - 美国区2线
+      - 旧协议1HK
+      - 旧协议2HK
+      - 旧协议1US
+      - 旧协议2US
 
   - name: 哔哩哔哩
     type: select
     proxies:
       - 禁用代理
-      - 日本区1线
-      - 日本区2线
-      - 香港区1线
-      - 香港区2线
-      - 新加坡1线
-      - 新加坡2线
-      - 美国区1线
-      - 美国区2线
+      - 旧协议1HK
+      - 旧协议2HK
+      - 旧协议1US
+      - 旧协议2US
 
   - name: 电报信息
     type: select
     proxies:
       - 节点选择
-      - 日本区1线
-      - 日本区2线
-      - 香港区1线
-      - 香港区2线
-      - 新加坡1线
-      - 新加坡2线
-      - 美国区1线
-      - 美国区2线
+      - 旧协议1HK
+      - 旧协议2HK
+      - 旧协议1US
+      - 旧协议2US
 
-  - name: 剩余流量 27326MB
+  - name: 剩余流量 30592MB
     type: select
     proxies:
       - DIRECT
@@ -396,25 +324,64 @@ rules:
   - DOMAIN-SUFFIX,xn--55qx5d,DIRECT
   - DOMAIN-SUFFIX,xn--io0a7i,DIRECT
 # 360
+  - DOMAIN-SUFFIX,360.com,DIRECT
   - DOMAIN-SUFFIX,360kuai.com,DIRECT
   - DOMAIN-SUFFIX,360safe.com,DIRECT
   - DOMAIN-SUFFIX,dhrest.com,DIRECT
   - DOMAIN-SUFFIX,qhres.com,DIRECT
   - DOMAIN-SUFFIX,qhstatic.com,DIRECT
   - DOMAIN-SUFFIX,qhupdate.com,DIRECT
+  - DOMAIN-SUFFIX,so.com,DIRECT
 # 百度
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,91.com,DIRECT
+  - DOMAIN-SUFFIX,aipage.com,DIRECT
+  - DOMAIN-SUFFIX,apollo.auto,DIRECT
+  - DOMAIN-SUFFIX,baidu.cn,DIRECT
   - DOMAIN-SUFFIX,baidu.com,DIRECT
-  - DOMAIN-SUFFIX,baidubcr.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.com.cn,DIRECT
+  - DOMAIN-SUFFIX,baidubce.com,DIRECT
+  - DOMAIN-SUFFIX,baiducontent.com,DIRECT
   - DOMAIN-SUFFIX,baidupcs.com,DIRECT
   - DOMAIN-SUFFIX,baidustatic.com,DIRECT
+  - DOMAIN-SUFFIX,baifae.com,DIRECT
+  - DOMAIN-SUFFIX,baifubao.com,DIRECT
   - DOMAIN-SUFFIX,bcebos.com,DIRECT
+  - DOMAIN-SUFFIX,bdcloudapi.com,DIRECT
   - DOMAIN-SUFFIX,bdimg.com,DIRECT
   - DOMAIN-SUFFIX,bdstatic.com,DIRECT
-  - DOMAIN-SUFFIX,bdurl.net,DIRECT
+  - DOMAIN-SUFFIX,bdtjrcv.com,DIRECT
+  - DOMAIN-SUFFIX,bdydns.cn,DIRECT
+  - DOMAIN-SUFFIX,bdydns.com,DIRECT
+  - DOMAIN-SUFFIX,bdydns.net,DIRECT
+  - DOMAIN-SUFFIX,chuanke.com,DIRECT
+  - DOMAIN-SUFFIX,click.qianqian.com,DIRECT
+  - DOMAIN-SUFFIX,dl-vip.pcfaster.baidu.co.th,DIRECT
+  - DOMAIN-SUFFIX,dlnel.com,DIRECT
+  - DOMAIN-SUFFIX,dlnel.org,DIRECT
+  - DOMAIN-SUFFIX,duapps.com,DIRECT
+  - DOMAIN-SUFFIX,dwz.cn,DIRECT
   - DOMAIN-SUFFIX,hao123.com,DIRECT
   - DOMAIN-SUFFIX,hao123img.com,DIRECT
+  - DOMAIN-SUFFIX,hao222.com,DIRECT
+  - DOMAIN-SUFFIX,haokan.com,DIRECT
+  - DOMAIN-SUFFIX,img.taotaosou.cn,DIRECT
+  - DOMAIN-SUFFIX,img01.taotaosou.cn,DIRECT
+  - DOMAIN-SUFFIX,jomocdn.net,DIRECT
   - DOMAIN-SUFFIX,jomodns.com,DIRECT
-  - DOMAIN-SUFFIX,yunjiasu-cdn.net,DIRECT
+  - DOMAIN-SUFFIX,mipcdn.com,DIRECT
+  - DOMAIN-SUFFIX,nuomi.com,DIRECT
+  - DOMAIN-SUFFIX,quyaoya.com,DIRECT
+  - DOMAIN-SUFFIX,shifen.com,DIRECT
+  - DOMAIN-SUFFIX,smartapps.cn,DIRECT
+  - DOMAIN-SUFFIX,tieba.com,DIRECT
+  - DOMAIN-SUFFIX,tiebaimg.com,DIRECT
+  - DOMAIN-SUFFIX,uat1.bfsspadserver.8le8le.com,DIRECT
+  - DOMAIN-SUFFIX,xianfae.com,DIRECT
+  - DOMAIN-SUFFIX,xiaodutv.com,DIRECT
+  - DOMAIN-SUFFIX,zuoyebang.cc,DIRECT
+  - DOMAIN-SUFFIX,zuoyebang.com,DIRECT
+  - DOMAIN-SUFFIX,zybang.com,DIRECT
 # ByteDance
   - DOMAIN-SUFFIX,amemv.com,DIRECT
   - DOMAIN-SUFFIX,bdxiguaimg.com,DIRECT
@@ -473,6 +440,8 @@ rules:
 # 斗鱼
   - DOMAIN-SUFFIX,douyu.com,DIRECT
   - DOMAIN-SUFFIX,douyu.tv,DIRECT
+  - DOMAIN-SUFFIX,douyucdn.cn,DIRECT
+  - DOMAIN-SUFFIX,douyucdn2.cn,DIRECT
   - DOMAIN-SUFFIX,douyuscdn.com,DIRECT
   - DOMAIN-SUFFIX,douyutv.com,DIRECT
 # 华为
@@ -498,13 +467,239 @@ rules:
   - DOMAIN-SUFFIX,ppsimg.com,DIRECT
   - DOMAIN-SUFFIX,qiyi.com,DIRECT
   - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qy.net,DIRECT
 # 京东
+  - DOMAIN-SUFFIX,1huizhan.com,DIRECT
+  - DOMAIN-SUFFIX,3.cn,DIRECT
+  - DOMAIN-SUFFIX,300hu.com,DIRECT
+  - DOMAIN-SUFFIX,360buy.cn,DIRECT
   - DOMAIN-SUFFIX,360buy.com,DIRECT
+  - DOMAIN-SUFFIX,360buy.com.cn,DIRECT
   - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,360buyinternational.com,DIRECT
+  - DOMAIN-SUFFIX,360top.com,DIRECT
+  - DOMAIN-SUFFIX,7fresh.com,DIRECT
+  - DOMAIN-SUFFIX,baitiao.com,DIRECT
+  - DOMAIN-SUFFIX,blackdragon.com,DIRECT
+  - DOMAIN-SUFFIX,caiyu.com,DIRECT
+  - DOMAIN-SUFFIX,chicalot.cn,DIRECT
+  - DOMAIN-SUFFIX,chinabank.com.cn,DIRECT
+  - DOMAIN-SUFFIX,cloud-beijing.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-hebi.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-ningbo.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-ordos.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-shenzhen.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-shiyan.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-wuhan.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-xian.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-xm.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-zhaoqing.com,DIRECT
+  - DOMAIN-SUFFIX,cloud-zhongwei.com,DIRECT
+  - DOMAIN-SUFFIX,cloudanqing.com,DIRECT
+  - DOMAIN-SUFFIX,cloudbaoshan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudbeibei.com,DIRECT
+  - DOMAIN-SUFFIX,cloudbinzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchangde.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchangsha.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchangzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchaozhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchengde.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchengdu.com,DIRECT
+  - DOMAIN-SUFFIX,cloudchuzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudczs.com,DIRECT
+  - DOMAIN-SUFFIX,clouddalian.com,DIRECT
+  - DOMAIN-SUFFIX,clouddatong.com,DIRECT
+  - DOMAIN-SUFFIX,clouddongying.com,DIRECT
+  - DOMAIN-SUFFIX,cloudfoshan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudfuqing.com,DIRECT
+  - DOMAIN-SUFFIX,cloudganzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudguangzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudhaidong.com,DIRECT
+  - DOMAIN-SUFFIX,cloudhefei.com,DIRECT
+  - DOMAIN-SUFFIX,cloudhengshui.com,DIRECT
+  - DOMAIN-SUFFIX,cloudhuaihua.com,DIRECT
+  - DOMAIN-SUFFIX,cloudhuizhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudjinan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudjinchang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudjingzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudjining.com,DIRECT
+  - DOMAIN-SUFFIX,cloudjiujiang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudkunming.com,DIRECT
+  - DOMAIN-SUFFIX,cloudleshan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudlijiang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudlishui.com,DIRECT
+  - DOMAIN-SUFFIX,cloudluohe.com,DIRECT
+  - DOMAIN-SUFFIX,cloudluoyang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudmeishan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudnanan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudnanjing.com,DIRECT
+  - DOMAIN-SUFFIX,cloudnanning.com,DIRECT
+  - DOMAIN-SUFFIX,cloudnantong.com,DIRECT
+  - DOMAIN-SUFFIX,cloudquanzhou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudsanya.com,DIRECT
+  - DOMAIN-SUFFIX,cloudshanghai.com,DIRECT
+  - DOMAIN-SUFFIX,cloudshaoyang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudshenfuxingqu.com,DIRECT
+  - DOMAIN-SUFFIX,cloudsiping.com,DIRECT
+  - DOMAIN-SUFFIX,cloudsuqian.com,DIRECT
+  - DOMAIN-SUFFIX,cloudtangshan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudtianjin.com,DIRECT
+  - DOMAIN-SUFFIX,cloudtongchuan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudtongliang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudweinan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudxiangtan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudxianyou.com,DIRECT
+  - DOMAIN-SUFFIX,cloudxining.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyanan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyancheng.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyantai.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyinchuan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyueyang.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyuncheng.com,DIRECT
+  - DOMAIN-SUFFIX,cloudyuxi.com,DIRECT
+  - DOMAIN-SUFFIX,cloudzhongshan.com,DIRECT
+  - DOMAIN-SUFFIX,cloudzhuhai.com,DIRECT
+  - DOMAIN-SUFFIX,dao123.com,DIRECT
+  - DOMAIN-SUFFIX,duiou.com.cn,DIRECT
+  - DOMAIN-SUFFIX,duolabao.com,DIRECT
+  - DOMAIN-SUFFIX,goselling.com,DIRECT
+  - DOMAIN-SUFFIX,healthjd.com,DIRECT
+  - DOMAIN-SUFFIX,isvjcloud.com,DIRECT
+  - DOMAIN-SUFFIX,isvjd.com,DIRECT
+  - DOMAIN-SUFFIX,jcloud-cache.com,DIRECT
+  - DOMAIN-SUFFIX,jcloud-cache.net,DIRECT
+  - DOMAIN-SUFFIX,jcloud-cdn.com,DIRECT
+  - DOMAIN-SUFFIX,jcloud-live.com,DIRECT
+  - DOMAIN-SUFFIX,jcloud-oss.com,DIRECT
+  - DOMAIN-SUFFIX,jcloud.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudcache.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudcache.net,DIRECT
   - DOMAIN-SUFFIX,jcloudcs.com,DIRECT
+  - DOMAIN-SUFFIX,jclouddn.com,DIRECT
+  - DOMAIN-SUFFIX,jclouddns.com,DIRECT
+  - DOMAIN-SUFFIX,jclouddns.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudec.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudedge.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudedge.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudgslb.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudgslb.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudimg.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudimg.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudlb.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudlb.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudlive.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudlv.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudoss.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudresolve.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudresolve.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudss.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudstatic.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudstatic.net,DIRECT
+  - DOMAIN-SUFFIX,jcloudvideo.com,DIRECT
+  - DOMAIN-SUFFIX,jcloudvideo.net,DIRECT
+  - DOMAIN-SUFFIX,jclps.com,DIRECT
+  - DOMAIN-SUFFIX,jd-app.com,DIRECT
+  - DOMAIN-SUFFIX,jd-ex.cn,DIRECT
+  - DOMAIN-SUFFIX,jd-ex.com,DIRECT
+  - DOMAIN-SUFFIX,jd-ex.com.cn,DIRECT
+  - DOMAIN-SUFFIX,jd-ex.net,DIRECT
+  - DOMAIN-SUFFIX,jd.cn,DIRECT
+  - DOMAIN-SUFFIX,jd.co.th,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com.cn,DIRECT
+  - DOMAIN-SUFFIX,jd.hk,DIRECT
+  - DOMAIN-SUFFIX,jd.id,DIRECT
+  - DOMAIN-SUFFIX,jd.ru,DIRECT
+  - DOMAIN-SUFFIX,jd.shop,DIRECT
+  - DOMAIN-SUFFIX,jdbusiness.com,DIRECT
+  - DOMAIN-SUFFIX,jdcache.com,DIRECT
+  - DOMAIN-SUFFIX,jdcdn.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-api.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-api.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-edu.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-elite.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-elive.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-livebuy.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-mail.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-openapi.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloud-oss.com,DIRECT
   - DOMAIN-SUFFIX,jdcloud.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudcache.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudcache.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudcdn.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudcs.com,DIRECT
+  - DOMAIN-SUFFIX,jdclouddns.com,DIRECT
+  - DOMAIN-SUFFIX,jdclouddns.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudedge.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudedge.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudlb.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudlb.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudlive.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudlive.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudresolve.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudresolve.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudsite.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudstatic.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudstatic.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudstatus.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudstatus.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudvideo.com,DIRECT
+  - DOMAIN-SUFFIX,jdcloudvideo.net,DIRECT
+  - DOMAIN-SUFFIX,jdcloudwaf.com,DIRECT
+  - DOMAIN-SUFFIX,jddapeigou.com,DIRECT
+  - DOMAIN-SUFFIX,jddebug.com,DIRECT
+  - DOMAIN-SUFFIX,jddglobal.com,DIRECT
+  - DOMAIN-SUFFIX,jdemall.com,DIRECT
+  - DOMAIN-SUFFIX,jdfw1.com,DIRECT
+  - DOMAIN-SUFFIX,jdgslb.com,DIRECT
+  - DOMAIN-SUFFIX,jdgslb.net,DIRECT
+  - DOMAIN-SUFFIX,jdh.com,DIRECT
+  - DOMAIN-SUFFIX,jdjinrong.com,DIRECT
+  - DOMAIN-SUFFIX,jdl.cn,DIRECT
+  - DOMAIN-SUFFIX,jdl.com,DIRECT
+  - DOMAIN-SUFFIX,jdl.com.cn,DIRECT
+  - DOMAIN-SUFFIX,jdlike.cn,DIRECT
   - DOMAIN-SUFFIX,jdpay.com,DIRECT
+  - DOMAIN-SUFFIX,jdpaydns.com,DIRECT
+  - DOMAIN-SUFFIX,jdwl.com,DIRECT
+  - DOMAIN-SUFFIX,jdx.com,DIRECT
+  - DOMAIN-SUFFIX,jhscm.com,DIRECT
+  - DOMAIN-SUFFIX,jingdong.com,DIRECT
+  - DOMAIN-SUFFIX,jingdongjinrong.com,DIRECT
+  - DOMAIN-SUFFIX,jingpinhui.com,DIRECT
+  - DOMAIN-SUFFIX,jingxi.com,DIRECT
+  - DOMAIN-SUFFIX,jkcsjd.com,DIRECT
+  - DOMAIN-SUFFIX,joybuy.com,DIRECT
+  - DOMAIN-SUFFIX,joybuy.es,DIRECT
+  - DOMAIN-SUFFIX,linglonglife.com,DIRECT
+  - DOMAIN-SUFFIX,logiseasy.com,DIRECT
+  - DOMAIN-SUFFIX,mayshijia.com,DIRECT
+  - DOMAIN-SUFFIX,minitiao.com,DIRECT
+  - DOMAIN-SUFFIX,missjia.net,DIRECT
+  - DOMAIN-SUFFIX,ocwms.com,DIRECT
+  - DOMAIN-SUFFIX,paidaojia.cn,DIRECT
   - DOMAIN-SUFFIX,paipai.com,DIRECT
+  - DOMAIN-SUFFIX,prestodb-china.com,DIRECT
+  - DOMAIN-SUFFIX,prestodb.net.cn,DIRECT
+  - DOMAIN-SUFFIX,qianxun.com,DIRECT
+  - DOMAIN-SUFFIX,qingzhouip.com,DIRECT
+  - DOMAIN-SUFFIX,sgsic.com,DIRECT
+  - DOMAIN-SUFFIX,toplife.com,DIRECT
+  - DOMAIN-SUFFIX,vg.com,DIRECT
+  - DOMAIN-SUFFIX,vipmro.com,DIRECT
+  - DOMAIN-SUFFIX,vipmro.net,DIRECT
+  - DOMAIN-SUFFIX,wangyin.com,DIRECT
+  - DOMAIN-SUFFIX,wdfok.com,DIRECT
+  - DOMAIN-SUFFIX,wuliujie.cn,DIRECT
+  - DOMAIN-SUFFIX,wuliujie.com,DIRECT
+  - DOMAIN-SUFFIX,xianjiqun.com,DIRECT
+  - DOMAIN-SUFFIX,xjoycity.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodian.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yiyaojd.com,DIRECT
+  - DOMAIN-SUFFIX,yizhitou.com,DIRECT
 # 金山
   - DOMAIN-SUFFIX,iciba.com,DIRECT
   - DOMAIN-SUFFIX,ksosoft.com,DIRECT
@@ -518,6 +713,7 @@ rules:
   - DOMAIN-SUFFIX,meitustat.com,DIRECT
   - DOMAIN-SUFFIX,meipai.com,DIRECT
 # 乐视TV
+  - DOMAIN-SUFFIX,le.com,DIRECT
   - DOMAIN-SUFFIX,lecloud.com,DIRECT
   - DOMAIN-SUFFIX,letv.com,DIRECT
   - DOMAIN-SUFFIX,letvcloud.com,DIRECT
@@ -531,6 +727,7 @@ rules:
 # 小米
   - DOMAIN-SUFFIX,duokan.com,DIRECT
   - DOMAIN-SUFFIX,mi-img.com,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
   - DOMAIN-SUFFIX,miui.com,DIRECT
   - DOMAIN-SUFFIX,xiaomi.com,DIRECT
   - DOMAIN-SUFFIX,xiaomi.net,DIRECT
@@ -590,6 +787,7 @@ rules:
 # 唯品会
   - DOMAIN-SUFFIX,appsimg.com,DIRECT
   - DOMAIN-SUFFIX,appvipshop.com,DIRECT
+  - DOMAIN-SUFFIX,vip.com,DIRECT
   - DOMAIN-SUFFIX,vipstatic.com,DIRECT
 # 喜马拉雅
   - DOMAIN-SUFFIX,ximalaya.com,DIRECT

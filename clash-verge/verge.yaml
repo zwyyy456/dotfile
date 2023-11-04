@@ -6,6 +6,7 @@ language: zh
 theme_mode: system
 theme_blur: false
 traffic_graph: true
+enable_memory_usage: null
 enable_tun_mode: null
 enable_auto_launch: false
 enable_silent_start: false
@@ -25,5 +26,5 @@ proxy_layout_column: null
 window_size_position:
 - 800.0
 - 642.0
-- 712.0
-- 107.0
+- 240.0
+- 157.0
