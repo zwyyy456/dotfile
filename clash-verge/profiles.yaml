@@ -1,31 +1,30 @@
 # Profiles Config for Clash Verge
 
-<<<<<<< HEAD
-current: lvibBQPD8cEm
-=======
-current: l0NylgJqL5kw
->>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
+current: lX01j9NzuWaZ
 chain: null
 valid:
 - dns
 items:
-<<<<<<< HEAD
-- uid: lvibBQPD8cEm
-  type: local
-  name: clmeta
-  file: lvibBQPD8cEm.yaml
-  desc: lcoalfile
-  url: ''
-  updated: 1699065107
+- uid: rRXVnpmYHfQW
+  type: remote
+  name: Remote File
+  file: rRXVnpmYHfQW.yaml
+  url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2F2324.taosky.com%2F23reality24-sub-dsdadds132d&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_AdblockPlus.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+  updated: 1699106571
   option:
-    with_proxy: false
-    self_proxy: false
     update_interval: 1440
-=======
-- uid: l0NylgJqL5kw
+- uid: liKSG78sFwGq
   type: local
-  name: cv
-  file: l0NylgJqL5kw.yaml
-  desc: for clash verge
-  updated: 1698855041
->>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
+  name: zwy
+  file: liKSG78sFwGq.yaml
+  desc: meta
+  selected:
+  - name: PROXY
+    now: oracle132kr147-10TB-联通移动电信-韩国
+  updated: 1699106870
+- uid: lX01j9NzuWaZ
+  type: local
+  name: Remote File
+  file: lX01j9NzuWaZ.yaml
+  desc: ''
+  updated: 1699113419

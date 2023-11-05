@@ -163,42 +163,51 @@ proxy-groups:
     proxies:
     #         - test 这里填写你的自建节点
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
   # tao
-  - name: "tao"
+  - name: "sub1"
     type: url-test
     proxies:
     use:
-      - taosky
+      - sub1
   # yuan
-  - name: "yuan"
+  - name: "sub2"
     type: url-test
     proxies:
     use:
-      - yuan1
-  # hneko
-  - name: "hneko"
+      - sub2
+  # sub3
+  - name: "sub3"
     type: url-test
     proxies:
     use:
-      - taosky
+      - sub3
+  # sub4
+  - name: "sub4"
+    type: url-test
+    proxies:
+    use:
+      - sub4
   # 手动选择
   - name: "PROXY"
     type: select # 下面开启了自动测速
     proxies:
       #         - test 这里填写你的自建节点
       - "Auto"
-      - "tao"
-      - "hneko"
-      - "yuan"
+      - "sub1"
+      - "sub3"
+      - "sub2"
+      - "sub4"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
   # 油管
   - name: "youtube"
     type: select # 下面开启了自动测速
@@ -206,119 +215,139 @@ proxy-groups:
       #         - test 这里填写你的自建节点
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # icloud
   - name: "icloud"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # telegram
   - name: "telegram"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
   # Apple
   - name: "apple"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # OneDrive
   - name: "onedrive"
     type: select
     proxies:
       - "Auto"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # Microsoft
   - name: "microsoft"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
-    # Apple
+      - sub1
+      - sub2
+      - sub3
+      - sub4
+    # OpenAi
   - name: "openai"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # Emby
   - name: "emby"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # Spotify
   - name: "spotify"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
     # Scholar
   - name: "scholar"
     type: select
     proxies:
       - "PROXY"
     use:
-      - taosky
-      - yuan1
-      - hneko
+      - sub1
+      - sub2
+      - sub3
+      - sub4
 
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  taosky:
+  sub1:
     type: http # http 的 path 可空置,默认储存路径为 homedir的proxies文件夹,文件名为url的md5
-    url: "https://2324.taosky.com/23reality24-sub-dsdadds132d" #订阅链接存放地址
+    url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx" #订阅链接存放地址
     interval: 86400 #配置文件自动更新时间 单位：秒
-    path: ./profiles/tao.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    path: ./profiles/sub1zlz.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
     health-check:
       enable: true
       interval: 300
       # lazy: true
       url: http://connectivitycheck.gstatic.com/generate_204
-  yuan1:
+  sub2:
     type: http # http 的 path 可空置,默认储存路径为 homedir的proxies文件夹,文件名为url的md5
-    url: "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a" #订阅链接存放地址
+    url: "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=9aabf3d73520d26eadb810f42194c66a" #订阅链接存放地址
     interval: 86400 #配置文件自动更新时间 单位：秒
-    path: ./profiles/yuan1.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    path: ./profiles/sub2zlz.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
     health-check:
       enable: true
       interval: 300
       # lazy: true
       url: http://connectivitycheck.gstatic.com/generate_204
-  hneko:
+  sub3:
     type: http # http 的 path 可空置,默认储存路径为 homedir的proxies文件夹,文件名为url的md5
-    url: "https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9" #订阅链接存放地址
+    url: "https://sub.sanfen017.xyz/api/v1/client/subscribe?token=90a78f41bcb882a4c19400809168c331&flag=clash" #订阅链接存放地址
     interval: 86400 #配置文件自动更新时间 单位：秒
-    path: ./profiles/hneko.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    path: ./profiles/sub3zlz.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    health-check:
+      enable: true
+      interval: 300
+      # lazy: true
+      url: http://connectivitycheck.gstatic.com/generate_204
+  sub4:
+    type: http # http 的 path 可空置,默认储存路径为 homedir的proxies文件夹,文件名为url的md5
+    url: "https://mo.mojieurl.com/api/v1/client/subscribe?token=ac2dcb772183d94104bafdf4f969d7b8" #订阅链接存放地址
+    interval: 86400 #配置文件自动更新时间 单位：秒
+    path: ./profiles/sub4zlz.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
     health-check:
       enable: true
       interval: 300

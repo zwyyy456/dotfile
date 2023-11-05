@@ -5,6 +5,7 @@
 **/*.dat
 **/*.log
 **/*.db
+**/*.dll
 
 ## iterm2
 iterm2

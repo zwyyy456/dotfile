@@ -4,30 +4,18 @@ mode: rule
 mixed-port: 7890
 allow-lan: true
 log-level: info
-<<<<<<< HEAD
 ipv6: false
-=======
->>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
 secret: ''
 external-controller: 127.0.0.1:9090
 dns:
   enable: true
   prefer-h3: true
-<<<<<<< HEAD
   listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
   - system
   - https://223.5.5.5/dns-query?
   - https://1.12.12.12/dns-query
-=======
-  listen: 0.0.0.0:1053
-  ipv6: false
-  default-nameserver:
-  - 192.168.6.1
-  - 223.5.5.5
-  - 119.29.29.29
->>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -103,15 +91,8 @@ dns:
   - '*.360top.com'
   - '*.jd.com'
   nameserver:
-<<<<<<< HEAD
   - system
   - https://dns.alidns.com/dns-query?
-=======
-  - 192.168.6.1
-  - 223.5.5.5
-  - 114.114.114.114
-  - https://dns.alidns.com/dns-query#h3=true
->>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
   - https://doh.pub/dns-query
 proxies: null
 proxy-groups:
@@ -119,141 +100,168 @@ proxy-groups:
   type: url-test
   proxies: null
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
   url: http://connectivitycheck.gstatic.com/generate_204
   interval: 300
-- name: tao
+- name: sub1
   type: url-test
   proxies: null
   use:
-  - taosky
-- name: yuan
+  - sub1
+- name: sub2
   type: url-test
   proxies: null
   use:
-  - yuan1
-- name: hneko
+  - sub2
+- name: sub3
   type: url-test
   proxies: null
   use:
-  - taosky
+  - sub3
+- name: sub4
+  type: url-test
+  proxies: null
+  use:
+  - sub4
 - name: PROXY
   type: select
   proxies:
   - Auto
-  - tao
-  - hneko
-  - yuan
+  - sub1
+  - sub3
+  - sub2
+  - sub4
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: youtube
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: icloud
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: telegram
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: apple
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: onedrive
   type: select
   proxies:
   - Auto
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: microsoft
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: openai
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: emby
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: spotify
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 - name: scholar
   type: select
   proxies:
   - PROXY
   use:
-  - taosky
-  - yuan1
-  - hneko
+  - sub1
+  - sub2
+  - sub3
+  - sub4
 proxy-providers:
-  taosky:
+  sub1:
     type: http
-    url: https://2324.taosky.com/23reality24-sub-dsdadds132d
+    url: https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx
     interval: 86400
-    path: ./profiles/tao.yaml
+    path: ./profiles/sub1zlz.yaml
     health-check:
       enable: true
       interval: 300
       url: http://connectivitycheck.gstatic.com/generate_204
-  yuan1:
+  sub2:
     type: http
-    url: https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a
+    url: https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=9aabf3d73520d26eadb810f42194c66a
     interval: 86400
-    path: ./profiles/yuan1.yaml
+    path: ./profiles/sub2zlz.yaml
     health-check:
       enable: true
       interval: 300
       url: http://connectivitycheck.gstatic.com/generate_204
-  hneko:
+  sub3:
     type: http
-    url: https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9
+    url: https://sub.sanfen017.xyz/api/v1/client/subscribe?token=90a78f41bcb882a4c19400809168c331&flag=clash
     interval: 86400
-    path: ./profiles/hneko.yaml
+    path: ./profiles/sub3zlz.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: http://connectivitycheck.gstatic.com/generate_204
+  sub4:
+    type: http
+    url: https://mo.mojieurl.com/api/v1/client/subscribe?token=ac2dcb772183d94104bafdf4f969d7b8
+    interval: 86400
+    path: ./profiles/sub4zlz.yaml
     health-check:
       enable: true
       interval: 300
@@ -261,10 +269,6 @@ proxy-providers:
 rules:
 - RULE-SET, private, DIRECT
 - RULE-SET, reject, REJECT
-<<<<<<< HEAD
-=======
-- RULE-SET, lancidr, DIRECT
->>>>>>> e9c2fe8f947fbf01ccc10f5220917726aa03b1cd
 - RULE-SET, applications, DIRECT
 - RULE-SET, cncidr, DIRECT
 - RULE-SET, apple, DIRECT
