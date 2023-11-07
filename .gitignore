@@ -5,6 +5,7 @@
 **/*.dat
 **/*.log
 **/*.db
+**/*.dll
 
 ## iterm2
 iterm2
@@ -73,3 +74,8 @@ plasma-localerc
 kwinrulesrc
 konquerorrc
 
+
+filezilla/*.sqlite3
+filezilla/lockfile
+
+nvim/lazy-lock.json
