@@ -121,7 +121,7 @@ proxy-groups:
       - 旧协议1US
       - 旧协议2US
 
-  - name: 剩余流量 29357MB
+  - name: 剩余流量 29216MB
     type: select
     proxies:
       - DIRECT

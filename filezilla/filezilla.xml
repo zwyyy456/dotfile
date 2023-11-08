@@ -129,16 +129,30 @@
 		<Setting name="Remote filelist shown columns">111111</Setting>
 		<Setting name="Local filelist column order">0,1,2,3</Setting>
 		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
-		<Setting name="Last automatic update check">2023-11-01 07:23:27</Setting>
-		<Setting name="Update Check New Version" platform="mac">nightly 2023-11-01 https://filezilla-project.org/nightlies/2023-11-01/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15150862 sha512 fda1de33d79f666011d8896011079b3226cdaf4d015dc0e31e902f5d2a6775c05da22c7d9d65595b5585b9fda5cdc4c11304ddbb1dfed86195b4926cadd721d4 sig:cF0/CO+k4sQHtY78h+Cuc8xofxauiLkZBY4V8sSR18yx3xNkzG6HxrRzhdR0tAeytpB13C7Zvd70b1nXyHzFDQ
-release 3.64.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.64.0_macosx-x86.app.tar.bz2 15289763 sha512 ff67a95345fa4c20563a58272ce61e1ce9b8db8c5a1d1ae24ea65c17ff5bcbd9552ebea182b06313bfd03c7a9510353999deff7b0128ea009b44c3d118516443 sig:C5uWxE6OT8UIB1g8jDrkMH+HS1fYPpsGfzUX4fKOMJ69RSlVMfYMxU7DOqAagBLyjedFUxefoAHjeyxlKmMVCQ
-</Setting>
 		<Setting name="Local filelist sortorder">0 0</Setting>
-		<Setting name="Remote filelist sortorder">0 0</Setting>
-		<Setting name="Site Manager position">0 177 279 1056 439 </Setting>
 		<Setting name="Already connected choice">1</Setting>
-		<Setting name="Sitemanager last selected">0/arm-wyb</Setting>
-		<Setting name="Window position and size">0 49 38 1203 856 </Setting>
+		<Setting name="Site Manager position">0 1931 1273 1056 439 </Setting>
+		<Setting name="Sitemanager last selected">0/arm-nb</Setting>
+		<Setting name="Window position and size">0 1858 1032 1203 856 </Setting>
+		<Setting name="Remote filelist sortorder">1 0</Setting>
+		<Setting name="Last automatic update check">2023-11-08 07:45:52</Setting>
+		<Setting name="Update Check New Version" platform="mac">nightly 2023-11-08 https://filezilla-project.org/nightlies/2023-11-08/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15138040 sha512 49a5829a8e2e756457e39618027b1eb0a1abceb06063558b8b76885cfbb944917dd5520b12da843240d3ffbca70eb829c579de05a5271dabe0b9c5aa7a5fe68c sig:lzC4tSFKhnGUaC/OPVcADd46Ueidq+v/2yUsQ4UkOpcrvDrEZRlTgYQPFLYBbf746jqs1zN7XQJJIN4wFYq8DA
+release 3.66.1 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.1_macosx-x86.app.tar.bz2 15152055 sha512 ffb58a16af4f319a664ad6f833310d48bc517ba0da932df13f35dbb8daa4424432b24576aebc4612b4dc8af2988e313dfa9a6a0f034e5b2ab711e17b97c5003c sig:ln62Abzm7KmXeJhoFdOSP1FVvizX8z+mfVUp2krYOxRh8rCtX2mnCXyaTZgzhR83CfkYRFI0EFpFml/oda/8Bg
+
+3.66.1 (2023-11-03)
+
+- macOS: Fixed display of local filenames containing non-ASCII characters if LC_CTYPE wasn't set
+
+3.66.0 (2023-10-23)
+
+- Fixed a sorting issue in comparative search
+
+3.66.0-rc1 (2023-10-11)
+
+- Fixed crash removing items from the list of file extensions treated as text files
+- Fixed potental crash if shutting down HTTP client.
+- Fixed HTTP timeouts
+</Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">
@@ -151,9 +165,9 @@ release 3.64.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.64.0_macosx-x86
 					<Logontype>1</Logontype>
 					<EncodingType>Auto</EncodingType>
 					<BypassProxy>0</BypassProxy>
-					<Name>arm-wyb</Name>
-					<Site>0/arm-wyb</Site>
-					<RemotePath>1 0 4 data 5 clash</RemotePath>
+					<Name>arm-nb</Name>
+					<Site>0/arm-nb</Site>
+					<RemotePath>1 0 4 data</RemotePath>
 					<LocalPath>/Users/zwyyy/Desktop/</LocalPath>
 				</Tab>
 			</Tabs>
