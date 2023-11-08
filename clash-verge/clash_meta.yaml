@@ -350,6 +350,15 @@ proxy-providers:
       enable: true
       interval: 300
       url: http://connectivitycheck.gstatic.com/generate_204
+  ferry:
+    type: http
+    url: "https://sub.sanfen017.xyz/api/v1/client/subscribe?token=c749b0bf653a39d07c4bb898c857702e&flag=clash"
+    interval: 86400
+    path: ./profiles/ferry.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: http://connectivitycheck.gstatic.com/generate_204
 
 #规则集，规则用于 rules?
 rule-providers:

@@ -167,7 +167,7 @@ release 3.66.1 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.1_macosx-x86
 					<BypassProxy>0</BypassProxy>
 					<Name>arm-nb</Name>
 					<Site>0/arm-nb</Site>
-					<RemotePath>1 0 4 data 5 clash 7 ruleset</RemotePath>
+					<RemotePath>1 0 4 data</RemotePath>
 					<LocalPath>/Users/zwyyy/Desktop/</LocalPath>
 				</Tab>
 			</Tabs>

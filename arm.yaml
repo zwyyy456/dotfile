@@ -189,6 +189,12 @@ proxy-groups:
     proxies:
     use:
       - beta
+    # ferry
+  - name: "ferry"
+    type: select
+    proxies:
+    use:
+      - ferry
 
   # 手动选择
   - name: "PROXY"
@@ -247,6 +253,7 @@ proxy-groups:
     proxies:
       - "PROXY"
       - "beta"
+      - "ferry"
     use:
       - taosky
       - yuan1
@@ -343,6 +350,15 @@ proxy-providers:
     url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
     interval: 86400
     path: ./profiles/beta.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: http://connectivitycheck.gstatic.com/generate_204
+  ferry:
+    type: http
+    url: "https://sub.sanfen017.xyz/api/v1/client/subscribe?token=c749b0bf653a39d07c4bb898c857702e&flag=clash"
+    interval: 86400
+    path: ./profiles/ferry.yaml
     health-check:
       enable: true
       interval: 300
@@ -468,6 +484,7 @@ rules:
   - RULE-SET, applications, DIRECT
 
   # 代理匹配
+  - DOMAIN-SUFFIX, chat1.zhile.io, openai
   - RULE-SET, gscholar, gscholar
   - RULE-SET, openai, openai
   - RULE-SET, microsoft, microsoft
