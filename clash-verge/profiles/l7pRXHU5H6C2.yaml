@@ -185,7 +185,14 @@ proxy-groups:
     type: url-test
     proxies:
     use:
-      - hneko
+      - taosky
+  # beta
+  - name: "beta"
+    type: select
+    proxies:
+    use:
+      - beta
+
   # 手动选择
   - name: "PROXY"
     type: select # 下面开启了自动测速
@@ -195,24 +202,16 @@ proxy-groups:
       - "tao"
       - "hneko"
       - "yuan"
+      - "beta"
     use:
       - taosky
       - yuan1
       - hneko
-  # 油管
+  # youtube
   - name: "youtube"
     type: select # 下面开启了自动测速
     proxies:
       #         - test 这里填写你的自建节点
-      - "PROXY"
-    use:
-      - taosky
-      - yuan1
-      - hneko
-    # icloud
-  - name: "icloud"
-    type: select
-    proxies:
       - "PROXY"
     use:
       - taosky
@@ -236,15 +235,6 @@ proxy-groups:
       - taosky
       - yuan1
       - hneko
-    # OneDrive
-  - name: "onedrive"
-    type: select
-    proxies:
-      - "Auto"
-    use:
-      - taosky
-      - yuan1
-      - hneko
     # Microsoft
   - name: "microsoft"
     type: select
@@ -254,11 +244,12 @@ proxy-groups:
       - taosky
       - yuan1
       - hneko
-    # Apple
+    # openai
   - name: "openai"
     type: select
     proxies:
       - "PROXY"
+      - "beta"
     use:
       - taosky
       - yuan1
@@ -282,7 +273,32 @@ proxy-groups:
       - yuan1
       - hneko
     # Scholar
-  - name: "scholar"
+  - name: "gscholar"
+    type: select
+    proxies:
+      - "PROXY"
+    use:
+      - taosky
+      - yuan1
+      - hneko
+
+  - name: "google"
+    type: select
+    proxies:
+      - "PROXY"
+    use:
+      - taosky
+      - yuan1
+      - hneko
+  - name: "github"
+    type: select
+    proxies:
+      - "PROXY"
+    use:
+      - taosky
+      - yuan1
+      - hneko
+  - name: "bilius"
     type: select
     proxies:
       - "PROXY"
@@ -325,6 +341,16 @@ proxy-providers:
       # lazy: true
       url: http://connectivitycheck.gstatic.com/generate_204
 
+  beta:
+    type: http
+    url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
+    interval: 86400
+    path: ./profiles/beta.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: http://connectivitycheck.gstatic.com/generate_204
+
 #规则集，规则用于 rules?
 rule-providers:
   reject:
@@ -334,121 +360,134 @@ rule-providers:
     path: ./ruleset/reject.yaml
     interval: 86400
 
-  icloud:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
-    path: ./ruleset/icloud.yaml
-    interval: 86400
-
-  apple:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./ruleset/apple.yaml
-    interval: 86400
-
-  proxy:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-    path: ./ruleset/proxy.yaml
-    interval: 86400
-
   direct:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/direct.yaml
-    interval: 86400
-
-  private:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./ruleset/private.yaml
-    interval: 86400
 
   gfw:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
     path: ./ruleset/gfw.yaml
-    interval: 86400
 
-  tld-not-cn:
+  applecn:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-    path: ./ruleset/tld-not-cn.yaml
-    interval: 86400
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/applecn.yaml
 
-  telegramcidr:
+  cndirect:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
-    interval: 86400
-
-  cncidr:
-    type: http
-    behavior: ipcidr
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
-    interval: 86400
-
-  lancidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./ruleset/lancidr.yaml
-    interval: 86400
 
   applications:
     type: http
-    behavior: classical
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
+
+  gscholar:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalScholar/GlobalScholar.yaml"
+    path: ./ruleset/gscholar.yaml
     interval: 86400
 
+  openai:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+
+  microsoft:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml" # 包含 onedrive
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+
+  youtube:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/youtube.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  github:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    path: ./ruleset/github.yaml
+
+  apple:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml" # 包含 icloud
+    path: ./ruleset/apple.yaml
+
+  bili_us:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
+    path: ./ruleset/bilius.yaml
+
+  spotify:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./ruleset/spotify.yaml
+
+  telegram:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/telegram.yaml
+
+  emby:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml"
+    path: ./ruleset/emby.yaml
+
 rules:
-  #域名规则
-  # 规则可以分配到 proxy-groups
-  # 先匹配 RULE-SET
-  - RULE-SET, private, DIRECT
-  - RULE-SET, reject, REJECT
-  # - RULE-SET, lancidr, DIRECT
+  # 开始匹配规则
+
+  ## 直连
+  - RULE-SET, cndirect, DIRECT
+  - RULE-SET, direct, DIRECT
+  - RULE-SET, applecn, DIRECT
   - RULE-SET, applications, DIRECT
-  - RULE-SET, cncidr, DIRECT
-  - RULE-SET, apple, DIRECT # apple 可以直连的列表
-  - RULE-SET, icloud, icloud
-  - RULE-SET, telegramcidr, telegram
+
+  # 代理匹配
+  - RULE-SET, gscholar, gscholar
+  - RULE-SET, openai, openai
+  - RULE-SET, microsoft, microsoft
+  - RULE-SET, youtube, youtube
+  - RULE-SET, google, google
+  - RULE-SET, github, github
+  - RULE-SET, apple, apple
+  - RULE-SET, bili_us, bilius
+  - RULE-SET, spotify, spotify
+  - RULE-SET, telegram, telegram
+  - RULE-SET, emby, emby
+
   - RULE-SET, gfw, PROXY
 
-  - GEOSITE,private,DIRECT
+  - GEOSITE, private, DIRECT
 
-  # DOMAIN-SUFFIX 匹配
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
-  - DOMAIN-SUFFIX,services.googleapis.cn,PROXY
-  - DOMAIN-SUFFIX,voidsec.com,PROXY #voidsec 礼貌性添加所谓的dns泄露检测站
-  - DOMAIN-SUFFIX,browserleaks.com,PROXY #browserleaks 礼貌性添加所谓的dns泄露检测站
-
-  - GEOSITE,onedrive, onedrive
-  - GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE, microsoft, microsoft
-  - GEOSITE,steam@cn,DIRECT
-  - GEOSITE,category-games@cn,DIRECT
-  - AND,((NETWORK,UDP),(DST-PORT,443),(GEOSITE,youtube)),REJECT #仅禁止Youtube QUIC导致速度不佳
-  - GEOSITE,google,PROXY
-  - GEOSITE,youtube,youtube
-  - GEOSITE,twitter,PROXY
-  - GEOSITE,facebook,PROXY
-  - GEOSITE,spotify,spotify
-  - GEOSITE,category-scholar-!cn,scholar
   - GEOSITE,geolocation-!cn,PROXY
   - GEOSITE,cn,DIRECT
 
-  #IP规则
-
-  #最终匹配
-  - MATCH,PROXY
+  - MATCH, PROXY

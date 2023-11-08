@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<CloudAccounts version="1.0">
+  <accounts>
+    <account Name="zwyyy456@163.com (dav.jianguoyun.com)" Provider="WebDav" DisplayName="zwyyy456@163.com (dav.jianguoyun.com)" Description="" Id="1788009863" Password="">
+      <property key="WebDav.Login" value="2dshu0pccLS/dvOxnSWrA47/28+toynscARoSpWqKV7xjU5JYDqjAB+aiLfwP7j5atS3pOOUZYdj4/Pim8miItpDz9Ogi8Lm2Oq6AVBPUvlJY2URO/zwYYvZd94coafB" type="string" />
+      <property key="WebDav.Password" value="t0q64DYcfc0qomTs2r5EgNAEDGgY25wbf2ZMNCel5k2vRUcgnNEAnTobwtEBrkCymYjA506T4i+W2uv4nK1FCsvBRYyy0UECm5M1CW4YJ2DjLcHC6+Cg+9KTk9P1MR+c" type="string" />
+      <property key="WebDav.Server" value="+0aq/AC9XR5eqg+zDwjLza/V/AWFs1FCnLhOI6DZJZ3byFAF88DPA9PgLbS2sK4uqkzGrGfymkDVrmPerjpRSBbjTPrnyM4SLhCwzLdVK4nBeWGofHGrmCMPJ5Y1TvOW" type="string" />
+    </account>
+  </accounts>
+</CloudAccounts>

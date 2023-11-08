@@ -10,7 +10,7 @@ enable_memory_usage: true
 enable_tun_mode: null
 enable_auto_launch: false
 enable_silent_start: false
-enable_system_proxy: true
+enable_system_proxy: false
 enable_proxy_guard: false
 system_proxy_bypass: null
 proxy_guard_duration: 30
@@ -24,7 +24,7 @@ enable_clash_fields: true
 enable_builtin_enhanced: true
 proxy_layout_column: null
 window_size_position:
-- 800.0
+- 1064.0
 - 642.0
-- 356.0
-- 170.0
+- 180.0
+- 132.0
