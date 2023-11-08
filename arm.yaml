@@ -258,6 +258,7 @@ proxy-groups:
       - taosky
       - yuan1
       - hneko
+      - ferry
     # Emby
   - name: "emby"
     type: select
