@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    alias lg = 'lazygit'
+    alias lg 'lazygit'
 end
 
 # >>> conda initialize >>>
