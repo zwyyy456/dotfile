@@ -6,7 +6,6 @@ language: en
 theme_mode: system
 theme_blur: false
 traffic_graph: true
-enable_memory_usage: true
 enable_tun_mode: null
 enable_auto_launch: false
 enable_silent_start: false
@@ -26,5 +25,5 @@ proxy_layout_column: null
 window_size_position:
 - 1064.0
 - 642.0
-- 180.0
-- 132.0
+- 103.33333333333333
+- 34.0
