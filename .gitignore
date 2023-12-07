@@ -79,3 +79,5 @@ filezilla/*.sqlite3
 filezilla/lockfile
 
 nvim/lazy-lock.json
+
+leetgo/cache/

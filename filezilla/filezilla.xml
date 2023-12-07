@@ -131,9 +131,7 @@
 		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
 		<Setting name="Local filelist sortorder">0 0</Setting>
 		<Setting name="Already connected choice">1</Setting>
-		<Setting name="Site Manager position">0 1931 1273 1056 439 </Setting>
 		<Setting name="Sitemanager last selected">0/arm-nb</Setting>
-		<Setting name="Window position and size">0 1858 1032 1203 856 </Setting>
 		<Setting name="Remote filelist sortorder">1 0</Setting>
 		<Setting name="Last automatic update check">2023-11-08 07:45:52</Setting>
 		<Setting name="Update Check New Version" platform="mac">nightly 2023-11-08 https://filezilla-project.org/nightlies/2023-11-08/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15138040 sha512 49a5829a8e2e756457e39618027b1eb0a1abceb06063558b8b76885cfbb944917dd5520b12da843240d3ffbca70eb829c579de05a5271dabe0b9c5aa7a5fe68c sig:lzC4tSFKhnGUaC/OPVcADd46Ueidq+v/2yUsQ4UkOpcrvDrEZRlTgYQPFLYBbf746jqs1zN7XQJJIN4wFYq8DA
@@ -153,6 +151,8 @@ release 3.66.1 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.1_macosx-x86
 - Fixed potental crash if shutting down HTTP client.
 - Fixed HTTP timeouts
 </Setting>
+		<Setting name="Site Manager position">0 1970 1272 1056 439 </Setting>
+		<Setting name="Window position and size">0 1897 1034 1203 850 </Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">
@@ -167,8 +167,8 @@ release 3.66.1 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.1_macosx-x86
 					<BypassProxy>0</BypassProxy>
 					<Name>arm-nb</Name>
 					<Site>0/arm-nb</Site>
-					<RemotePath>1 0 4 data</RemotePath>
-					<LocalPath>/Users/zwyyy/Desktop/</LocalPath>
+					<RemotePath>1 0 4 data 5 clash</RemotePath>
+					<LocalPath>/Users/zwyyy/.config/clash-verge/myconfig/</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>

@@ -1,7 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/zwyyy/Documents/code/mit/xv6-labs-2021
+- /home/zwyyy/.config
 startuppopupversion: 5
 customcommandshistory:
-    - q
+- q
 hidecommandlog: false
+ignorewhitespaceindiffview: false

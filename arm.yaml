@@ -404,6 +404,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
 
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
   gscholar:
     type: http
     behavior: classical
@@ -483,6 +490,11 @@ rules:
   - RULE-SET, direct, DIRECT
   - RULE-SET, applecn, DIRECT
   - RULE-SET, applications, DIRECT
+  - RULE-SET, private, DIRECT
+  - RULE-SET, reject, REJECT
+  - GEOSITE,cn,DIRECT
+  - GEOSITE, private, DIRECT
+  - GEOIP, cn, DIRECT
 
   # 代理匹配
   - DOMAIN-SUFFIX, chat1.zhile.io, openai
@@ -500,9 +512,6 @@ rules:
 
   - RULE-SET, gfw, PROXY
 
-  - GEOSITE, private, DIRECT
-
   - GEOSITE,geolocation-!cn,PROXY
-  - GEOSITE,cn,DIRECT
 
   - MATCH, PROXY
