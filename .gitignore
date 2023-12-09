@@ -8,7 +8,7 @@
 **/*.dll
 
 ## iterm2
-iterm2
+iterm2/
 
 ## debian, kde
 dolphinrc
@@ -81,3 +81,7 @@ filezilla/lockfile
 nvim/lazy-lock.json
 
 leetgo/cache/
+
+.filen.trash.local/
+
+siyuan/

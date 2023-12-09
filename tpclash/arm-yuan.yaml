@@ -46,7 +46,6 @@ dns:
     # defautl dns 需要是纯 IP
     - https://223.5.5.5/dns-query
     - https://1.12.12.12/dns-query
-    # - https://dns.alidns.com/dns-query? # 强制 HTTP/3，与 perfer-h3 无关，强制开启 DoH 的 HTTP/3 支持，若不支持将无法使用
     # - https://doh.pub/dns-query
     # - 223.5.5.5
     # - 1.12.12.12
@@ -155,337 +154,222 @@ dns:
     - https://1.12.12.12/dns-query
     - https://doh.pub/dns-query
   fallback:
-    - tls://dns.google
     - https://1.0.0.1/dns-query
+    - tls://dns.google
 
 #节点存放地址
 proxies:
 
-#代理组
-proxy-groups:
-  #自动选择
-  - name: "Auto"
-    type: url-test # 下面开启了自动测速
-    proxies:
-    #         - test 这里填写你的自建节点
-    use:
-      - yuan1
-      - hneko
-    url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 300
-  # yuan
-  - name: "yuan"
-    type: url-test
-    proxies:
-    use:
-      - yuan1
-  # hneko
-  - name: "hneko"
-    type: url-test
-    proxies:
-    use:
-      - hneko
-  # beta
-  - name: "beta"
-    type: select
-    proxies:
-    use:
-      - beta
-  # 手动选择
-  - name: "PROXY"
-    type: select # 下面开启了自动测速
-    proxies:
-      #         - test 这里填写你的自建节点
-      - "Auto"
-      - "hneko"
-      - "yuan"
-    use:
-      - yuan1
-      - hneko
-  # youtube
-  - name: "youtube"
-    type: select # 下面开启了自动测速
-    proxies:
-      #         - test 这里填写你的自建节点
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
-    # telegram
-  - name: "telegram"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
-  # Apple
-  - name: "apple"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
-    # Microsoft
-  - name: "microsoft"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
-    # openai
-  - name: "openai"
-    type: select
-    proxies:
-      - "PROXY"
-      - "Auto"
-      - "beta"
-    use:
-      - yuan1
-      - hneko
-    # Emby
-  - name: "emby"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
-    # Spotify
-  - name: "spotify"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
-    # Scholar
-  - name: "gscholar"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
+# 策略组引用
 
+pr: &a1
+  type: select
+  proxies:
+    - "Auto"
+  use:
+    - hneko
+    - yuan
+
+auto: &a2
+  type: url-test
+  proxies:
+  use:
+    - hneko
+    - yuan
+  url: "http://connectivitycheck.gstatic.com/generate_204"
+  interval: 300
+
+pr1: &a3
+  type: select
+  proxies:
+    - "PROXY"
+  use:
+    - yuan
+    - hneko
+pr2: &a4
+  type: select
+  proxies:
+    - "PROXY"
+  use:
+    - yuan
+    - hneko
+    - beta
+
+prp: &prp
+  type: http
+  interval: 86400
+  health-check:
+    enable: true
+    interval: 300
+    # lazy: true
+    url: http://connectivitycheck.gstatic.com/generate_204
+
+rl1: &rl1
+  type: http
+  interval: 86400
+  behavior: classical
+
+rl2: &rl2
+  type: http
+  interval: 86400
+  behavior: domain
+
+proxy-groups:
+  # 自动选择
+  - name: "Auto"
+    <<: *a2
+  - name: "PROXY"
+    <<: *a1
+  - name: "youtube"
+    <<: *a3
+  - name: "telegram"
+    <<: *a3
+  - name: "apple"
+    <<: *a3
+  - name: "microsoft"
+    <<: *a3
+  - name: "openai"
+    <<: *a4
+  - name: "emby"
+    <<: *a3
+  - name: "spotify"
+    <<: *a3
+  - name: "gscholar"
+    <<: *a3
   - name: "google"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
+    <<: *a3
   - name: "github"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
+    <<: *a3
   - name: "bilius"
-    type: select
-    proxies:
-      - "PROXY"
-    use:
-      - yuan1
-      - hneko
+    <<: *a3
 
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  yuan1:
-    type: http # http 的 path 可空置,默认储存路径为 homedir的proxies文件夹,文件名为url的md5
+  yuan:
     url: "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a" #订阅链接存放地址
-    interval: 86400 #配置文件自动更新时间 单位：秒
-    path: ./profiles/yuan1.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    health-check:
-      enable: true
-      interval: 300
-      # lazy: true
-      url: http://connectivitycheck.gstatic.com/generate_204
+    path: ./profiles/yuan.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    <<: *prp
   hneko:
-    type: http # http 的 path 可空置,默认储存路径为 homedir的proxies文件夹,文件名为url的md5
     url: "https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9" #订阅链接存放地址
-    interval: 86400 #配置文件自动更新时间 单位：秒
     path: ./profiles/hneko.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    health-check:
-      enable: true
-      interval: 300
-      # lazy: true
-      url: http://connectivitycheck.gstatic.com/generate_204
+    <<: *prp
   beta:
-    type: http
     url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
-    interval: 86400
     path: ./profiles/beta.yaml
-    health-check:
-      enable: true
-      interval: 300
-      url: http://connectivitycheck.gstatic.com/generate_204
+    <<: *prp
 
 #规则集，规则用于 rules?
 rule-providers:
   reject:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 86400
-
+    <<: *rl2
   direct:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./ruleset/direct.yaml
+    <<: *rl2
 
   gfw:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-    path: ./ruleset/gfw.yaml
+    <<: *rl2
 
   applecn:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./ruleset/applecn.yaml
+    <<: *rl2
 
   cndirect:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-    path: ./ruleset/cncidr.yaml
+    <<: *rl2
 
   applications:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    path: ./ruleset/applications.yaml
+    <<: *rl2
 
   private:
-    type: http
-    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./ruleset/private.yaml
-    interval: 86400
+    <<: *rl2
 
   gscholar:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalScholar/GlobalScholar.yaml"
-    path: ./ruleset/gscholar.yaml
-    interval: 86400
+    <<: *rl1
 
   openai:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
-    path: ./ruleset/openai.yaml
-    interval: 86400
+    <<: *rl1
 
   microsoft:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml" # 包含 onedrive
-    path: ./ruleset/microsoft.yaml
-    interval: 86400
+    <<: *rl1
 
   youtube:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
-    path: ./ruleset/youtube.yaml
-    interval: 86400
+    <<: *rl1
 
   google:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
-    path: ./ruleset/google.yaml
-    interval: 86400
+    <<: *rl1
 
   github:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
-    path: ./ruleset/github.yaml
+    <<: *rl1
 
   apple:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml" # 包含 icloud
-    path: ./ruleset/apple.yaml
+    <<: *rl1
 
   bili_us:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
-    path: ./ruleset/bilius.yaml
+    <<: *rl1
 
   spotify:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
-    path: ./ruleset/spotify.yaml
+    <<: *rl1
 
   telegram:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
-    path: ./ruleset/telegram.yaml
+    <<: *rl1
 
   emby:
-    type: http
-    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml"
-    path: ./ruleset/emby.yaml
+    <<: *rl1
 
 rules:
   # 开始匹配规则
 
   ## 直连
-  - RULE-SET, cndirect, DIRECT
-  - RULE-SET, direct, DIRECT
-  - RULE-SET, applecn, DIRECT
-  - RULE-SET, applications, DIRECT
-  - RULE-SET, private, DIRECT
+  - RULE-SET,cndirect,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,applecn,DIRECT
+  - RULE-SET,applications,DIRECT
+  - DOMAIN-SUFFIX,tracker.pterclub.com,DIRECT
+  - DOMAIN-KEYWORD,tracker,DIRECT
   - GEOSITE,cn,DIRECT
-  - GEOSITE, private, DIRECT
-  - GEOIP, cn, DIRECT
 
   ## subscribe and ruleset
-  - DOMAIN-SUFFIX, cdn.jsdelivr.net, DIRECT
-  - DOMAIN-SUFFIX, sub2.smallstrawberry.com, DIRECT
-  - DOMAIN-SUFFIX, www.hneko.world, DIRECT
-  - DOMAIN-SUFFIX, v2sub.betac1ouds.top, DIRECT
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
+  - DOMAIN-SUFFIX,sub2.smallstrawberry.com,DIRECT
+  - DOMAIN-SUFFIX,www.hneko.world,DIRECT
+  - DOMAIN-SUFFIX,v2sub.betac1ouds.top,DIRECT
+  - IP-CIDR,45.82.80.0/24,DIRECT
+  - IP-CIDR,106.14.118.42/32,DIRECT
+  - IP-CIDR,38.72.148.44/32,DIRECT
 
-  ## tracker
-
-  - DOMAIN-SUFFIX, tracker-public.tjupt.org, DIRECT
-  - DOMAIN-SUFFIX, tracker.open.cd, DIRECT
-  - DOMAIN-SUFFIX, tracker.greatposterwall.com, DIRECT
-  - DOMAIN-SUFFIX, tracker.pterclub.com, DIRECT
-  - DOMAIN-SUFFIX, tracker.springsunday.com, DIRECT
-
+  # - GEOIP, cn, DIRECT
   # 代理匹配
-  - DOMAIN-SUFFIX, chat1.zhile.io, openai
-  - RULE-SET, gscholar, gscholar
-  - RULE-SET, openai, openai
-  - RULE-SET, microsoft, microsoft
-  - RULE-SET, youtube, youtube
-  - RULE-SET, google, google
-  - RULE-SET, github, github
-  - RULE-SET, apple, apple
-  - RULE-SET, bili_us, bilius
-  - RULE-SET, spotify, spotify
-  - RULE-SET, telegram, telegram
-  - RULE-SET, emby, emby
-
-  - RULE-SET, gfw, PROXY
-
+  - DOMAIN-SUFFIX,chat1.zhile.io,PROXY
+  - RULE-SET,gscholar,gscholar
+  - RULE-SET,openai,openai
+  - RULE-SET,microsoft,microsoft
+  - RULE-SET,youtube,youtube
+  - RULE-SET,google,google
+  - RULE-SET,github,github
+  - RULE-SET,apple,apple
+  - RULE-SET,bili_us,bilius
+  - RULE-SET,spotify,spotify
+  - RULE-SET,telegram,telegram
+  - RULE-SET,emby,emby
+  - RULE-SET,gfw,PROXY
   - GEOSITE,geolocation-!cn,PROXY
-  - RULE-SET, reject, REJECT
+  - RULE-SET,reject,REJECT
 
-  - MATCH, PROXY
+  - SRC-IP-CIDR,192.168.6.155/32,DIRECT
+  - MATCH,PROXY
