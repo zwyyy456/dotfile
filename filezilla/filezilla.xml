@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.65.0" platform="mac">
+<FileZilla3 version="3.66.1" platform="mac">
 	<Settings>
 		<Setting name="Use Pasv mode">1</Setting>
 		<Setting name="Limit local ports">0</Setting>
@@ -62,7 +62,6 @@
 		<Setting name="Update Check Check Beta">0</Setting>
 		<Setting name="Cache directory" platform="mac" />
 		<Setting name="Number of Transfers">2</Setting>
-		<Setting name="Language Code" />
 		<Setting name="Concurrent download limit">0</Setting>
 		<Setting name="Concurrent upload limit">0</Setting>
 		<Setting name="Show debug menu">0</Setting>
@@ -70,7 +69,6 @@
 		<Setting name="File exists action upload">0</Setting>
 		<Setting name="Allow ascii resume">0</Setting>
 		<Setting name="Greeting resources" />
-		<Setting name="Onetime Dialogs" />
 		<Setting name="Show Tree Local">1</Setting>
 		<Setting name="Show Tree Remote">1</Setting>
 		<Setting name="File Pane Layout">0</Setting>
@@ -78,11 +76,8 @@
 		<Setting name="Filelist directory sort">0</Setting>
 		<Setting name="Filelist name sort">1</Setting>
 		<Setting name="Queue successful autoclear">0</Setting>
-		<Setting name="Time Format" />
-		<Setting name="Date Format" />
 		<Setting name="Show message log">1</Setting>
 		<Setting name="Show queue">1</Setting>
-		<Setting name="Default editor" platform="mac" />
 		<Setting name="Always use default editor">0</Setting>
 		<Setting name="File associations (v2)" platform="mac" />
 		<Setting name="Comparison mode">1</Setting>
@@ -118,41 +113,32 @@
 		<Setting name="Drag and Drop disabled">0</Setting>
 		<Setting name="Disable update footer">0</Setting>
 		<Setting name="Highest shown overlay id">0</Setting>
-		<Setting name="Greeting version">3.65.0</Setting>
-		<Setting name="Last automatic update version">3.65.0</Setting>
 		<Setting name="Prompt password save">0</Setting>
 		<Setting name="Queue column widths">180 60 180 80 60 150</Setting>
 		<Setting name="Local filelist colwidths">170 80 120 120</Setting>
-		<Setting name="Remote filelist colwidths">150 75 80 100 80 85</Setting>
-		<Setting name="Splitter positions (v2)">97 -130 500000000 234 234 500000000</Setting>
 		<Setting name="Local filelist shown columns">1111</Setting>
 		<Setting name="Remote filelist shown columns">111111</Setting>
 		<Setting name="Local filelist column order">0,1,2,3</Setting>
 		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
 		<Setting name="Local filelist sortorder">0 0</Setting>
 		<Setting name="Already connected choice">1</Setting>
-		<Setting name="Sitemanager last selected">0/arm-nb</Setting>
-		<Setting name="Remote filelist sortorder">1 0</Setting>
-		<Setting name="Last automatic update check">2023-11-08 07:45:52</Setting>
-		<Setting name="Update Check New Version" platform="mac">nightly 2023-11-08 https://filezilla-project.org/nightlies/2023-11-08/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15138040 sha512 49a5829a8e2e756457e39618027b1eb0a1abceb06063558b8b76885cfbb944917dd5520b12da843240d3ffbca70eb829c579de05a5271dabe0b9c5aa7a5fe68c sig:lzC4tSFKhnGUaC/OPVcADd46Ueidq+v/2yUsQ4UkOpcrvDrEZRlTgYQPFLYBbf746jqs1zN7XQJJIN4wFYq8DA
-release 3.66.1 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.1_macosx-x86.app.tar.bz2 15152055 sha512 ffb58a16af4f319a664ad6f833310d48bc517ba0da932df13f35dbb8daa4424432b24576aebc4612b4dc8af2988e313dfa9a6a0f034e5b2ab711e17b97c5003c sig:ln62Abzm7KmXeJhoFdOSP1FVvizX8z+mfVUp2krYOxRh8rCtX2mnCXyaTZgzhR83CfkYRFI0EFpFml/oda/8Bg
-
-3.66.1 (2023-11-03)
-
-- macOS: Fixed display of local filenames containing non-ASCII characters if LC_CTYPE wasn't set
-
-3.66.0 (2023-10-23)
-
-- Fixed a sorting issue in comparative search
-
-3.66.0-rc1 (2023-10-11)
-
-- Fixed crash removing items from the list of file extensions treated as text files
-- Fixed potental crash if shutting down HTTP client.
-- Fixed HTTP timeouts
+		<Setting name="Greeting version">3.66.1</Setting>
+		<Setting name="Language Code">zh_CN</Setting>
+		<Setting name="Time Format">0</Setting>
+		<Setting name="Date Format">0</Setting>
+		<Setting name="Default editor" platform="mac">0</Setting>
+		<Setting name="Last automatic update version">3.66.1</Setting>
+		<Setting name="Splitter positions (v2)">97 -207 500000000 234 234 500000000</Setting>
+		<Setting name="Remote filelist colwidths">168 75 80 100 80 85</Setting>
+		<Setting name="Window position and size">0 1900 1016 1203 850 </Setting>
+		<Setting name="Remote filelist sortorder">0 0</Setting>
+		<Setting name="Last automatic update check">2023-12-07 03:47:17</Setting>
+		<Setting name="Update Check New Version" platform="mac">nightly 2023-12-06 https://filezilla-project.org/nightlies/2023-12-06/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15203555 sha512 f5e4f3df5c8af380cd3ebbb215edc66790ab1e3724248a79ad01b24d5cb73fadf076c8d3f85b3448b95de206304c5c37ef3b6539de5afd0ce0348a2afe65122b sig:maJHemxHi2WCazgoVDuDFIzInviGNGO59Y8Xm16cdNgH8E+9uqmKvxcPKSV/FTZI9jf2aibihlG8XHynB6ZRDg
+release 3.64.0 https://dl3.cdn.filezilla-project.org/FileZilla_3.64.0_macosx-x86.app.tar.bz2 15289763 sha512 ff67a95345fa4c20563a58272ce61e1ce9b8db8c5a1d1ae24ea65c17ff5bcbd9552ebea182b06313bfd03c7a9510353999deff7b0128ea009b44c3d118516443 sig:C5uWxE6OT8UIB1g8jDrkMH+HS1fYPpsGfzUX4fKOMJ69RSlVMfYMxU7DOqAagBLyjedFUxefoAHjeyxlKmMVCQ
 </Setting>
-		<Setting name="Site Manager position">0 1970 1272 1056 439 </Setting>
-		<Setting name="Window position and size">0 1897 1034 1203 850 </Setting>
+		<Setting name="Onetime Dialogs">0001</Setting>
+		<Setting name="Site Manager position">0 1973 1254 1056 439 </Setting>
+		<Setting name="Sitemanager last selected">0/arm-nb</Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">
@@ -168,7 +154,7 @@ release 3.66.1 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.1_macosx-x86
 					<Name>arm-nb</Name>
 					<Site>0/arm-nb</Site>
 					<RemotePath>1 0 4 data 5 clash</RemotePath>
-					<LocalPath>/Users/zwyyy/.config/clash-verge/myconfig/</LocalPath>
+					<LocalPath>/Users/zwyyy/.config/tpclash/</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>
