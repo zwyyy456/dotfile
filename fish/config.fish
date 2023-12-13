@@ -8,6 +8,8 @@ end
 if uname | grep -q Linux
     if test -f /home/zwyyy/miniconda3/bin/conda
         eval /home/zwyyy/miniconda3/bin/conda "shell.fish" hook $argv | source
+    else if test -f /root/miniconda3/bin/conda
+        eval /root/miniconda3/bin/conda "shell.fish" hook &argv | source
     end
     # <<< conda initialize <<<
     set -gx GOPATH $HOME/go
