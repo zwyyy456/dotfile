@@ -42,7 +42,7 @@ dns:
   listen: 0.0.0.0:1053 # 开启 DNS 服务器监听
   ipv6: false # 如果需要ipv6设置为true
   default-nameserver:
-    - 192.168.6.1 # 如果是windows或安卓客户端可使用system，如果是软路由填写你的光猫的IP地址，拨号的路由器的IP地址 DNS 不必关闭光猫的ipv6功能,openclash运行在主路由上时填写127.0.0.1 记住是替换，不要保留system
+    # - 192.168.6.1 fakeip 模式不使用内网地址作为 dns
     - https://223.5.5.5/dns-query?
     - https://1.12.12.12/dns-query
   enhanced-mode: fake-ip
@@ -143,7 +143,7 @@ dns:
     - "*.jd.com"
 
   nameserver:
-    - 192.168.6.1 # 如果是windows或安卓客户端可使用system，如果是软路由填写你的光猫的IP地址，拨号的路由器的IP地址 DNS 不必关闭光猫的ipv6功能,openclash运行在主路由上时填写127.0.0.1 记住是替换，不要保留system
+    # - 192.168.6.1 fakeip 模式不使用内网地址作为 dns
     # - 223.5.5.5 # default value
     # - 114.114.114.114
     - https://dns.alidns.com/dns-query#h3=true # 强制 HTTP/3，与 perfer-h3 无关，强制开启 DoH 的 HTTP/3 支持，若不支持将无法使用
