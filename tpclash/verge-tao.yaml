@@ -28,13 +28,13 @@ profile:
   store-fake-ip: true # 持久化 fake-ip
 
 # Tun 配置 Windows使用
-tun:
-  enable: true
-  stack: system # gvisor / lwip
-  dns-hijack:
-    - any:53 # 需要劫持的 DNS
-  auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
-  auto-detect-interface: true # 自动识别出口网卡
+# tun:
+#   enable: true
+#   stack: system # gvisor / lwip
+#   dns-hijack:
+#     - any:53 # 需要劫持的 DNS
+#   auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
+#   auto-detect-interface: true # 自动识别出口网卡
 
 dns:
   enable: true # 关闭将使用系统 DNS
@@ -182,6 +182,10 @@ proxies:
   - name: "lw"
     server: 38.72.148.44
     <<: *a0
+  - name: "gr"
+    server: 103.186.65.217
+    <<: *a0
+
 # 策略组引用
 
 pr: &a1
@@ -191,15 +195,13 @@ pr: &a1
     - "inp"
     - "wap"
     - "lw"
+    - "gr"
   use:
     - tao
 
 auto: &a2
   type: url-test
   proxies:
-    - "inp"
-    - "wap"
-    - "lw"
   use:
     - tao
   url: "http://connectivitycheck.gstatic.com/generate_204"
@@ -212,6 +214,8 @@ pr1: &a3
     - "inp"
     - "wap"
     - "lw"
+    - "gr"
+    - "DIRECT"
   use:
     - tao
 pr2: &a4
@@ -221,6 +225,7 @@ pr2: &a4
     - "inp"
     - "wap"
     - "lw"
+    - "gr"
   use:
     - beta
     - tao
@@ -271,6 +276,8 @@ proxy-groups:
   - name: "github"
     <<: *a3
   - name: "bilius"
+    <<: *a3
+  - name: "mdirect"
     <<: *a3
 
 #代理集  如果是自建节点屏蔽这里
@@ -377,6 +384,9 @@ rules:
   - GEOSITE,cn,DIRECT
   - GEOIP, cn, DIRECT
 
+  # cdn.staticfile
+  - DOMAIN-SUFFIX,cdn.staticfile.org,mdirect
+
   ## subscribe and ruleset
   - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
   - DOMAIN-SUFFIX,sub2.smallstrawberry.com,DIRECT
@@ -386,7 +396,7 @@ rules:
   - IP-CIDR,106.14.118.42/32,DIRECT
   - IP-CIDR,38.72.148.44/32,DIRECT
   - IP-CIDR,100.98.11.147/32,DIRECT
-  - IP-CIDR,103.186.65.217,DIRECT
+  - IP-CIDR,103.186.65.217/32,DIRECT
 
   # 代理匹配
   - DOMAIN-SUFFIX,chat1.zhile.io,PROXY

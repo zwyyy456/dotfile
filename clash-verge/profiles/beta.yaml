@@ -32,6 +32,54 @@ proxies:
 
 
 
+  - name: 旧协议HK1
+    type: vmess
+    server: v2hk1.ee112358.com
+    port: 33089
+    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
+    alterId: 0
+    cipher: auto
+    udp: false
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /wss/2
+      headers:
+        Host: v2hk1.ee112358.com
+
+  - name: 旧协议HK2
+    type: vmess
+    server: v2hk2.ee112358.com
+    port: 33089
+    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
+    alterId: 0
+    cipher: auto
+    udp: false
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /wss/2
+      headers:
+        Host: v2hk2.ee112358.com
+
+  - name: 旧协议HK3
+    type: vmess
+    server: v2hk3.ee112358.com
+    port: 33089
+    uuid: BEB91F68-F10C-D9E8-5871-7F33016D1DC1
+    alterId: 0
+    cipher: auto
+    udp: false
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /wss/2
+      headers:
+        Host: v2hk3.ee112358.com
+
   - name: 旧协议SG1
     type: vmess
     server: v2sg1.ee112358.com
@@ -85,6 +133,9 @@ proxy-groups:
   - name: 节点选择
     type: select
     proxies:
+      - 旧协议HK1
+      - 旧协议HK2
+      - 旧协议HK3
       - 旧协议SG1
       - 旧协议SG2
       - 旧协议SG3
@@ -93,6 +144,9 @@ proxy-groups:
     type: select
     proxies:
       - 禁用代理
+      - 旧协议HK1
+      - 旧协议HK2
+      - 旧协议HK3
       - 旧协议SG1
       - 旧协议SG2
       - 旧协议SG3
@@ -101,11 +155,14 @@ proxy-groups:
     type: select
     proxies:
       - 节点选择
+      - 旧协议HK1
+      - 旧协议HK2
+      - 旧协议HK3
       - 旧协议SG1
       - 旧协议SG2
       - 旧协议SG3
 
-  - name: 剩余流量 30127MB
+  - name: 剩余流量 30074MB
     type: select
     proxies:
       - DIRECT

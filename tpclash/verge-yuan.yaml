@@ -28,13 +28,13 @@ profile:
   store-fake-ip: true # 持久化 fake-ip
 
 # Tun 配置 Windows使用
-tun:
-  enable: true
-  stack: system # gvisor / lwip
-  dns-hijack:
-    - any:53 # 需要劫持的 DNS
-  auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
-  auto-detect-interface: true # 自动识别出口网卡
+# tun:
+#   enable: true
+#   stack: system # gvisor / lwip
+#   dns-hijack:
+#     - any:53 # 需要劫持的 DNS
+#   auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
+#   auto-detect-interface: true # 自动识别出口网卡
 
 dns:
   enable: true # 关闭将使用系统 DNS
@@ -158,50 +158,24 @@ dns:
     - tls://dns.google
 
 #节点存放地址
-pr0: &a0
-  type: vless
-  port: 443
-  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  reality-opts:
-    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
-
 proxies:
-  - name: "inp"
-    server: 45.82.80.126
-    <<: *a0
-  - name: "wap"
-    server: 23.26.254.59
-    <<: *a0
-  - name: "lw"
-    server: 38.72.148.44
-    <<: *a0
+
 # 策略组引用
 
 pr: &a1
   type: select
   proxies:
     - "Auto"
-    - "inp"
-    - "wap"
-    - "lw"
   use:
-    - tao
+    - hneko
+    - yuan
 
 auto: &a2
   type: url-test
   proxies:
-    - "inp"
-    - "wap"
-    - "lw"
   use:
-    - tao
+    - hneko
+    - yuan
   url: "http://connectivitycheck.gstatic.com/generate_204"
   interval: 300
 
@@ -209,21 +183,18 @@ pr1: &a3
   type: select
   proxies:
     - "PROXY"
-    - "inp"
-    - "wap"
-    - "lw"
+    - "mdirect"
   use:
-    - tao
+    - yuan
+    - hneko
 pr2: &a4
   type: select
   proxies:
     - "PROXY"
-    - "inp"
-    - "wap"
-    - "lw"
   use:
+    - yuan
+    - hneko
     - beta
-    - tao
 
 prp: &prp
   type: http
@@ -272,13 +243,19 @@ proxy-groups:
     <<: *a3
   - name: "bilius"
     <<: *a3
+  - name: "mdirect"
+    <<: *a3
 
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  tao:
-    url: "https://2324.taosky.com/23reality24-sub-dsdadds132d" #订阅链接存放地址
-    path: ./profiles/tao.yaml
+  yuan:
+    url: "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a" #订阅链接存放地址
+    path: ./profiles/yuan.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+    <<: *prp
+  hneko:
+    url: "https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9" #订阅链接存放地址
+    path: ./profiles/hneko.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
     <<: *prp
   beta:
     url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
@@ -377,6 +354,9 @@ rules:
   - GEOSITE,cn,DIRECT
   - GEOIP, cn, DIRECT
 
+  # cdn.staticfile
+  - DOMAIN-SUFFIX,cdn.staticfile.org,mdirect
+
   ## subscribe and ruleset
   - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
   - DOMAIN-SUFFIX,sub2.smallstrawberry.com,DIRECT
@@ -386,7 +366,7 @@ rules:
   - IP-CIDR,106.14.118.42/32,DIRECT
   - IP-CIDR,38.72.148.44/32,DIRECT
   - IP-CIDR,100.98.11.147/32,DIRECT
-  - IP-CIDR,103.186.65.217,DIRECT
+  - IP-CIDR,103.186.65.217/32,DIRECT
 
   # 代理匹配
   - DOMAIN-SUFFIX,chat1.zhile.io,PROXY

@@ -158,7 +158,33 @@ dns:
     - tls://dns.google
 
 #节点存放地址
+pr0: &a0
+  type: vless
+  port: 443
+  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: tesla.com
+  reality-opts:
+    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
+    short-id: 6ba85179e30d4fc2
+  client-fingerprint: chrome
+
 proxies:
+  - name: "inp"
+    server: 45.82.80.126
+    <<: *a0
+  - name: "wap"
+    server: 23.26.254.59
+    <<: *a0
+  - name: "lw"
+    server: 38.72.148.44
+    <<: *a0
+  - name: "gr"
+    server: 103.186.65.217
+    <<: *a0
 
 # 策略组引用
 
@@ -166,6 +192,10 @@ pr: &a1
   type: select
   proxies:
     - "Auto"
+    - "inp"
+    - "wap"
+    - "lw"
+    - "gr"
   use:
     - tao
 
@@ -181,12 +211,21 @@ pr1: &a3
   type: select
   proxies:
     - "PROXY"
+    - "inp"
+    - "wap"
+    - "lw"
+    - "gr"
+    - "DIRECT"
   use:
     - tao
 pr2: &a4
   type: select
   proxies:
     - "PROXY"
+    - "inp"
+    - "wap"
+    - "lw"
+    - "gr"
   use:
     - beta
     - tao
@@ -237,6 +276,8 @@ proxy-groups:
   - name: "github"
     <<: *a3
   - name: "bilius"
+    <<: *a3
+  - name: "mdirect"
     <<: *a3
 
 #代理集  如果是自建节点屏蔽这里
@@ -334,7 +375,17 @@ rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN-SUFFIX,tracker.pterclub.com,DIRECT
   - DOMAIN-KEYWORD,tracker,DIRECT
+
+  ## pt 站
+  - DOMAIN-SUFFIX,pterclub.com,PROXY
+  - DOMAIN-SUFFIX,open.cd,PROXY
+
+  ## geo 直连
   - GEOSITE,cn,DIRECT
+  - GEOIP, cn, DIRECT
+
+  # cdn.staticfile
+  - DOMAIN-SUFFIX,cdn.staticfile.org,mdirect
 
   ## subscribe and ruleset
   - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
@@ -344,8 +395,9 @@ rules:
   - IP-CIDR,45.82.80.0/24,DIRECT
   - IP-CIDR,106.14.118.42/32,DIRECT
   - IP-CIDR,38.72.148.44/32,DIRECT
+  - IP-CIDR,100.98.11.147/32,DIRECT
+  - IP-CIDR,103.186.65.217/32,DIRECT
 
-  # - GEOIP, cn, DIRECT
   # 代理匹配
   - DOMAIN-SUFFIX,chat1.zhile.io,PROXY
   - RULE-SET,gscholar,gscholar

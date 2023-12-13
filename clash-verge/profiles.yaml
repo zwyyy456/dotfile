@@ -1,47 +1,15 @@
 # Profiles Config for Clash Verge
 
-current: rDh7i0EScGOX
+current: lrTOb3pAv0Lt
 chain: null
 valid:
 - dns
+- sub-rules
+- unified-delay
 items:
-- uid: rRXVnpmYHfQW
-  type: remote
-  name: Remote File
-  file: rRXVnpmYHfQW.yaml
-  url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2F2324.taosky.com%2F23reality24-sub-dsdadds132d&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_AdblockPlus.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
-<<<<<<< HEAD
-  updated: 1701961588
-=======
-  updated: 1701094875
->>>>>>> 99bc28d40f89305eb350c4e096305b7a3e2de7a7
-  option:
-    update_interval: 1440
-- uid: l7pRXHU5H6C2
+- uid: lrTOb3pAv0Lt
   type: local
-  name: meta
-  file: l7pRXHU5H6C2.yaml
-  desc: ''
-  selected:
-  - name: PROXY
-    now: tao
-  updated: 1699439188
-- uid: rDh7i0EScGOX
-  type: remote
-  name: mojie
-  file: rDh7i0EScGOX.yaml
-  desc: turkey
-  url: https://mojie.cyou/api/v1/client/subscribe?token=ac2dcb772183d94104bafdf4f969d7b8
-  selected:
-  - name: 节点选择
-    now: 自动选择
-  extra:
-    upload: 3844926249
-    download: 40391542024
-    total: 139586437120
-    expire: 0
-  updated: 1701961614
-  option:
-    with_proxy: false
-    self_proxy: false
-    update_interval: 1440
+  name: verge-tao
+  file: lrTOb3pAv0Lt.yaml
+  desc: tao and my own node
+  updated: 1702368857

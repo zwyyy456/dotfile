@@ -7,6 +7,31 @@
 **/*.db
 **/*.dll
 
+## clash
+clash-verge/
+clash
+
+# filezilla
+filezilla/*.sqlite3
+filezilla/lockfile
+
+# nvim
+nvim/lazy-lock.json
+
+# leetgo
+leetgo/cache/
+
+# filen
+.filen.trash.local/
+
+# siyuan
+siyuan/
+
+# qBitorrent
+
+qBittorrent/
+
+
 ## iterm2
 iterm2/
 
@@ -73,15 +98,3 @@ gtk-3.0
 plasma-localerc
 kwinrulesrc
 konquerorrc
-
-
-filezilla/*.sqlite3
-filezilla/lockfile
-
-nvim/lazy-lock.json
-
-leetgo/cache/
-
-.filen.trash.local/
-
-siyuan/
