@@ -1,0 +1,36 @@
+{
+    "inbounds": [
+        {
+            "type": "vless",
+            "listen": "::",
+            "listen_port": 443,
+            "users": [
+                {
+                    "name": "wap",
+                    "uuid": "",
+                    "flow": "xtls-rprx-vision"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "reality": {
+                    "enabled": true,
+                    "handshake": {
+                        "server": "www.tesla.com",
+                        "server_port": 443
+                    },
+                    "private_key": "",
+                    "short_id": [
+                        "8f043787f6d14d9c"
+                    ]
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
