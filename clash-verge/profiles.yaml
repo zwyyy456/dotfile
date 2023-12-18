@@ -3,19 +3,13 @@
 current: rbXslYN4FHzv
 chain: null
 valid:
-- dns
-- sub-rules
-- unified-delay
+  - dns
+  - sub-rules
+  - unified-delay
 items:
-- uid: lrTOb3pAv0Lt
-  type: local
-  name: verge-tao
-  file: lrTOb3pAv0Lt.yaml
-  desc: tao and my own node
-  updated: 1702368857
-- uid: rbXslYN4FHzv
-  type: remote
-  name: Remote File
-  file: rbXslYN4FHzv.yaml
-  url: https://gist.githubusercontent.com/zwyyy456/fbd23f44a86087fe6ed663ed3bfb518a/raw/d4d242f150a2c9e28d878683441cf2a724287ea5/arm-yuan.yaml
-  updated: 1702909684
+  - uid: lrTOb3pAv0Lt
+    type: local
+    name: verge-tao
+    file: lrTOb3pAv0Lt.yaml
+    desc: tao and my own node
+    updated: 1702368857

@@ -24,7 +24,7 @@ enable_clash_fields: true
 enable_builtin_enhanced: true
 proxy_layout_column: null
 window_size_position:
-- 1065.0
-- 642.0
-- 198.0
-- 186.0
+  - 1065.0
+  - 642.0
+  - 1780.0
+  - 97.0
