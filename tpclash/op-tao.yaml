@@ -28,6 +28,7 @@ profile:
   store-fake-ip: true # 持久化 fake-ip
 
 # Tun 配置 Windows使用
+<<<<<<<< HEAD:tpclash/op-tao.yaml
 tun:
   enable: false
   stack: system # gvisor / lwip
@@ -35,6 +36,15 @@ tun:
     - any:53 # 需要劫持的 DNS
   auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
   auto-detect-interface: true # 自动识别出口网卡
+========
+# tun:
+#   enable: true
+#   stack: system # gvisor / lwip
+#   dns-hijack:
+#     - any:53 # 需要劫持的 DNS
+#   auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
+#   auto-detect-interface: true # 自动识别出口网卡
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 
 dns:
   enable: true # 关闭将使用系统 DNS
@@ -157,6 +167,7 @@ dns:
     - https://1.0.0.1/dns-query
     - tls://dns.google
 
+<<<<<<<< HEAD:tpclash/op-tao.yaml
 #节点存放地址
 pr0: &a0
   type: vless
@@ -186,24 +197,35 @@ proxies:
     server: 103.186.65.217
     <<: *a0
 
+========
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 # 策略组引用
 
 pr: &a1
   type: select
   proxies:
     - "Auto"
+<<<<<<<< HEAD:tpclash/op-tao.yaml
     - "inp"
     - "wap"
     - "lw"
     - "gr"
   use:
     - tao
+========
+  use:
+    - zwy
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 
 auto: &a2
   type: url-test
   proxies:
   use:
+<<<<<<<< HEAD:tpclash/op-tao.yaml
     - tao
+========
+    - zwy
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
   url: "http://connectivitycheck.gstatic.com/generate_204"
   interval: 300
 
@@ -211,6 +233,7 @@ pr1: &a3
   type: select
   proxies:
     - "PROXY"
+<<<<<<<< HEAD:tpclash/op-tao.yaml
     - "inp"
     - "wap"
     - "lw"
@@ -218,10 +241,16 @@ pr1: &a3
     - "DIRECT"
   use:
     - tao
+========
+    - "DIRECT"
+  use:
+    - zwy
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 pr2: &a4
   type: select
   proxies:
     - "PROXY"
+<<<<<<<< HEAD:tpclash/op-tao.yaml
     - "inp"
     - "wap"
     - "lw"
@@ -229,6 +258,10 @@ pr2: &a4
   use:
     - beta
     - tao
+========
+  use:
+    - zwy
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 
 prp: &prp
   type: http
@@ -248,6 +281,14 @@ rl2: &rl2
   type: http
   interval: 86400
   behavior: domain
+
+#代理集  如果是自建节点屏蔽这里
+proxy-providers:
+  #自定义名称
+  zwy:
+    url: "https://gist.githubusercontent.com/zwyyy456/9b625f2547ed60be6ddd39c99178d962/raw/proxy-provider.yaml"
+    path: ./profiles/zwy.yaml
+    <<: *prp
 
 proxy-groups:
   # 自动选择
@@ -279,6 +320,7 @@ proxy-groups:
     <<: *a3
   - name: "mdirect"
     <<: *a3
+<<<<<<<< HEAD:tpclash/op-tao.yaml
 
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
@@ -291,78 +333,125 @@ proxy-providers:
     url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
     path: ./profiles/beta.yaml
     <<: *prp
+========
+  - name: "mproxy"
+    <<: *a3
+  - name: "mpt"
+    <<: *a3
+  - name: "mtracker"
+    <<: *a3
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 
 #规则集，规则用于 rules?
 rule-providers:
   reject:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
     <<: *rl2
+
   direct:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
     <<: *rl2
 
   gfw:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
     <<: *rl2
 
   applecn:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/applecn.yaml
     <<: *rl2
 
   cndirect:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cndirect.yaml
     <<: *rl2
 
   applications:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    <<: *rl2
+    path: ./ruleset/applications.yaml
+    <<: *rl1
 
   private:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
     <<: *rl2
 
   gscholar:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalScholar/GlobalScholar.yaml"
+    path: ./ruleset/gscholar.yaml
     <<: *rl1
 
   openai:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/openai.yaml
     <<: *rl1
 
   microsoft:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml" # 包含 onedrive
+    path: ./ruleset/microsoft.yaml
     <<: *rl1
 
   youtube:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/youtube.yaml
     <<: *rl1
 
   google:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    path: ./ruleset/google.yaml
     <<: *rl1
 
   github:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    path: ./ruleset/github.yaml
     <<: *rl1
 
   apple:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml" # 包含 icloud
+    path: ./ruleset/apple.yaml
     <<: *rl1
 
   bili_us:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
+    path: ./ruleset/bili_us.yaml
     <<: *rl1
 
   spotify:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./ruleset/spotify.yaml
     <<: *rl1
 
   telegram:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/telegram.yaml
     <<: *rl1
 
   emby:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml"
+    path: ./ruleset/emby.yaml
+    <<: *rl1
+
+  mpt:
+    url: "https://gist.githubusercontent.com/zwyyy456/eb9aa537968491f143b9b2124d2e4b47/raw/pt-rule.yaml"
+    path: ./ruleset/mpt.yaml
+    <<: *rl1
+
+  mtracker:
+    path: ./ruleset/mtracker.yaml
+    url: "https://gist.githubusercontent.com/zwyyy456/2edad3f6da907c96f503c0cca3c681a9/raw/tracker-rule.yaml"
+    <<: *rl1
+
+  mdirect:
+    path: ./ruleset/mdirect.yaml
+    url: "https://gist.githubusercontent.com/zwyyy456/4811d18198c3ad49d0485480eff22d9f/raw/direct-rule.yaml"
+    <<: *rl1
+
+  mproxy:
+    path: ./ruleset/mproxy.yaml
+    url: "https://gist.githubusercontent.com/zwyyy456/43afd8f49c179fddbfa54458e898eb2e/raw/proxy-rule.yaml"
     <<: *rl1
 
 rules:
@@ -373,17 +462,15 @@ rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,applecn,DIRECT
   - RULE-SET,applications,DIRECT
-  - DOMAIN-SUFFIX,tracker.pterclub.com,DIRECT
-  - DOMAIN-KEYWORD,tracker,DIRECT
 
-  ## pt 站
-  - DOMAIN-SUFFIX,pterclub.com,PROXY
-  - DOMAIN-SUFFIX,open.cd,PROXY
+  - RULE-SET,mtracker,mtracker
+  - RULE-SET,mpt,mpt
 
   ## geo 直连
   - GEOSITE,cn,DIRECT
   - GEOIP, cn, DIRECT
 
+<<<<<<<< HEAD:tpclash/op-tao.yaml
   # cdn.staticfile
   - DOMAIN-SUFFIX,cdn.staticfile.org,mdirect
 
@@ -397,9 +484,12 @@ rules:
   - IP-CIDR,38.72.148.44/32,DIRECT
   - IP-CIDR,100.98.11.147/32,DIRECT
   - IP-CIDR,103.186.65.217/32,DIRECT
+========
+  - RULE-SET,mdirect,mdirect
+  - RULE-SET,mproxy,mproxy
+>>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959:tpclash/verge-vps.yaml
 
   # 代理匹配
-  - DOMAIN-SUFFIX,chat1.zhile.io,PROXY
   - RULE-SET,gscholar,gscholar
   - RULE-SET,openai,openai
   - RULE-SET,microsoft,microsoft

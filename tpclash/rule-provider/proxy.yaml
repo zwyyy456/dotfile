@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 payload:
   - DOMAIN-SUFFIX,chat1.zhile.io
+=======
+payload:
+  - DOMAIN-SUFFIX,chat1.zhile.io
+>>>>>>> bc9fe3c8ce542181bb87459a3c8e1cf93e798959
