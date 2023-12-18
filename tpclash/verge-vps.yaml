@@ -157,53 +157,20 @@ dns:
     - https://1.0.0.1/dns-query
     - tls://dns.google
 
-#节点存放地址
-pr0: &a0
-  type: vless
-  port: 443
-  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  reality-opts:
-    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
-
-proxies:
-  - name: "inp"
-    server: 45.82.80.126
-    <<: *a0
-  - name: "wap"
-    server: 23.26.254.59
-    <<: *a0
-  - name: "lw"
-    server: 38.72.148.44
-    <<: *a0
 # 策略组引用
 
 pr: &a1
   type: select
   proxies:
     - "Auto"
-    - "inp"
-    - "wap"
-    - "lw"
   use:
-    - hneko
-    - yuan
+    - zwy
 
 auto: &a2
   type: url-test
   proxies:
-    - "inp"
-    - "wap"
-    - "lw"
   use:
-    - hneko
-    - yuan
+    - zwy
   url: "http://connectivitycheck.gstatic.com/generate_204"
   interval: 300
 
@@ -211,27 +178,15 @@ pr1: &a3
   type: select
   proxies:
     - "PROXY"
-<<<<<<<< HEAD:tpclash/verge-yuan.yaml
     - "DIRECT"
-========
-    - "inp"
-    - "wap"
-    - "lw"
->>>>>>>> 0aa03042457ad7f2d3185a7ad257187e9a22545d:tpclash/arm-yuan-nonas.yaml
   use:
-    - yuan
-    - hneko
+    - zwy
 pr2: &a4
   type: select
   proxies:
     - "PROXY"
-    - "inp"
-    - "wap"
-    - "lw"
   use:
-    - yuan
-    - hneko
-    - beta
+    - zwy
 
 prp: &prp
   type: http
@@ -255,17 +210,9 @@ rl2: &rl2
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  yuan:
-    url: "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a" #订阅链接存放地址
-    path: ./profiles/yuan.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    <<: *prp
-  hneko:
-    url: "https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9" #订阅链接存放地址
-    path: ./profiles/hneko.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    <<: *prp
-  beta:
-    url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
-    path: ./profiles/beta.yaml
+  zwy:
+    url: "https://gist.githubusercontent.com/zwyyy456/9b625f2547ed60be6ddd39c99178d962/raw/proxy-provider.yaml"
+    path: ./profiles/zwy.yaml
     <<: *prp
 
 proxy-groups:
@@ -425,38 +372,16 @@ rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,applecn,DIRECT
   - RULE-SET,applications,DIRECT
-<<<<<<<< HEAD:tpclash/verge-yuan.yaml
 
   - RULE-SET,mtracker,mtracker
   - RULE-SET,mpt,mpt
-========
-  - DOMAIN-SUFFIX,tracker.pterclub.com,DIRECT
-  - DOMAIN-KEYWORD,tracker,DIRECT
-
-  ## pt 站
-  - DOMAIN-SUFFIX,pterclub.com,PROXY
-  - DOMAIN-SUFFIX,open.cd,PROXY
->>>>>>>> 0aa03042457ad7f2d3185a7ad257187e9a22545d:tpclash/arm-yuan-nonas.yaml
 
   ## geo 直连
   - GEOSITE,cn,DIRECT
   - GEOIP, cn, DIRECT
 
-<<<<<<<< HEAD:tpclash/verge-yuan.yaml
   - RULE-SET,mdirect,mdirect
   - RULE-SET,mproxy,mproxy
-========
-  ## subscribe and ruleset
-  - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
-  - DOMAIN-SUFFIX,sub2.smallstrawberry.com,DIRECT
-  - DOMAIN-SUFFIX,www.hneko.world,DIRECT
-  - DOMAIN-SUFFIX,v2sub.betac1ouds.top,DIRECT
-  - IP-CIDR,45.82.80.0/24,DIRECT
-  - IP-CIDR,106.14.118.42/32,DIRECT
-  - IP-CIDR,38.72.148.44/32,DIRECT
-  - IP-CIDR,100.98.11.147/32,DIRECT
-  - IP-CIDR,103.186.65.217,DIRECT
->>>>>>>> 0aa03042457ad7f2d3185a7ad257187e9a22545d:tpclash/arm-yuan-nonas.yaml
 
   # 代理匹配
   - RULE-SET,gscholar,gscholar

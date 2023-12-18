@@ -9,3 +9,4 @@ leetgo/cache
 siyuan/
 */.git/
 iterm2/
+qBittorrent/

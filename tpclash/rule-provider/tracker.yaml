@@ -1,0 +1,4 @@
+payload:
+  ## pt 站
+  - DOMAIN-SUFFIX,tracker.pterclub.com
+  - DOMAIN-KEYWORD,tracker
