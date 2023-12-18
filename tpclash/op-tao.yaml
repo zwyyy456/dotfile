@@ -1,4 +1,3 @@
-tproxy-port: 7893
 mixed-port: 7890 # 局域网访问Port
 bind-address: "*" #绑定IP地址
 allow-lan: true # 允许局域网访问
@@ -29,18 +28,18 @@ profile:
   store-fake-ip: true # 持久化 fake-ip
 
 # Tun 配置 Windows使用
-tun:
-  enable: true
-  stack: system # gvisor / lwip
-  dns-hijack:
-    - any:53 # 需要劫持的 DNS
-  auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
-  auto-detect-interface: true # 自动识别出口网卡
+# tun:
+#   enable: true
+#   stack: system # gvisor / lwip
+#   dns-hijack:
+#     - any:53 # 需要劫持的 DNS
+#   auto-route: true # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
+#   auto-detect-interface: true # 自动识别出口网卡
 
 dns:
   enable: true # 关闭将使用系统 DNS
   prefer-h3: true # 开启 DoH 支持 HTTP/3，将并发尝试
-  listen: 0.0.0.0:1053 # 开启 DNS 服务器监听
+  listen: ":53" # 开启 DNS 服务器监听
   ipv6: false # 如果需要ipv6设置为true
   default-nameserver:
     # - 192.168.6.1 fakeip 模式不使用内网地址作为 dns
@@ -165,14 +164,13 @@ pr: &a1
   proxies:
     - "Auto"
   use:
-    - tao
     - zwy
 
 auto: &a2
   type: url-test
   proxies:
   use:
-    - tao
+    - zwy
   url: "http://connectivitycheck.gstatic.com/generate_204"
   interval: 300
 
@@ -182,15 +180,12 @@ pr1: &a3
     - "PROXY"
     - "DIRECT"
   use:
-    - tao
     - zwy
 pr2: &a4
   type: select
   proxies:
     - "PROXY"
   use:
-    - beta
-    - tao
     - zwy
 
 prp: &prp
@@ -215,14 +210,6 @@ rl2: &rl2
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  tao:
-    url: "https://2324.taosky.com/23reality24-sub-dsdadds132d" #订阅链接存放地址
-    path: ./profiles/tao.yaml
-    <<: *prp
-  beta:
-    url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
-    path: ./profiles/beta.yaml
-    <<: *prp
   zwy:
     url: "https://gist.githubusercontent.com/zwyyy456/9b625f2547ed60be6ddd39c99178d962/raw/proxy-provider.yaml"
     path: ./profiles/zwy.yaml
@@ -391,6 +378,7 @@ rules:
 
   ## geo 直连
   - GEOSITE,cn,DIRECT
+  - GEOIP, cn, DIRECT
 
   - RULE-SET,mdirect,mdirect
   - RULE-SET,mproxy,mproxy
@@ -412,5 +400,4 @@ rules:
   - RULE-SET,reject,REJECT
 
   - SRC-IP-CIDR,192.168.6.155/32,DIRECT
-  - GEOIP, cn, DIRECT
   - MATCH,PROXY

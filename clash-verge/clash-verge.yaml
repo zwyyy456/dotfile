@@ -2,9 +2,8 @@
 
 mode: rule
 mixed-port: 7890
-allow-lan: true
+allow-lan: false
 log-level: info
-ipv6: false
 secret: ''
 external-controller: 127.0.0.1:9090
 dns:
@@ -96,196 +95,156 @@ dns:
   fallback:
   - https://1.0.0.1/dns-query
   - tls://dns.google
-proxies:
-- name: inp
-  server: 45.82.80.126
-  type: vless
-  port: 443
-  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  reality-opts:
-    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
-- name: wap
-  server: 23.26.254.59
-  type: vless
-  port: 443
-  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  reality-opts:
-    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
-- name: lw
-  server: 38.72.148.44
-  type: vless
-  port: 443
-  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  reality-opts:
-    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
-- name: gr
-  server: 103.186.65.217
-  type: vless
-  port: 443
-  uuid: c2312cd7-b05c-4d7e-af44-e1fa29c182f5
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: tesla.com
-  reality-opts:
-    public-key: 2E6FbUe4MER5NnmBX3pDGSRvVbrWmyHwdr85oxBQbDA
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
+proxies: null
 proxy-groups:
 - name: Auto
   type: url-test
   proxies: null
   use:
-  - tao
+  - hneko
+  - yuan
   url: http://connectivitycheck.gstatic.com/generate_204
   interval: 300
 - name: PROXY
   type: select
   proxies:
   - Auto
-  - inp
-  - wap
-  - lw
-  - gr
   use:
-  - tao
+  - hneko
+  - yuan
 - name: youtube
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: telegram
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: apple
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: microsoft
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: openai
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
   use:
+  - yuan
+  - hneko
   - beta
-  - tao
 - name: emby
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: spotify
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: gscholar
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: google
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: github
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
 - name: bilius
   type: select
   proxies:
   - PROXY
-  - inp
-  - wap
-  - lw
-  - gr
+  - DIRECT
   use:
-  - tao
+  - yuan
+  - hneko
+- name: mdirect
+  type: select
+  proxies:
+  - PROXY
+  - DIRECT
+  use:
+  - yuan
+  - hneko
+- name: mproxy
+  type: select
+  proxies:
+  - PROXY
+  - DIRECT
+  use:
+  - yuan
+  - hneko
+- name: mpt
+  type: select
+  proxies:
+  - PROXY
+  - DIRECT
+  use:
+  - yuan
+  - hneko
+- name: mtracker
+  type: select
+  proxies:
+  - PROXY
+  - DIRECT
+  use:
+  - yuan
+  - hneko
 proxy-providers:
-  tao:
-    url: https://2324.taosky.com/23reality24-sub-dsdadds132d
-    path: ./profiles/tao.yaml
+  yuan:
+    url: https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a
+    path: ./profiles/yuan.yaml
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 300
+      url: http://connectivitycheck.gstatic.com/generate_204
+  hneko:
+    url: https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9
+    path: ./profiles/hneko.yaml
     type: http
     interval: 86400
     health-check:
@@ -306,22 +265,12 @@ rules:
 - RULE-SET,direct,DIRECT
 - RULE-SET,applecn,DIRECT
 - RULE-SET,applications,DIRECT
-- DOMAIN-SUFFIX,tracker.pterclub.com,DIRECT
-- DOMAIN-KEYWORD,tracker,DIRECT
-- DOMAIN-SUFFIX,pterclub.com,PROXY
-- DOMAIN-SUFFIX,open.cd,PROXY
+- RULE-SET,mtracker,mtracker
+- RULE-SET,mpt,mpt
 - GEOSITE,cn,DIRECT
 - GEOIP, cn, DIRECT
-- DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
-- DOMAIN-SUFFIX,sub2.smallstrawberry.com,DIRECT
-- DOMAIN-SUFFIX,www.hneko.world,DIRECT
-- DOMAIN-SUFFIX,v2sub.betac1ouds.top,DIRECT
-- IP-CIDR,45.82.80.0/24,DIRECT
-- IP-CIDR,106.14.118.42/32,DIRECT
-- IP-CIDR,38.72.148.44/32,DIRECT
-- IP-CIDR,100.98.11.147/32,DIRECT
-- IP-CIDR,103.186.65.217/32,DIRECT
-- DOMAIN-SUFFIX,chat1.zhile.io,PROXY
+- RULE-SET,mdirect,mdirect
+- RULE-SET,mproxy,mproxy
 - RULE-SET,gscholar,gscholar
 - RULE-SET,openai,openai
 - RULE-SET,microsoft,microsoft
@@ -341,91 +290,133 @@ rules:
 rule-providers:
   reject:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
     type: http
     interval: 86400
     behavior: domain
   direct:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
     type: http
     interval: 86400
     behavior: domain
   gfw:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/gfw.yaml
     type: http
     interval: 86400
     behavior: domain
   applecn:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/applecn.yaml
     type: http
     interval: 86400
     behavior: domain
   cndirect:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cndirect.yaml
     type: http
     interval: 86400
     behavior: domain
   applications:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/applications.yaml
     type: http
     interval: 86400
-    behavior: domain
+    behavior: classical
   private:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
     type: http
     interval: 86400
     behavior: domain
   gscholar:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalScholar/GlobalScholar.yaml
+    path: ./ruleset/gscholar.yaml
     type: http
     interval: 86400
     behavior: classical
   openai:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/openai.yaml
     type: http
     interval: 86400
     behavior: classical
   microsoft:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./ruleset/microsoft.yaml
     type: http
     interval: 86400
     behavior: classical
   youtube:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    path: ./ruleset/youtube.yaml
     type: http
     interval: 86400
     behavior: classical
   google:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
+    path: ./ruleset/google.yaml
     type: http
     interval: 86400
     behavior: classical
   github:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
+    path: ./ruleset/github.yaml
     type: http
     interval: 86400
     behavior: classical
   apple:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml
+    path: ./ruleset/apple.yaml
     type: http
     interval: 86400
     behavior: classical
   bili_us:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml
+    path: ./ruleset/bili_us.yaml
     type: http
     interval: 86400
     behavior: classical
   spotify:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml
+    path: ./ruleset/spotify.yaml
     type: http
     interval: 86400
     behavior: classical
   telegram:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/telegram.yaml
     type: http
     interval: 86400
     behavior: classical
   emby:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml
+    path: ./ruleset/emby.yaml
+    type: http
+    interval: 86400
+    behavior: classical
+  mpt:
+    url: https://gist.githubusercontent.com/zwyyy456/eb9aa537968491f143b9b2124d2e4b47/raw/pt-rule.yaml
+    path: ./ruleset/mpt.yaml
+    type: http
+    interval: 86400
+    behavior: classical
+  mtracker:
+    path: ./ruleset/mtracker.yaml
+    url: https://gist.githubusercontent.com/zwyyy456/2edad3f6da907c96f503c0cca3c681a9/raw/tracker-rule.yaml
+    type: http
+    interval: 86400
+    behavior: classical
+  mdirect:
+    path: ./ruleset/mdirect.yaml
+    url: https://gist.githubusercontent.com/zwyyy456/4811d18198c3ad49d0485480eff22d9f/raw/direct-rule.yaml
+    type: http
+    interval: 86400
+    behavior: classical
+  mproxy:
+    path: ./ruleset/mproxy.yaml
+    url: https://gist.githubusercontent.com/zwyyy456/43afd8f49c179fddbfa54458e898eb2e/raw/proxy-rule.yaml
     type: http
     interval: 86400
     behavior: classical

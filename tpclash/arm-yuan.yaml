@@ -183,7 +183,7 @@ pr1: &a3
   type: select
   proxies:
     - "PROXY"
-    - "mdirect"
+    - "DIRECT"
   use:
     - yuan
     - hneko

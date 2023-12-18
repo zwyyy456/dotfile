@@ -39,7 +39,7 @@ profile:
 dns:
   enable: true # 关闭将使用系统 DNS
   prefer-h3: true # 开启 DoH 支持 HTTP/3，将并发尝试
-  listen: 0.0.0.0:1053 # 开启 DNS 服务器监听
+  listen: ":53" # 开启 DNS 服务器监听
   ipv6: false # 如果需要ipv6设置为true
   default-nameserver:
     # - 192.168.6.1 fakeip 模式不使用内网地址作为 dns
@@ -170,9 +170,6 @@ auto: &a2
   type: url-test
   proxies:
   use:
-    - zwy
-  url: "http://connectivitycheck.gstatic.com/generate_204"
-  interval: 300
 
 pr1: &a3
   type: select
