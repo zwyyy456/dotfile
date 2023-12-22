@@ -1,3 +1,4 @@
+tproxy-port: 7893
 mixed-port: 7890 # 局域网访问Port
 bind-address: "*" #绑定IP地址
 allow-lan: true # 允许局域网访问
@@ -157,9 +158,6 @@ dns:
     - https://1.0.0.1/dns-query
     - tls://dns.google
 
-#节点存放地址
-proxies:
-
 # 策略组引用
 
 pr: &a1
@@ -167,15 +165,14 @@ pr: &a1
   proxies:
     - "Auto"
   use:
-    - hneko
-    - yuan
+    - tao
+    - zwy
 
 auto: &a2
   type: url-test
   proxies:
   use:
-    - hneko
-    - yuan
+    - tao
   url: "http://connectivitycheck.gstatic.com/generate_204"
   interval: 300
 
@@ -183,18 +180,18 @@ pr1: &a3
   type: select
   proxies:
     - "PROXY"
-    - "mdirect"
+    - "DIRECT"
   use:
-    - yuan
-    - hneko
+    - tao
+    - zwy
 pr2: &a4
   type: select
   proxies:
     - "PROXY"
   use:
-    - yuan
-    - hneko
     - beta
+    - tao
+    - zwy
 
 prp: &prp
   type: http
@@ -218,17 +215,17 @@ rl2: &rl2
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  yuan:
-    url: "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=e8e6c2e45cf9c1f273a37379c979586a" #订阅链接存放地址
-    path: ./profiles/yuan.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
-    <<: *prp
-  hneko:
-    url: "https://www.hneko.world/api/v1/client/subscribe?token=b82e133f8ff80f8b1053978f89353da9" #订阅链接存放地址
-    path: ./profiles/hneko.yaml # 默认只允许存储在 clash 的 Home Dir，如果想存储到任意位置，添加环境变量 SKIP_SAFE_PATH_CHECK=1
+  tao:
+    url: "https://2324.taosky.com/23reality24-sub-dsdadds132d" #订阅链接存放地址
+    path: ./profiles/tao.yaml
     <<: *prp
   beta:
     url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx"
     path: ./profiles/beta.yaml
+    <<: *prp
+  zwy:
+    url: "https://gist.githubusercontent.com/zwyyy456/9b625f2547ed60be6ddd39c99178d962/raw/proxy-provider.yaml"
+    path: ./profiles/zwy.yaml
     <<: *prp
 
 proxy-groups:
@@ -394,7 +391,6 @@ rules:
 
   ## geo 直连
   - GEOSITE,cn,DIRECT
-  - GEOIP, cn, DIRECT
 
   - RULE-SET,mdirect,mdirect
   - RULE-SET,mproxy,mproxy
@@ -416,4 +412,5 @@ rules:
   - RULE-SET,reject,REJECT
 
   - SRC-IP-CIDR,192.168.6.155/32,DIRECT
+  - GEOIP, cn, DIRECT
   - MATCH,PROXY

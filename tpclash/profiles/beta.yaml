@@ -23,15 +23,6 @@ dns:
     - 208.67.220.222
 
 proxies:
-
-
-
-
-
-
-
-
-
   - name: 旧协议HK1
     type: vmess
     server: v2hk1.ee112358.com
@@ -128,7 +119,6 @@ proxies:
       headers:
         Host: v2sg3.ee112358.com
 
-
 proxy-groups:
   - name: 节点选择
     type: select
@@ -178,8 +168,8 @@ proxy-groups:
       - DIRECT
 
 rules:
-# 自主维护代理列表
-# 内网
+  # 自主维护代理列表
+  # 内网
   - IP-CIDR,0.0.0.0/8,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
@@ -197,7 +187,7 @@ rules:
   - IP-CIDR,233.252.0.0/24,DIRECT
   - IP-CIDR,240.0.0.0/4,DIRECT
   - IP-CIDR,255.255.255.255/32,DIRECT
-# 谷歌
+  # 谷歌
   - DOMAIN,google.com,节点选择
   - DOMAIN-KEYWORD,google,节点选择
   - DOMAIN-SUFFIX,gvt0.com,节点选择
@@ -208,7 +198,7 @@ rules:
   - DOMAIN-SUFFIX,gstatic.com,节点选择
   - DOMAIN-SUFFIX,googleapis.cn,节点选择
   - DOMAIN-SUFFIX,googleapis.com,节点选择
-# 必应
+  # 必应
   - DOMAIN-SUFFIX,bing.com,节点选择
   - DOMAIN-SUFFIX,bing.com.cn,节点选择
   - DOMAIN-SUFFIX,bing.net,节点选择
@@ -239,7 +229,7 @@ rules:
   - DOMAIN-SUFFIX,ditu.live.com,节点选择
   - DOMAIN,bj1.api.bing.com,节点选择
   - DOMAIN,emoi-cncdn.bing.com,节点选择
-# 币安
+  # 币安
   - DOMAIN-SUFFIX,binance.cc,节点选择
   - DOMAIN-SUFFIX,binance.charity,节点选择
   - DOMAIN-SUFFIX,binance.cloud,节点选择
@@ -273,9 +263,9 @@ rules:
   - DOMAIN-SUFFIX,bnbzh.ac,节点选择
   - DOMAIN-SUFFIX,saasexch.com,节点选择
   - DOMAIN-SUFFIX,appsflayer.com,节点选择
-# 贝塔
+  # 贝塔
   - DOMAIN-SUFFIX,betaclouds.net,节点选择
-# 哔哩
+  # 哔哩
   - DOMAIN-SUFFIX,acg.tv,哔哩哔哩
   - DOMAIN-SUFFIX,acgvideo.com,哔哩哔哩
   - DOMAIN-SUFFIX,animetamashi.cn,哔哩哔哩
@@ -320,7 +310,7 @@ rules:
   - DOMAIN-SUFFIX,mincdn.com,哔哩哔哩
   - DOMAIN-SUFFIX,yo9.com,哔哩哔哩
   - DOMAIN,upos-hz-mirrorakam.akamaized.net,哔哩哔哩
-# 电报
+  # 电报
   - DOMAIN-SUFFIX,comments.app,电报信息
   - DOMAIN-SUFFIX,contest.com,电报信息
   - DOMAIN-SUFFIX,graph.org,电报信息
@@ -349,7 +339,7 @@ rules:
   - IP-CIDR,109.239.140.0/24,电报信息
   - IP-CIDR,149.154.160.0/20,电报信息
   - IP-CIDR,185.76.151.0/24,电报信息
-# 蒸汽
+  # 蒸汽
   - DOMAIN-SUFFIX,csgo.wmsj.cn,DIRECT
   - DOMAIN-SUFFIX,dota2.wmsj.cn,DIRECT
   - DOMAIN-SUFFIX,wmsjsteam.com,DIRECT
@@ -363,12 +353,12 @@ rules:
   - DOMAIN-SUFFIX,steamstatic.com.8686c.com,DIRECT
   - DOMAIN,xz.pphimalayanrt.com,DIRECT
   - DOMAIN-SUFFIX,steamcontent.com,DIRECT
-# CN域名直连(中国|公司|网络)
+  # CN域名直连(中国|公司|网络)
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-SUFFIX,xn--fiqs8s,DIRECT
   - DOMAIN-SUFFIX,xn--55qx5d,DIRECT
   - DOMAIN-SUFFIX,xn--io0a7i,DIRECT
-# 360
+  # 360
   - DOMAIN-SUFFIX,360.com,DIRECT
   - DOMAIN-SUFFIX,360kuai.com,DIRECT
   - DOMAIN-SUFFIX,360safe.com,DIRECT
@@ -377,7 +367,7 @@ rules:
   - DOMAIN-SUFFIX,qhstatic.com,DIRECT
   - DOMAIN-SUFFIX,qhupdate.com,DIRECT
   - DOMAIN-SUFFIX,so.com,DIRECT
-# 百度
+  # 百度
   - DOMAIN-KEYWORD,baidu,DIRECT
   - DOMAIN-SUFFIX,91.com,DIRECT
   - DOMAIN-SUFFIX,aipage.com,DIRECT
@@ -427,7 +417,7 @@ rules:
   - DOMAIN-SUFFIX,zuoyebang.cc,DIRECT
   - DOMAIN-SUFFIX,zuoyebang.com,DIRECT
   - DOMAIN-SUFFIX,zybang.com,DIRECT
-# 今日头条/bytedance
+  # 今日头条/bytedance
   - DOMAIN-SUFFIX,toutiao.com,DIRECT
   - DOMAIN-SUFFIX,toutiaoapi.com,DIRECT
   - DOMAIN-SUFFIX,toutiaocdn.com,DIRECT
@@ -441,24 +431,24 @@ rules:
   - DOMAIN-SUFFIX,toutiaopage.com,DIRECT
   - DOMAIN-SUFFIX,toutiaostatic.com,DIRECT
   - DOMAIN-SUFFIX,toutiaovod.com,DIRECT
-# 抖音/bytedance
+  # 抖音/bytedance
   - DOMAIN-SUFFIX,douyin.com,DIRECT
   - DOMAIN-SUFFIX,douyincdn.com,DIRECT
   - DOMAIN-SUFFIX,douyinliving.com,DIRECT
   - DOMAIN-SUFFIX,douyinpic.com,DIRECT
   - DOMAIN-SUFFIX,douyinstatic.com,DIRECT
   - DOMAIN-SUFFIX,douyinvod.com,DIRECT
-# 抖音火山版/bytedance
+  # 抖音火山版/bytedance
   - DOMAIN-SUFFIX,huoshan.com,DIRECT
   - DOMAIN-SUFFIX,huoshanstatic.com,DIRECT
   - DOMAIN-SUFFIX,huoshanzhibo.com,DIRECT
-# 西瓜视频/bytedance
+  # 西瓜视频/bytedance
   - DOMAIN-SUFFIX,ixigua.com,DIRECT
   - DOMAIN-SUFFIX,ixiguavideo.com,DIRECT
   - DOMAIN-SUFFIX,ixgvideo.com,DIRECT
   - DOMAIN-SUFFIX,bdxiguaimg.com,DIRECT
   - DOMAIN-SUFFIX,bdxiguastatic.com,DIRECT
-# 快手/kuaishou/kuaishou-ads
+  # 快手/kuaishou/kuaishou-ads
   - DOMAIN-SUFFIX,gifshow.com,DIRECT
   - DOMAIN-SUFFIX,ksapisrv.com,DIRECT
   - DOMAIN-SUFFIX,kuaishou.com,DIRECT
@@ -467,7 +457,7 @@ rules:
   - DOMAIN-SUFFIX,kuaishouzt.com,DIRECT
   - DOMAIN,log-sdk.gifshow.com,DIRECT
   - DOMAIN,wlog.kuaishou.com,DIRECT
-# cctv
+  # cctv
   - DOMAIN-SUFFIX,cctv.cn,DIRECT
   - DOMAIN-SUFFIX,cctv.com,DIRECT
   - DOMAIN-SUFFIX,cctvpic.com,DIRECT
@@ -505,7 +495,7 @@ rules:
   - DOMAIN-SUFFIX,zggbdszt.com.cn,DIRECT
   - DOMAIN-SUFFIX,zggbdszt.net.cn,DIRECT
   - DOMAIN-SUFFIX,zygbdszt.net.cn,DIRECT
-# 滴滴/didi
+  # 滴滴/didi
   - DOMAIN-SUFFIX,didi-food.com,DIRECT
   - DOMAIN-SUFFIX,didiaustralia.blog,DIRECT
   - DOMAIN-SUFFIX,didichuxing.com,DIRECT
@@ -515,14 +505,14 @@ rules:
   - DOMAIN-SUFFIX,xiaojukeji.com,DIRECT
   - DOMAIN-SUFFIX,didialift.com,DIRECT
   - DOMAIN-SUFFIX,udache.com,DIRECT
-# 斗鱼/douyu
+  # 斗鱼/douyu
   - DOMAIN-SUFFIX,douyu.com,DIRECT
   - DOMAIN-SUFFIX,douyu.tv,DIRECT
   - DOMAIN-SUFFIX,douyucdn.cn,DIRECT
   - DOMAIN-SUFFIX,douyucdn2.cn,DIRECT
   - DOMAIN-SUFFIX,douyuscdn.com,DIRECT
   - DOMAIN-SUFFIX,douyutv.com,DIRECT
-# 华为/huawei/huawei-dev/huaweicloud
+  # 华为/huawei/huawei-dev/huaweicloud
   - DOMAIN-SUFFIX,abhouses.com,DIRECT
   - DOMAIN-SUFFIX,agconnect.link,DIRECT
   - DOMAIN-SUFFIX,dbank.com,DIRECT
@@ -730,7 +720,7 @@ rules:
   - DOMAIN-SUFFIX,cdnhwcwqz113.cn,DIRECT
   - DOMAIN-SUFFIX,cdnhwcojn124.cn,DIRECT
   - DOMAIN-SUFFIX,cdnhwcscc123.cn,DIRECT
-# 京东/jd
+  # 京东/jd
   - DOMAIN-SUFFIX,1huizhan.com,DIRECT
   - DOMAIN-SUFFIX,3.cn,DIRECT
   - DOMAIN-SUFFIX,300hu.com,DIRECT
@@ -962,7 +952,7 @@ rules:
   - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
   - DOMAIN-SUFFIX,yiyaojd.com,DIRECT
   - DOMAIN-SUFFIX,yizhitou.com,DIRECT
-# 小米
+  # 小米
   - DOMAIN-SUFFIX,duokan.com,DIRECT
   - DOMAIN-SUFFIX,mi-img.com,DIRECT
   - DOMAIN-SUFFIX,mi.com,DIRECT
@@ -970,10 +960,10 @@ rules:
   - DOMAIN-SUFFIX,xiaomi.com,DIRECT
   - DOMAIN-SUFFIX,xiaomi.net,DIRECT
   - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
-# 拼多多
+  # 拼多多
   - DOMAIN-SUFFIX,pinduoduo.com,DIRECT
   - DOMAIN-SUFFIX,yangkeduo.com,DIRECT
-# 新浪
+  # 新浪
   - DOMAIN-SUFFIX,leju.com,DIRECT
   - DOMAIN-SUFFIX,miaopai.com,DIRECT
   - DOMAIN-SUFFIX,sina.com,DIRECT
@@ -988,7 +978,7 @@ rules:
   - DOMAIN-SUFFIX,weibocdn.com,DIRECT
   - DOMAIN-SUFFIX,weibocdn.cn,DIRECT
   - DOMAIN-SUFFIX,xiaoka.tv,DIRECT
-# 搜狐
+  # 搜狐
   - DOMAIN-SUFFIX,go2map.com,DIRECT
   - DOMAIN-SUFFIX,sogo.com,DIRECT
   - DOMAIN-SUFFIX,sogou.com,DIRECT
@@ -999,7 +989,7 @@ rules:
   - DOMAIN-SUFFIX,sohuno.com,DIRECT
   - DOMAIN-SUFFIX,sohurdc.com,DIRECT
   - DOMAIN-SUFFIX,v-56.com,DIRECT
-# 腾讯/tencent
+  # 腾讯/tencent
   - DOMAIN-SUFFIX,qq.xn--fiqs8s,DIRECT
   - DOMAIN-SUFFIX,xn--r70as2s.xn--fiqs8s,DIRECT
   - DOMAIN-SUFFIX,apcdns.net,DIRECT
@@ -1036,15 +1026,15 @@ rules:
   - DOMAIN-SUFFIX,alloyteam.com,DIRECT
   - DOMAIN-SUFFIX,imweb.io,DIRECT
   - DOMAIN-SUFFIX,ivweb.io,DIRECT
-# 唯品会
+  # 唯品会
   - DOMAIN-SUFFIX,appsimg.com,DIRECT
   - DOMAIN-SUFFIX,appvipshop.com,DIRECT
   - DOMAIN-SUFFIX,vip.com,DIRECT
   - DOMAIN-SUFFIX,vipstatic.com,DIRECT
-# 喜马拉雅
+  # 喜马拉雅
   - DOMAIN-SUFFIX,ximalaya.com,DIRECT
   - DOMAIN-SUFFIX,xmcdn.com,DIRECT
-# 迅雷
+  # 迅雷
   - DOMAIN-SUFFIX,00cdn.com,DIRECT
   - DOMAIN-SUFFIX,88cdn.com,DIRECT
   - DOMAIN-SUFFIX,kanimg.com,DIRECT
@@ -1053,7 +1043,7 @@ rules:
   - DOMAIN-SUFFIX,sandai.net,DIRECT
   - DOMAIN-SUFFIX,thundercdn.com,DIRECT
   - DOMAIN-SUFFIX,xunlei.com,DIRECT
-# 直连IP列表
+  # 直连IP列表
   - IP-CIDR,1.0.1.0/24,DIRECT
   - IP-CIDR,1.0.2.0/23,DIRECT
   - IP-CIDR,1.0.8.0/21,DIRECT

@@ -13,22 +13,22 @@ ipv6: false #软路由上不建议开启
 iptables:
   enable: false
 
-# 域名嗅探，关闭
-# sniffer:
-#   enable: true
-#   force-dns-mapping: true
-#   parse-pure-ip: true
-#   overrid-destination: true
-#   sniff:
-#     HTTP:
-#       ports: [80, 8080-8880]
-#       override-destination: true
-#     TLS:
-#       ports: [443, 8443]
-#   force-domain:
-#     - tracker.*.com
-#   skip-domain:
-#     - Mijia Cloud
+# 域名嗅探
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  overrid-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+  force-domain:
+    - tracker.*.com
+  skip-domain:
+    - Mijia Cloud
 
 geodata-mode: true
 geox-url: # 自定义 geodata url, 需要有代理的前提才能下载geoip和geosite
@@ -41,6 +41,7 @@ profile:
   store-selected: true # 存储 select 选择记录
   store-fake-ip: true # 持久化 fake-ip
 
+# Tun 配置 Windows使用
 tun:
   enable: true
   stack: system # gvisor / lwip
@@ -93,7 +94,7 @@ auto: &a2
   proxies:
   use:
     - tao
-  url: "http://www.gstatic.com/generate_204"
+  url: "http://connectivitycheck.gstatic.com/generate_204"
   interval: 300
 
 pr1: &a3
@@ -200,12 +201,12 @@ rule-providers:
   mpt:
     url: "https://gist.githubusercontent.com/zwyyy456/eb9aa537968491f143b9b2124d2e4b47/raw/pt-rule.yaml"
     path: ./ruleset/mpt.yaml
-    <<: *rl2
+    <<: *rl1
 
   mtracker:
     path: ./ruleset/mtracker.yaml
     url: "https://gist.githubusercontent.com/zwyyy456/2edad3f6da907c96f503c0cca3c681a9/raw/tracker-rule.yaml"
-    <<: *rl2
+    <<: *rl1
 
   mdirect:
     path: ./ruleset/mdirect.yaml
@@ -224,106 +225,137 @@ rule-providers:
 
   # loyalsoldier
   reject:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: ./ruleset/reject.yaml
     <<: *rl2
+    interval: 86400
 
   icloud:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
     path: ./ruleset/icloud.yaml
     <<: *rl2
+    interval: 86400
 
   apple-direct:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
     path: ./ruleset/apple-direct.yaml
-    <<: *rl2
+    interval: 86400
 
   google-direct:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
     path: ./ruleset/google-direct.yaml
     <<: *rl2
+    interval: 86400
 
   proxy:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
     path: ./ruleset/proxy.yaml
     <<: *rl2
+    interval: 86400
 
   direct:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/direct.yaml
     <<: *rl2
+    interval: 86400
 
   private:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/private.yaml
     <<: *rl2
+    interval: 86400
 
   gfw:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
     path: ./ruleset/gfw.yaml
     <<: *rl2
+    interval: 86400
 
   tld-not-cn:
+    type: http
+    behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/tld-not-cn.yaml
     <<: *rl2
+    interval: 86400
 
   telegramcidr:
+    type: http
+    behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
     path: ./ruleset/telegramcidr.yaml
     <<: *rl3
+    interval: 86400
 
   cncidr:
+    type: http
+    behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     <<: *rl3
+    interval: 86400
 
   lancidr:
+    type: http
+    behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
     <<: *rl3
+    interval: 86400
 
   applications:
+    type: http
+    behavior: classical
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
     <<: *rl1
+    interval: 86400
 
 rules:
   # 开始匹配规则
   - RULE-SET,direct,DIRECT
-  - RULE-SET,cncidr,DIRECT,no-resolve
+  - RULE-SET,cncidr,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,mdirect,DIRECT,no-resolve
+  - RULE-SET,mdirect,DIRECT
   - RULE-SET,mtracker,DIRECT
   - RULE-SET,apple-direct,DIRECT
-  - RULE-SET,lancidr,DIRECT,no-resolve
+  - RULE-SET,lancidr,DIRECT
   - RULE-SET,applications,DIRECT
 
   - RULE-SET,mpt,PROXY
-  - RULE-SET,mproxy,PROXY
 
   ## GEOSITE
   - GEOSITE,bilibili,DIRECT
   - GEOSITE,icloud,icloud
-  - GEOSITE,apple,apple
   - GEOSITE,onedrive,onedrive
   - GEOSITE,spotify,spotify
   - GEOSITE,youtube,youtube
   - GEOSITE,netflix,stream
-  - GEOSITE,google,google
   - GEOSITE,telegram,telegram
   - GEOSITE,github,github
   - GEOSITE,microsoft,microsoft
-  - GEOSITE,steam@cn,DIRECT
   - GEOSITE,openai,openai
   - GEOSITE,category-games@cn,DIRECT
   - GEOSITE,geolocation-!cn,PROXY
   - GEOSITE,cn,DIRECT
 
-  - RULE-SET,telegramcidr,telegram,no-resolve
+  - RULE-SET,telegramcidr,telegram
   - RULE-SET,gfw,PROXY
-
-  # 是否有这样的请求，域名不在上述规则之内，但是 ip 又是国内的？目前看来，似乎没有碰到过这样的情况；故选择 GEOIP,CN,DIRECT,no-resolve
-  - GEOIP,cn,DIRECT,no-resolve
-
+  - GEOIP,cn,DIRECT
   - MATCH,PROXY
