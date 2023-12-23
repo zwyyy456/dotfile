@@ -62,31 +62,25 @@ dns:
 # 策略组引用
 
 pr: &a1 { type: select, proxies: ["Auto"], use: [tao, zwy] }
-
 auto: &a2 { type: url-test, use: [tao], url: "http://www.gstatic.com/generate_204", interval: 300 }
-
 pr1: &a3 { type: select, proxies: ["PROXY", "DIRECT"], use: [tao, zwy] }
-
 # for openai
 pr2: &a4 { type: select, proxies: ["PROXY"], use: [beta, tao, zwy] }
 
 # anchor for proxy provider
 prp: &prp { type: http, interval: 86400, health-check: { enable: true, interval: 300, url: "http://www.gstatic.com/generate_204" } }
 
+#anchor for rule-provider
 rl1: &rl1 { type: http, interval: 86400, behavior: classical }
-
 rl2: &rl2 { type: http, interval: 86400, behavior: domain }
-
 rl3: &rl3 { type: http, interval: 86400, behavior: ipcidr }
 
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
   tao: { url: "https://2324.taosky.com/23reality24-sub-dsdadds132d", path: "./profiles/tao.yaml", <<: *prp }
-
   beta: { url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx", path: "./profiles/beta.yaml", <<: *prp }
-
-  zwy: { url: "https://gist.githubusercontent.com/zwyyy456/9b625f2547ed60be6ddd39c99178d962/raw/proxy-provider.yaml", path: "./profiles/zwy.yaml", <<: *prp }
+  zwy: { url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/tpclash/proxies.yaml", path: "./profiles/zwy.yaml", <<: *prp }
 
 proxy-groups:
   - { name: "Auto", <<: *a2 }

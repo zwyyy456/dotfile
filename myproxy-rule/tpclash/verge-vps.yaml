@@ -81,7 +81,7 @@ rl3: &rl3 { type: http, interval: 86400, behavior: ipcidr }
 #代理集  如果是自建节点屏蔽这里
 proxy-providers:
   #自定义名称
-  zwy: { url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy/tpclash/proxies.yaml", path: "./profiles/zwy.yaml", <<: *prp }
+  zwy: { url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/tpclash/proxies.yaml", path: "./profiles/zwy.yaml", <<: *prp }
 
 proxy-groups:
   - { name: "Auto", <<: *a2 }

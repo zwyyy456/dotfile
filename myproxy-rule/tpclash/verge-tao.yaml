@@ -82,10 +82,8 @@ rl3: &rl3 { type: http, interval: 86400, behavior: ipcidr }
 proxy-providers:
   #自定义名称
   tao: { url: "https://2324.taosky.com/23reality24-sub-dsdadds132d", path: "./profiles/tao.yaml", <<: *prp }
-
   beta: { url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx", path: "./profiles/beta.yaml", <<: *prp }
-
-  zwy: { url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy/tpclash/proxies.yaml", path: "./profiles/zwy.yaml", <<: *prp }
+  zwy: { url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/tpclash/proxies.yaml", path: "./profiles/zwy.yaml", <<: *prp }
 
 proxy-groups:
   - { name: "Auto", <<: *a2 }
