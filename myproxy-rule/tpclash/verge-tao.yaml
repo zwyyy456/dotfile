@@ -85,7 +85,7 @@ proxy-providers:
 
   beta: { url: "https://v2sub.betac1ouds.top/modules/servers/V2raySocks/NEWclash.php?sid=7197&token=zj72yNuIbqCx", path: "./profiles/beta.yaml", <<: *prp }
 
-  zwy: { url: "https://gist.githubusercontent.com/zwyyy456/9b625f2547ed60be6ddd39c99178d962/raw/proxy-provider.yaml", path: "./profiles/zwy.yaml", <<: *prp }
+  zwy: { url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy/tpclash/proxies.yaml", path: "./profiles/zwy.yaml", <<: *prp }
 
 proxy-groups:
   - { name: "Auto", <<: *a2 }
