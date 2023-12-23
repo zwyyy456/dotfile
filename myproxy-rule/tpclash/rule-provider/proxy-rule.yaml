@@ -7,3 +7,4 @@ payload:
   - DOMAIN-SUFFIX,open.cd
   - DOMAIN-SUFFIX,m-team.cc
   - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,services.googleapis.cn
