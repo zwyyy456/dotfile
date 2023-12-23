@@ -103,12 +103,23 @@ proxy-groups:
 
 rule-providers:
   mdirect:
-    { path: "./ruleset/mdirect.yaml", url: "https://gist.githubusercontent.com/zwyyy456/4811d18198c3ad49d0485480eff22d9f/raw/direct-rule.yaml", <<: *rl1 }
+    {
+      path: "./ruleset/mdirect.yaml",
+      url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/tpclash/rule-provider/direct-rule.yaml",
+      <<: *rl1,
+    }
   mdirect-ip:
-    { path: "./ruleset/mdirect-ip.yaml", url: "https://gist.githubusercontent.com/zwyyy456/5e30e860689f18f0c05c5d42bdcd72d5/raw/direct-ip-rule.yaml", <<: *rl3 }
-
-  mproxy: { path: "./ruleset/mproxy.yaml", url: "https://gist.githubusercontent.com/zwyyy456/43afd8f49c179fddbfa54458e898eb2e/raw/proxy-rule.yaml", <<: *rl1 }
-
+    {
+      path: "./ruleset/mdirect-ip.yaml",
+      url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/tpclash/rule-provider/direct-ip-rule.yaml",
+      <<: *rl3,
+    }
+  mproxy:
+    {
+      path: "./ruleset/mproxy.yaml",
+      url: "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/tpclash/rule-provider/proxy-rule.yaml",
+      <<: *rl1,
+    }
   openai: { url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml", path: "./ruleset/openai.yaml", <<: *rl1 }
 
   reject: { url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: "./ruleset/reject.yaml", <<: *rl2 }
