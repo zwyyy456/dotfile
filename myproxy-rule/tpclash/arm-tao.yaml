@@ -1,3 +1,4 @@
+# 仅保证 gist 的 arm-tao.yaml，verge-vps.yaml 是最新的
 tproxy-port: 7893
 mixed-port: 7890 # 局域网访问Port
 bind-address: "*" #绑定IP地址
@@ -143,16 +144,15 @@ rule-providers:
 
 rules:
   # 开始匹配规则
+  - RULE-SET,mproxy,PROXY
   - RULE-SET,direct,DIRECT
   - RULE-SET,cncidr,DIRECT,no-resolve
   - RULE-SET,private,DIRECT
   - RULE-SET,mdirect,DIRECT
-  - RULE-SET,midirect-ip,DIRECT
+  - RULE-SET,mdirect-ip,DIRECT,no-resolve
   - RULE-SET,apple-direct,DIRECT
   - RULE-SET,lancidr,DIRECT,no-resolve
   - RULE-SET,applications,DIRECT
-
-  - RULE-SET,mproxy,PROXY
 
   ## GEOSITE
   - GEOSITE,bilibili,DIRECT

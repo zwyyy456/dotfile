@@ -143,7 +143,7 @@ rules:
   - RULE-SET,cncidr,DIRECT,no-resolve
   - RULE-SET,private,DIRECT
   - RULE-SET,mdirect,DIRECT
-  - RULE-SET,midirect-ip,DIRECT
+  - RULE-SET,mdirect-ip,DIRECT,no-resolve
   - RULE-SET,apple-direct,DIRECT
   - RULE-SET,lancidr,DIRECT,no-resolve
   - RULE-SET,applications,DIRECT
