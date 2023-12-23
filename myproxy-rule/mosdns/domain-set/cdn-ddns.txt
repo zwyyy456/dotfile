@@ -1,0 +1,2 @@
+cdn.staticfile.org
+cdn.jsdelivr.net

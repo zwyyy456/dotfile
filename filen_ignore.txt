@@ -10,3 +10,5 @@ siyuan/
 */.git/
 iterm2/
 qBittorrent/
+clash-verge/
+clash/

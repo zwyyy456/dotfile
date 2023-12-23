@@ -1,0 +1,25 @@
+payload:
+  # cdn.staticfile
+  - DOMAIN-SUFFIX,cdn.staticfile.org
+
+  # tracker
+  - DOMAIN-SUFFIX,tracker.pterclub.com
+  - DOMAIN-SUFFIX,t.hddolby.com
+  - DOMAIN-SUFFIX,tracker-public.tjupt.org
+  - DOMAIN-SUFFIX,tracker.52dic.vip
+  - DOMAIN-SUFFIX,tracker.greatposterwall.com
+  - DOMAIN-SUFFIX,tracker.leaves.read
+  - DOMAIN-SUFFIX,tracker.m-team.io
+  - DOMAIN-SUFFIX,tracker.open.cd
+  - DOMAIN-SUFFIX,tracker.pterclub.com
+  - DOMAIN-SUFFIX,tracker.sjtu.edu.cn
+  - DOMAIN-SUFFIX,tracker2.leaves.red
+  - DOMAIN-SUFFIX,tracker3.leaves.red
+
+  ## subscribe and ruleset
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net
+  - DOMAIN-SUFFIX,sub2.smallstrawberry.com
+  - DOMAIN-SUFFIX,www.hneko.world
+  - DOMAIN-SUFFIX,v2sub.betac1ouds.top
+  - DOMAIN-SUFFIX,mossfrp.top
+  - DOMAIN-SUFFIX,mossfrp.cn
