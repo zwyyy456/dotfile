@@ -1,6 +1,7 @@
 payload:
   # cdn.staticfile
   - DOMAIN-SUFFIX,cdn.staticfile.org
+  - DOMAIN-SUFFIX,b0.aicdn.com
 
   # tracker
   - DOMAIN-SUFFIX,tracker.pterclub.com
