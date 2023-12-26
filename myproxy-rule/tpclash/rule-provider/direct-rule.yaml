@@ -3,6 +3,9 @@ payload:
   - DOMAIN-SUFFIX,cdn.staticfile.org
   - DOMAIN-SUFFIX,b0.aicdn.com
 
+  # upyun
+  - DOMAIN-SUFFIX,pic-upyun.zwyyy456.tech
+
   # tracker
   - DOMAIN-SUFFIX,tracker.pterclub.com
   - DOMAIN-SUFFIX,t.hddolby.com
