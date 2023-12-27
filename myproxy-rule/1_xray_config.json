@@ -1,0 +1,57 @@
+{
+    "log": {
+        "loglevel": "warning",
+        "error": "/var/log/xray/error.log",
+        "access": "/var/log/xray/access.log"
+    },
+    "inbounds": [
+        {
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "c2312cd7-b05c-4d7e-af44-e1fa29c182f5",
+                        "flow": "xtls-rprx-vision",
+                        "email": "zwyyy456@gmail.com"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "dest": 7443,
+                    "xver": 2,
+                    "serverNames": [
+                        "ccs.ggll.eu.org"
+                    ],
+                    "privateKey": "2EaJYBxCo1Y4yxC37msUEEvmCfWlmwsFqVD_HHYAjGk",
+                    "shortIds": [
+                        "6ba85179e30d4fc2"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "tag": "blocked",
+            "protocol": "blackhole",
+            "settings": {}
+        }
+    ]
+}
