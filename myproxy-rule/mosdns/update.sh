@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /root/mosdns
 # 设置 GitHub 仓库的所有者和仓库名
 GITHUB_OWNER="Loyalsoldier"  # 替换为仓库所有者的用户名
 GITHUB_REPO="v2ray-rules-dat"    # 替换为仓库名称
@@ -28,7 +29,7 @@ for FILE_NAME in "${FILES[@]}"; do
     curl -L $DOWNLOAD_URL -o $FILE_NAME
 done
 
-curl -L "" -o proxy-domain.txt
+curl -L "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/mosdns/domain-set/proxy-domain.txt" -o proxy-domain.txt
 curl -L "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/mosdns/domain-set/direct-domain.txt" -o direct-domain.txt
 curl -L "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/mosdns/domain-set/cdn-ddns.txt" -o cdn-ddns.txt
 curl -L "https://raw.githubusercontent.com/zwyyy456/dotfile/main/myproxy-rule/mosdns/config.yaml" -o config.yaml
