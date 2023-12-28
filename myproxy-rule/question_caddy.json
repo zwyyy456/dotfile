@@ -1,0 +1,31 @@
+: 443, example.eu.org {
+    tls example@gmail.com
+    route {
+        forward_proxy {
+            basic_auth abc def
+            hide_ip
+            hide_via
+            probe_resistance
+        }
+        handle_path /plex* {
+            uri strip_prefix /plex
+            reverse_proxy localhost: 32400
+        }
+        handle_path /qbit* {
+            redir /qbit /qbit/
+            uri strip_prefix /qbit
+            reverse_proxy 127.0.0.1: 28080 {
+                header_up Host localhost: 28080
+                header_up X-Forwarded-For {remote
+                }
+                header_up X-Forwarded-Host {hostport
+                }
+                header_up -Origin
+                header_up -Referer
+            }
+        }
+        file_server {
+            root /home/zwyyy/webpage
+        }
+    }
+}

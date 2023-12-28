@@ -157,6 +157,6 @@
 		<Setting name="Update Check New Version" platform="mac">nightly 2023-12-26 https://filezilla-project.org/nightlies/2023-12-26/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15231295 sha512 2cf8fea3cf7d42bc95abb72dbeeab67998b83a2fae7c0b0a93d21edd0e30e1e14ce16f29e0101afb6716f3bc4262ea2f8190be3b61adc7d16e7be4d7cec990ef sig:+SbYoWhTdHD2RXHRaJrA1DJC/kAwNOkJ3BRL2ER8EnVSxX/VO+F+DO824S8PPuhs0P0YsWQtJAxsogonrgJgAQ
 release 3.64.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.64.0_macosx-x86.app.tar.bz2 15289763 sha512 ff67a95345fa4c20563a58272ce61e1ce9b8db8c5a1d1ae24ea65c17ff5bcbd9552ebea182b06313bfd03c7a9510353999deff7b0128ea009b44c3d118516443 sig:C5uWxE6OT8UIB1g8jDrkMH+HS1fYPpsGfzUX4fKOMJ69RSlVMfYMxU7DOqAagBLyjedFUxefoAHjeyxlKmMVCQ
 </Setting>
-		<Setting name="Sitemanager last selected">0/inp</Setting>
+		<Setting name="Sitemanager last selected">0/amd1</Setting>
 	</Settings>
 </FileZilla3>
