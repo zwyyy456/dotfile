@@ -6,6 +6,11 @@ usermod -aG sudo zwyyy
 
 su zwyyy
 
+ssh-keygen -t ed25519 -C "zwyyy456@hotmail.com"
+
+sudo apt install git
+
+git clone git@github.com:zwyyy456/nvim_config.git ~/.config/nvim
 # 安装 docker
 # Add Docker's official GPG key:
 sudo apt-get update
