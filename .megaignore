@@ -1,0 +1,26 @@
+# 忽略所有 .git 目录
+-dn:.git
+# 忽略所有 logs 目录
+-dn:logs
+# 忽略所有 dll 文件 dat 文件
+-fn:.dll
+-fn:.dat
+-fn:.db
+-fn:.mmdb
+-fn:layzlock.json
+-dn:filezilla
+-dn:siyuan
+-dn:cache
+-dn:clash
+-dn:clash-verge
+-dn:MusicBrainz
+-dn:.filen.trash.local
+-dn:iterm2
+-sn:AppSupport
+-fn:*.dll
+-fn:*.dat
+-fn:*.db
+-fn:*.mmdb
+-:*.bin
+-:*.logs
+-fn:*.log
