@@ -22,7 +22,7 @@ for FILE_NAME in "${FILES[@]}"; do
     if [ -z "$DOWNLOAD_URL" ]; then
         echo "未找到文件 $FILE_NAME"
         continue
-    fi
+    fi 
 
     # 下载文件
     echo "正在下载 $FILE_NAME..."
