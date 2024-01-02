@@ -19,6 +19,10 @@ payload:
   - DOMAIN-SUFFIX,tracker.sjtu.edu.cn
   - DOMAIN-SUFFIX,tracker2.leaves.red
   - DOMAIN-SUFFIX,tracker3.leaves.red
+  - DOMAIN-SUFFIX,tracker.hhan.club
+  - DOMAIN-SUFFIX,hhanclub.top
+  - DOMAIN-SUFFIX,tracker.cinefiles.info
+  - DOMAIN-SUFFIX,t.audiences.me
 
   ## subscribe and ruleset
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
