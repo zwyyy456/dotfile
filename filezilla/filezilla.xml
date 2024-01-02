@@ -133,30 +133,75 @@
 		<Setting name="Site Manager position">0 1973 1287 1056 439 </Setting>
 		<Setting name="Window position and size">0 1900 1049 1203 850 </Setting>
 		<Setting name="Queue column widths">180 128 371 80 60 150</Setting>
-		<Setting name="Tab data" sensitive="1">
-			<Tabs>
-				<Tab connected="1" selected="1">
-					<Host>45.82.80.126</Host>
-					<Port>22331</Port>
-					<Protocol>1</Protocol>
-					<Type>0</Type>
-					<User>client_19339_1</User>
-					<Keyfile>/Users/zwyyy/.ssh/id_ed25519</Keyfile>
-					<Logontype>5</Logontype>
-					<EncodingType>Auto</EncodingType>
-					<BypassProxy>0</BypassProxy>
-					<Name>inp</Name>
-					<Site>0/inp</Site>
-					<RemotePath>1 0 4 home 14 client_19339_1 9 downloads 6 movies</RemotePath>
-					<LocalPath>/Users/zwyyy/Downloads/zimu/</LocalPath>
-				</Tab>
-			</Tabs>
-		</Setting>
 		<Setting name="Last automatic update check">2023-12-26 08:01:24</Setting>
 		<Setting name="Update Check New Version" platform="mac">nightly 2023-12-26 https://filezilla-project.org/nightlies/2023-12-26/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 15231295 sha512 2cf8fea3cf7d42bc95abb72dbeeab67998b83a2fae7c0b0a93d21edd0e30e1e14ce16f29e0101afb6716f3bc4262ea2f8190be3b61adc7d16e7be4d7cec990ef sig:+SbYoWhTdHD2RXHRaJrA1DJC/kAwNOkJ3BRL2ER8EnVSxX/VO+F+DO824S8PPuhs0P0YsWQtJAxsogonrgJgAQ
 release 3.64.0 https://dl1.cdn.filezilla-project.org/FileZilla_3.64.0_macosx-x86.app.tar.bz2 15289763 sha512 ff67a95345fa4c20563a58272ce61e1ce9b8db8c5a1d1ae24ea65c17ff5bcbd9552ebea182b06313bfd03c7a9510353999deff7b0128ea009b44c3d118516443 sig:C5uWxE6OT8UIB1g8jDrkMH+HS1fYPpsGfzUX4fKOMJ69RSlVMfYMxU7DOqAagBLyjedFUxefoAHjeyxlKmMVCQ
 </Setting>
 		<Setting name="Sitemanager last selected">0/ecs</Setting>
 		<Setting name="Already connected choice">2</Setting>
+		<Setting name="Tab data" sensitive="1">
+			<Tabs>
+				<Tab connected="1">
+					<Host>193.26.156.130</Host>
+					<Port>22333</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>zwyyy</User>
+					<Keyfile>/Users/zwyyy/.ssh/id_ed25519</Keyfile>
+					<Logontype>5</Logontype>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>nc1o</Name>
+					<Site>0/nc1o</Site>
+					<RemotePath>1 0 4 home 5 zwyyy</RemotePath>
+					<LocalPath>/Users/zwyyy/Downloads/</LocalPath>
+				</Tab>
+				<Tab connected="1">
+					<Host>152.69.198.196</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>zwyyy</User>
+					<Keyfile>/Users/zwyyy/.ssh/id_ed25519</Keyfile>
+					<Logontype>5</Logontype>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>amd0</Name>
+					<Site>0/amd0</Site>
+					<RemotePath>1 0 4 home 5 zwyyy 5 caddy</RemotePath>
+					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
+				</Tab>
+				<Tab connected="1">
+					<Host>64.110.97.25</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>zwyyy</User>
+					<Keyfile>/Users/zwyyy/.ssh/id_ed25519</Keyfile>
+					<Logontype>5</Logontype>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>amd1</Name>
+					<Site>0/amd1</Site>
+					<RemotePath>1 0 4 home 5 zwyyy</RemotePath>
+					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
+				</Tab>
+				<Tab connected="1" selected="1">
+					<Host>47.76.45.253</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>zwyyy</User>
+					<Pass encoding="base64">MTEzNmxpbg==</Pass>
+					<Logontype>1</Logontype>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>ecs</Name>
+					<Site>0/ecs</Site>
+					<RemotePath>1 0 4 home 5 zwyyy</RemotePath>
+					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
+				</Tab>
+			</Tabs>
+		</Setting>
 	</Settings>
 </FileZilla3>
