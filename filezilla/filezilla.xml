@@ -150,7 +150,6 @@ release 3.66.4 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.4_macos-x86.
 - Fixed a potential crash in the HTTP client
 </Setting>
 		<Setting name="Greeting version">3.66.4</Setting>
-		<Setting name="Site Manager position">0 1945 1281 1056 439 </Setting>
 		<Setting name="Window position and size">0 1872 1043 1203 850 </Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
@@ -186,6 +185,7 @@ release 3.66.4 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.4_macos-x86.
 				</Tab>
 			</Tabs>
 		</Setting>
-		<Setting name="Sitemanager last selected">0/inp</Setting>
+		<Setting name="Sitemanager last selected">0/amd1</Setting>
+		<Setting name="Site Manager position">0 2101 1007 1056 439 </Setting>
 	</Settings>
 </FileZilla3>
