@@ -23,6 +23,7 @@ payload:
   - DOMAIN-SUFFIX,hhanclub.top
   - DOMAIN-SUFFIX,tracker.cinefiles.info
   - DOMAIN-SUFFIX,t.audiences.me
+  - DOMAIN-SUFFIX,on.springsunday.net
 
   ## subscribe and ruleset
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
