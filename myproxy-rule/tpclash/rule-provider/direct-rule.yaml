@@ -31,3 +31,6 @@ payload:
   - DOMAIN-SUFFIX,v2sub.betac1ouds.top
   - DOMAIN-SUFFIX,mossfrp.top
   - DOMAIN-SUFFIX,mossfrp.cn
+
+  ## my server
+  - DOMAIN-SUFFIX,ggll.eu.org
