@@ -49,7 +49,7 @@ tar -zxvf cd2.tar.gz
 
 rm cd2.tar.gz
 # 假设解压后只有一个目录，获取这个目录的名称
-EXTRACTED_DIR=$(ls -d */ | head -n 1)
+EXTRACTED_DIR=$(ls -d clouddrive*/ | head -n 1)
 
 # 删除目录名末尾的斜杠
 EXTRACTED_DIR=${EXTRACTED_DIR%/}
