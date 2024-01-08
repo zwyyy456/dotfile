@@ -126,8 +126,6 @@
 		<Setting name="Default editor" platform="mac">0</Setting>
 		<Setting name="Last automatic update version">3.66.1</Setting>
 		<Setting name="Splitter positions (v2)">97 -207 500000000 234 234 500000000</Setting>
-		<Setting name="Remote filelist colwidths">168 75 80 100 80 85</Setting>
-		<Setting name="Remote filelist sortorder">0 0</Setting>
 		<Setting name="Onetime Dialogs">0001</Setting>
 		<Setting name="Queue column widths">180 128 371 80 60 150</Setting>
 		<Setting name="Already connected choice">2</Setting>
@@ -150,58 +148,13 @@ release 3.66.4 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.4_macos-x86.
 - Fixed a potential crash in the HTTP client
 </Setting>
 		<Setting name="Greeting version">3.66.4</Setting>
-		<Setting name="Site Manager position">0 2066 1306 1056 439 </Setting>
-		<Setting name="Sitemanager last selected">0/amd1-br</Setting>
-		<Setting name="Window position and size">0 1866 52 1203 850 </Setting>
+		<Setting name="Remote filelist colwidths">368 75 80 100 80 85</Setting>
+		<Setting name="Remote filelist sortorder">0 0</Setting>
+		<Setting name="Window position and size">0 313 38 1203 850 </Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
-				<Tab connected="1">
-					<Host>45.159.48.36</Host>
-					<Port>22</Port>
-					<Protocol>1</Protocol>
-					<Type>0</Type>
-					<User>zwyyy</User>
-					<Pass encoding="base64">MTEzNmxpbg==</Pass>
-					<Logontype>1</Logontype>
-					<EncodingType>Auto</EncodingType>
-					<BypassProxy>0</BypassProxy>
-					<Name>green</Name>
-					<Site>0/green</Site>
-					<RemotePath>1 0 4 home 5 zwyyy</RemotePath>
-					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
-				</Tab>
-				<Tab connected="1">
-					<Host>45.82.80.126</Host>
-					<Port>22331</Port>
-					<Protocol>1</Protocol>
-					<Type>0</Type>
-					<User>client_19339_1</User>
-					<Keyfile>/Users/zwyyy/.ssh/id_ed25519</Keyfile>
-					<Logontype>5</Logontype>
-					<EncodingType>Auto</EncodingType>
-					<BypassProxy>0</BypassProxy>
-					<Name>inp</Name>
-					<Site>0/inp</Site>
-					<RemotePath>1 0 4 home 14 client_19339_1 9 downloads 6 movies</RemotePath>
-					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
-				</Tab>
-				<Tab connected="1">
-					<Host>168.75.108.22</Host>
-					<Port>22333</Port>
-					<Protocol>1</Protocol>
-					<Type>0</Type>
-					<User>zwyyy</User>
-					<Pass encoding="base64">MTEzNmxpbg==</Pass>
-					<Logontype>1</Logontype>
-					<EncodingType>Auto</EncodingType>
-					<BypassProxy>0</BypassProxy>
-					<Name>amd0-br</Name>
-					<Site>0/amd0-br</Site>
-					<RemotePath>1 0 4 home 5 zwyyy</RemotePath>
-					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
-				</Tab>
 				<Tab connected="1" selected="1">
-					<Host>144.22.154.95</Host>
+					<Host>146.235.37.60</Host>
 					<Port>22333</Port>
 					<Protocol>1</Protocol>
 					<Type>0</Type>
@@ -210,12 +163,14 @@ release 3.66.4 https://dl1.cdn.filezilla-project.org/FileZilla_3.66.4_macos-x86.
 					<Logontype>1</Logontype>
 					<EncodingType>Auto</EncodingType>
 					<BypassProxy>0</BypassProxy>
-					<Name>amd1-br</Name>
-					<Site>0/amd1-br</Site>
+					<Name>arm-br</Name>
+					<Site>0/arm-br</Site>
 					<RemotePath>1 0 4 home 5 zwyyy</RemotePath>
 					<LocalPath>/Users/zwyyy/Downloads/caddy/</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>
+		<Setting name="Site Manager position">0 1847 1180 1056 439 </Setting>
+		<Setting name="Sitemanager last selected">0/nc1o</Setting>
 	</Settings>
 </FileZilla3>
