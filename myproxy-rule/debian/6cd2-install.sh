@@ -76,3 +76,6 @@ echo "$CD2SERVICE" > cd2.service
 sudo mv cd2.service /etc/systemd/system/
 sudo systemctl enable cd2
 sudo systemctl restart cd2
+
+# host 模式的 qbittorrent
+
