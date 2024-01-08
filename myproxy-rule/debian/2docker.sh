@@ -1,6 +1,7 @@
 # 安装 docker
 # Add Docker's official GPG key:
 sudo apt-get update
+
 sudo apt-get -y install ca-certificates curl gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -16,5 +17,7 @@ sudo apt-get update
 sudo apt  -y install docker-ce docker-compose
 
 sudo usermod -aG docker $USER
+
+sudo apt install -y llvm clang 
 
 su - $USER # 切换到同一用户，使更改生效

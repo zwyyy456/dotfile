@@ -9,6 +9,7 @@ tailscale.com
 
 gr-jp.ggll.eu.org
 alihk0.ggll.eu.org
+zwyyy456.tech
 
 tracker.pterclub.com
 t.hddolby.com
