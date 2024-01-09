@@ -16,10 +16,7 @@ services:
     volumes:
       - /home/zwyyy/qbit/config:/config
       - /home/zwyyy/downloads:/downloads
-    ports:
-      - 28080:28080
-      - 51413:51413
-      - 51413:51413/udp
+    network_mode: host
     restart: unless-stopped
 EOL
 )
