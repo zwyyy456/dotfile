@@ -18,6 +18,7 @@ sudo apt  -y install docker-ce docker-compose
 
 sudo usermod -aG docker $USER
 
-sudo apt install -y llvm clang 
 
 su - $USER # 切换到同一用户，使更改生效
+
+sudo apt install -y llvm clang 
