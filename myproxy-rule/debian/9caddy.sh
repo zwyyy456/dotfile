@@ -16,3 +16,13 @@ cd /var/lib/caddy/.local/share/caddy
 apt install tree
 
 tree certificates
+
+
+sudo systemctl stop caddy
+wget https://cd2.ccs.ggll.eu.org/static/https/cd2.ccs.ggll.eu.org:443/False/%2Fdownloads%2Fcaddy_exec.tar.gz
+tar -zxvf %2Fdownloads%2Fcaddy_exec.tar.gz
+sudo cp caddy_exec/trojan/caddy /usr/bin
+sudo chmod +x /usr/bin/caddy
+sudo setcap 'cap_net_bind_service=+ep' /usr/bin/caddy
+
+sudo systemctl restart caddy
