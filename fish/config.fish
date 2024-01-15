@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    alias lg 'lazygit'
+    alias lg lazygit
 end
 
 # >>> conda initialize >>>
@@ -9,7 +9,7 @@ if uname | grep -q Linux
     if test -f /home/zwyyy/miniconda3/bin/conda
         eval /home/zwyyy/miniconda3/bin/conda "shell.fish" hook $argv | source
     else if test -f /root/miniconda3/bin/conda
-        eval /root/miniconda3/bin/conda "shell.fish" hook &argv | source
+        eval /root/miniconda3/bin/conda "shell.fish" hook & argv | source
     end
     # <<< conda initialize <<<
     set -gx GOPATH $HOME/go
@@ -29,4 +29,8 @@ if uname | grep -q Darwin
     # set path
     set -x PATH /opt/homebrew/bin $PATH
     set -x PATH /opt/homebrew/opt/postgresql@15/bin $PATH
+    set -gx PATH /opt/homebrew/opt/llvm/bin $PATH
+    set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
+    set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
+
 end
