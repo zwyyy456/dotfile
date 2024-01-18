@@ -6,6 +6,7 @@ v2sub.betac1ouds.top
 mossfrp.top
 mossfrp.cn
 tailscale.com
+log.tailscale.io
 
 gr-jp.ggll.eu.org
 alihk0.ggll.eu.org
