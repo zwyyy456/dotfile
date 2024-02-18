@@ -5,7 +5,7 @@
 # 支持操作系统： Linux, OSX, FreeBSD, OpenBSD and NetBSD, both 32-bit and 64-bit architectures
 # 说明: 默认情况下修改server和user就可以了。丢包率监测方向可以自定义，例如：CU = "www.facebook.com"。
 
-SERVER = "152.69.198.196"
+SERVER = "193.26.156.130"
 USER = "s13"
 
 
