@@ -31,8 +31,8 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
 elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_prog = { "pwsh" }
 	config.font = wezterm.font_with_fallback({
+		{ family = "FiraMono Nerd Font Mono", harfbuzz_features = { "liga=0" } },
 		"Cascadia Mono",
-		{ family = "FuraMono NFM", harfbuzz_features = { "liga=0" } },
 		"Microsoft Yahei",
 	})
 end
