@@ -1,0 +1,222 @@
+{
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "grunt.autoDetect": "on",
+    "gulp.autoDetect": "on",
+    "jake.autoDetect": "on",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.inheritEnv": true,
+    "python.autoComplete.extraPaths": [],
+    "python.analysis.extraPaths": [],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.accessibilitySupport": "off",
+    "settingsSync.ignoredSettings": [
+        // "leetcode.workspaceFolder",
+        "terminal.integrated.fontFamily"
+    ],
+    // "leetcode.workspaceFolder": "/Users/zwyyy456/Documents/zCode/zLeetCode",
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.autoSelectActiveFolder": false,
+    "vscode-neovim.highlightGroups.highlights": {
+        "Directory": "vim",
+        "IncSearch": {
+            "backgroundColor": "theme.editor.findMatchBackground",
+            "borderColor": "theme.editor.findMatchBorder"
+        },
+        "Search": {
+            "backgroundColor": "theme.editor.findMatchHighlightBackground",
+            "borderColor": "theme.editor.findMatchHighlightBorder"
+        },
+        "Visual": {
+            "backgroundColor": "theme.editor.selectionBackground"
+        },
+        "Conceal": "vim",
+        "Substitute": "vim"
+    },
+    "vscode-neovim.highlightGroups.ignoreHighlights": [
+        "EndOfBuffer",
+        "ErrorMsg",
+        "MoreMsg",
+        "ModeMsg",
+        "Question",
+        "VisualNC",
+        "WarningMsg",
+        "^Diff",
+        "Sign",
+        "SignColumn",
+        "^Spell",
+        "^Pmenu",
+        "^Tab",
+        "ColorColumn",
+        "QuickFixLine",
+        "MsgSeparator",
+        "MsgArea",
+        "^RedrawDebug",
+        "^.*MatchParen",
+        "^Nvim",
+        "Operator",
+        "Delimiter",
+        "Identifier",
+        "SpecialChar",
+        "Number",
+        "Type",
+        "String",
+        "Error",
+        "Comment",
+        "Constant",
+        "Special",
+        "Statement",
+        "PreProc",
+        "Underlined",
+        "Ignore",
+        "Todo",
+        "Character",
+        "Boolean",
+        "Float",
+        "Function",
+        "Conditional",
+        "Repeat",
+        "Label",
+        "Keyword",
+        "Exception",
+        "Include",
+        "Define",
+        "Macro",
+        "PreCondit",
+        "StorageClass",
+        "Structure",
+        "Typedef",
+        "Tag",
+        "SpecialComment",
+        "Debug",
+        "Folded",
+        "FoldColumn"
+    ],
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "editor.fontFamily": "Monaco Nerd Font Mono, Cascadia Mono, FuraMono NFM, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Monaco Nerd Font Mono, FiraMono Nerd Font Mono",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\zwyyy\\scoop\\apps\\neovim\\current\\bin\\nvim.exe",
+    "editor.lineNumbers": "relative",
+    "explorer.confirmDragAndDrop": false,
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--clang-tidy"
+    ],
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "cmake.configureOnOpen": true,
+    "clangd.onConfigChanged": "restart",
+    "cmake.configureSettings": {},
+    "python.formatting.provider": "black",
+    "editor.minimap.enabled": false,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "remote.SSH.connectTimeout": 60,
+    "remote.SSH.defaultForwardedPorts": [],
+    "remote.SSH.remotePlatform": {
+        "deb-lenovo": "linux",
+        "frp-deb": "linux",
+        "mossfrp": "linux",
+        "openfrp-deb": "linux",
+        "gr-jp": "linux"
+    },
+    "workbench.colorTheme": "Monokai",
+    "cnblogsClient.linux.workspace": "~/Documents/zwyb_blog/content/posts/",
+    "remote.SSH.logLevel": "trace",
+    "remote.SSH.useExecServer": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "cmake.showOptionsMovedNotification": false,
+    "beancount.python3Path": "/opt/homebrew/Caskroom/miniconda/base/envs/csi/bin/python",
+    "powershell.promptToUpdatePowerShell": false,
+    "files.eol": "\n",
+    "terminal.integrated.profiles.windows": {
+        "pwsh": {
+            "icon": "terminal-powershell",
+            "path": [
+                "C:\\Users\\zwyyy\\scoop\\shims\\pwsh.exe"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "pwsh",
+    "editor.stickyScroll.enabled": false,
+    // latex settings
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "miktex-xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "miktex-latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "miktex-pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "miktex-bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    //清除辅助文件
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.view.pdf.viewer": "tab", //用内置pdf阅读器查看
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "latex-workshop.latex.autoBuild.run": "never", // 保存时不会自动编译
+    "editor.fontSize": 13,
+    "C_Cpp.intelliSenseEngine": "disabled", //右键菜单
+}
