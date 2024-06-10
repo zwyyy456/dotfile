@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,services.googleapis.cn
   - DOMAIN-SUFFIX,safebrowsing.googleapis.com
+  - DOMAIN-SUFFIX,radio-activity.itunes.apple.com
