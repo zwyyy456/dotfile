@@ -156,10 +156,10 @@ beta 3.67.1-rc1 https://dl3.cdn.filezilla-project.org/FileZilla_3.67.1-rc1_macos
 </Setting>
 		<Setting name="Site Manager position">0 1948 182 1056 439 </Setting>
 		<Setting name="Local filelist colwidths">214 80 120 120</Setting>
-		<Setting name="Window position and size">0 1874 28 1203 850 </Setting>
+		<Setting name="Window position and size">0 137 38 1203 850 </Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
-				<Tab connected="1" selected="1">
+				<Tab selected="1">
 					<Host>192.168.6.181</Host>
 					<Port>22333</Port>
 					<Protocol>1</Protocol>
