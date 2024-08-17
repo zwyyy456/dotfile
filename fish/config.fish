@@ -29,8 +29,9 @@ if uname | grep -q Darwin
     # set path
     set -x PATH /opt/homebrew/bin $PATH
     set -x PATH /opt/homebrew/opt/postgresql@15/bin $PATH
-    set -gx PATH /opt/homebrew/opt/llvm/bin $PATH
-    set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
-    set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
+    # command-line-tools 够了，不需要额外安装 llvm，反而容易出问题s
+    #set -gx PATH /opt/homebrew/opt/llvm/bin $PATH
+    #set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
+    #set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
 
 end
