@@ -7,6 +7,8 @@ mossfrp.top
 mossfrp.cn
 tailscale.com
 log.tailscale.io
+win1910.ipv6.microsoft.com
+azwindows.ipv6.microsoft.com.akadns.net
 
 gr-jp.ggll.eu.org
 alihk0.ggll.eu.org
@@ -29,4 +31,5 @@ hhanclub.top
 tracker.cinefiles.info
 t.audiences.me
 on.springsunday.net
+
 
