@@ -3,9 +3,10 @@ if status is-interactive
     alias lg lazygit
 end
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
+
 if uname | grep -q Linux
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
     if test -f /home/zwyyy/miniconda3/bin/conda
         eval /home/zwyyy/miniconda3/bin/conda "shell.fish" hook $argv | source
     else if test -f /root/miniconda3/bin/conda
@@ -13,7 +14,7 @@ if uname | grep -q Linux
     end
     # <<< conda initialize <<<
     set -gx GOPATH $HOME/go
-    set -gx PATH $GOPATH/bin $PATH
+    set -gx PATH $GOPATH/bin $HOME/.local/bin $PATH
     set -gx PATH /opt/riscv/bin $PATH
 
 end
