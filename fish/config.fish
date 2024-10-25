@@ -29,9 +29,15 @@ if uname | grep -q Darwin
     # set path
     set -x PATH /opt/homebrew/bin $PATH
     set -x PATH /opt/homebrew/opt/postgresql@15/bin $PATH
-    # command-line-tools 够了，不需要额外安装 llvm，反而容易出问题s
+    # command-line-tools 
     #set -gx PATH /opt/homebrew/opt/llvm/bin $PATH
     #set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
     #set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
+    set -x HOMEBREW_BREW_GIT_REMOTE "https://mirrors.ustc.edu.cn/brew.git"
+    set -x HOMEBREW_BREW_GIT_REMOTE "https://mirrors.ustc.edu.cn/brew.git"
+    set -x HOMEBREW_CORE_GIT_REMOTE "https://mirrors.ustc.edu.cn/homebrew-core.git"
+    set -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.ustc.edu.cn/homebrew-bottles"
+    set -x HOMEBREW_API_DOMAIN "https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+
 
 end
