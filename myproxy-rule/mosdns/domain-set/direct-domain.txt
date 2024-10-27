@@ -34,3 +34,8 @@ t.audiences.me
 on.springsunday.net
 
 
+hsreplay.net
+api.hearthstonejson.com
+hsdecktracker.net
+
+
