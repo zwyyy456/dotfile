@@ -26,10 +26,9 @@ git submodule update
 sudo apt install curl
 
 ## neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-sudo apt -y install fuse3
-sudo chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/download/latest/nvim-linux64.tar.gz
+tar -xvf nvim-linux.tar.gz
+cp -r nvim-linux/* $HOME/.local
 
 curl -LO https://github.com/neovim/neovim/releases/download/latest/nvim-linux64.tar.gz
 
