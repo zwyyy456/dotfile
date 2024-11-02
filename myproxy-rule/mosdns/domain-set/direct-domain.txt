@@ -11,6 +11,7 @@ win1910.ipv6.microsoft.com
 azwindows.ipv6.microsoft.com.akadns.net
 push.apple.com
 cc.plusai.me
+cc2.plusai.me
 
 gr-jp.ggll.eu.org
 alihk0.ggll.eu.org
