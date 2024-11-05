@@ -27,10 +27,10 @@ sudo apt install curl
 
 ## neovim
 curl -LO https://github.com/neovim/neovim/releases/download/latest/nvim-linux64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
 tar -xvf nvim-linux.tar.gz
 cp -r nvim-linux/* $HOME/.local
 
-curl -LO https://github.com/neovim/neovim/releases/download/latest/nvim-linux64.tar.gz
 
 
 cd nvim && git checkout onecloud
