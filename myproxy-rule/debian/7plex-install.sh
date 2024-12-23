@@ -18,11 +18,11 @@ services:
     volumes:
       - /home/zwyyy/plex/config:/config
       - /home/zwyyy/plex/transcode:/transcode
-      - /home/zwyyy/115/tv:/tv
-      - /home/zwyyy/115/show:/show
-      - /home/zwyyy/115/video:/video
-      - /home/zwyyy/115/movies:/movies
-      - /home/zwyyy/115/music:/music
+      - /home/zwyyy/CloudDrive/115/tv:/tv
+      - /home/zwyyy/CloudDrive/115/show:/show
+      - /home/zwyyy/CloudDrive/115/video:/video
+      - /home/zwyyy/CloudDrive/115/movies:/movies
+      - /home/zwyyy/CloudDrive/115/music:/music
     restart: unless-stopped
     mem_limit: 700m
     memswap_limit: 2000m
