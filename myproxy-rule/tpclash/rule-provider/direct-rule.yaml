@@ -33,6 +33,15 @@ payload:
   - DOMAIN-SUFFIX,mossfrp.top
   - DOMAIN-SUFFIX,mossfrp.cn
 
+  ## tailscale
+  - DOMAIN-SUFFIX,log.tailscale.com
+  - DOMAIN-SUFFIX,tailscale.com
+
+  ## apple and ms
+  - DOMAIN-SUFFIX,win1910.ipv6.microsoft.com
+  - DOMAIN-SUFFIX,azwindows.ipv6.microsoft.com.akadns.net
+  - DOMAIN-SUFFIX,push.apple.com
+
   ## my server
   - DOMAIN-SUFFIX,gr-jp.ggll.eu.org
   - DOMAIN-SUFFIX,alihk0.ggll.eu.org
@@ -41,4 +50,8 @@ payload:
   ## plex
   - DOMAIN-SUFFIX,v4.plex.tv
   - DOMAIN-SUFFIX,plex.direct
-  
+
+  ## blizzard
+  - DOMAIN-SUFFIX,hsreplay.net
+  - DOMAIN-SUFFIX,api.hearthstonejson.com
+  - DOMAIN-SUFFIX,hsdecktracker.net
