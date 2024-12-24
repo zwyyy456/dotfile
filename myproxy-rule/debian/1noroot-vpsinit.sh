@@ -25,12 +25,9 @@ git submodule update
 sudo apt install curl
 
 ## neovim
-curl -LO https://github.com/neovim/neovim/releases/download/latest/nvim-linux64.tar.gz
-curl -LO https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 tar -xvf nvim-linux.tar.gz
 cp -r nvim-linux/* $HOME/.local
 
-
-
-cd nvim && git checkout onecloud
+sudo apt install gcc g++ make cmake
 
