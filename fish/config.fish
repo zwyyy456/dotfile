@@ -15,7 +15,7 @@ if uname | grep -q Linux
     # <<< conda initialize <<<
     set -gx GOPATH $HOME/go
     set -gx PATH  $PATH $HOME/.local/bin $GOPATH/bin
-    set -gx PATH /opt/riscv/bin $PATH
+    set -gx PATH /devprog/bin $PATH
 
 end
 

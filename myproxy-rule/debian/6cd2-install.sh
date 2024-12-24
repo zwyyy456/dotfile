@@ -1,32 +1,3 @@
-# 安装 qBittorrent
-
-cd && mkdir qbit
-cd qbit
-COMPOSE_CONTENT=$(cat <<EOL
-version: "2.1"
-services:
-  qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - WEBUI_PORT=28080
-    volumes:
-      - /home/zwyyy/qbit/config:/config
-      - /home/zwyyy/downloads:/downloads
-    network_mode: host
-    restart: unless-stopped
-EOL
-)
-
-echo "$COMPOSE_CONTENT" > docker-compose.yml
-
-echo "docker-compose.yml has been created!\n"
-
-docker-compose up -d
-
 ## 安装 cd2
 
 cd ~
@@ -42,21 +13,17 @@ if [ -z "$DOWNLOAD_URL" ]; then
 fi
 
 curl -L $DOWNLOAD_URL -o cd2.tar.gz
-tar -zxvf cd2.tar.gz
+mkdir -p cd2tmp
+tar -C cd2tmp -zxvf cd2.tar.gz
 
 rm cd2.tar.gz
 # 假设解压后只有一个目录，获取这个目录的名称
-EXTRACTED_DIR=$(ls -d clouddrive*/ | head -n 1)
 
-# 删除目录名末尾的斜杠
-EXTRACTED_DIR=${EXTRACTED_DIR%/}
+mkdir -p cd2 && mv cd2tmp/*/* cd2
+rm -r cd2tmp
 
-# 如果提取的目录名不是 cd2，则重命名它
-if [ "$EXTRACTED_DIR" != "cd2" ]; then
-    mv "$EXTRACTED_DIR" cd2
-fi
-
-CD2SERVICE=$(cat <<EOL
+CD2SERVICE=$(
+    cat <<EOL
 [Unit]
 Description=cd2
 After=network.target
@@ -69,10 +36,9 @@ Restart=always
 WantedBy=multi-user.target
 EOL
 )
-echo "$CD2SERVICE" > cd2.service
+echo "$CD2SERVICE" >cd2.service
 sudo mv cd2.service /etc/systemd/system/
 sudo systemctl enable cd2
 sudo systemctl restart cd2
 
 # host 模式的 qbittorrent
-
