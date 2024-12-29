@@ -27,6 +27,8 @@ fpath=(
     ~/.local/share/zsh/site-functions
 )
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
+
 if command -v brew > /dev/null; then
   # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
   # caching and compilation of <command>'s output, making it 10 times faster.
