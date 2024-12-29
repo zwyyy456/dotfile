@@ -107,4 +107,9 @@ clash.meta/config.yaml
 raycast/extensions
 clash.meta
 scoop
+zsh/functions/prompt_launchpad_chpwd.zwc
+zsh/functions/prompt_launchpad_precmd.zwc
+zsh/functions/prompt_launchpad_setup.zwc
+zsh/rc.d/05-prompt.zsh.zwc
+zsh/rc.d/08-keys.zsh.zwc
 lazygit/state.yml
