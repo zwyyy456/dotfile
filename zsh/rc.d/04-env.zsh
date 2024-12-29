@@ -28,6 +28,7 @@ fpath=(
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
+autoload -Uz zvm_config
 
 if command -v brew > /dev/null; then
   # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with

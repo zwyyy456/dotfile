@@ -6,14 +6,15 @@
 # For more info on each plugin, visit its repo at github.com/<plugin>
 # -a sets the variable's type to array.
 local -a plugins=(
+    zsh-users/zsh-autosuggestions       # Inline suggestions
+    zsh-users/zsh-syntax-highlighting   # Command-line syntax highlighting
     marlonrichert/zsh-edit              # Better keyboard shortcuts
     marlonrichert/zsh-hist              # Edit history from the command line.
     marlonrichert/zcolors               # Colors for completions and Git
-    zsh-users/zsh-autosuggestions       # Inline suggestions
     # marlonrichert/zsh-autocomplete    # Real-time type-ahead completion
     Aloxaf/fzf-tab                      # completion through fzf
-    zsh-users/zsh-syntax-highlighting   # Command-line syntax highlighting
     skywind3000/z.lua                   # A new cd command that helps you navigate faster by learning your habits
+    jeffreytse/zsh-vi-mode              # vi mode for zsh
 )
 
 # The Zsh Autocomplete plugin sends *a lot* of characters to your terminal.
@@ -37,9 +38,10 @@ for p in $plugins; do
   znap source $p
 done
 
-# znap source ohmyzsh/ohmyzsh lib/clipboard
+znap source ohmyzsh/ohmyzsh lib/clipboard
 znap source ohmyzsh/ohmyzsh plugins/colored-man-pages
 znap source ohmyzsh/ohmyzsh plugins/copypath
+znap source ohmyzsh/ohmyzsh plugins/copybuffer
 # znap source ohmyzsh/ohmyzsh plugins/copyfile
 
 # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
