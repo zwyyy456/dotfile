@@ -1,5 +1,5 @@
 log:
-  level: warn
+  level: info
 
 plugins:
   # 缓存
@@ -23,7 +23,7 @@ plugins:
     type: "forward"
     args:
       upstreams:
-        - { tag: fakedns, addr: "192.168.6.206:1053" }
+        - { tag: fakedns, addr: "192.168.6.181:1053" }
 
   - tag: "direct_domain"
     type: "domain_set"
@@ -70,7 +70,7 @@ plugins:
       - { exec: goto proxy_seq } # 没有匹配到直连域名，跳转 proxy_sequence
 
   - type: "udp_server"
-    args: { entry: main_seq, listen: ":5533" }
+    args: { entry: main_seq, listen: "[::]:2353" }
 
   - type: "tcp_server"
-    args: { entry: main_seq, listen: ":5533" }
+    args: { entry: main_seq, listen: "[::]:2353" }

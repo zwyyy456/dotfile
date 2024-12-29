@@ -8,3 +8,4 @@ payload:
   - DOMAIN-SUFFIX,m-team.cc
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,services.googleapis.cn
+  - DOMAIN-SUFFIX,safebrowsing.googleapis.com
