@@ -31,6 +31,10 @@ autoload -Uz zmv
 alias zmv='zmv -Mv'
 alias zcp='zmv -Cv'
 alias zln='zmv -Lv'
+
+autoload -Uz clipcopy
+
+
 # Note that, unlike with Bash, you do not need to inform Zsh's completion system
 # of your aliases. It will figure them out automatically.
 
@@ -111,3 +115,6 @@ alias ag='ag --hidden'          # 使用 silversearcher-ag 搜索
 alias fd='fd --hidden'          # 使用 fd 搜索文件/目录
 
 alias less='less -R'            # 支持 ANSI 转义序列
+
+alias lg='lazygit'
+alias ccpy='clipcopy'
