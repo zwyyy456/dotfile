@@ -20,5 +20,3 @@ sudo usermod -aG docker $USER
 
 
 su - $USER # 切换到同一用户，使更改生效
-
-sudo apt install -y llvm clang 
