@@ -105,6 +105,7 @@ filezilla/layout.xml
 filezilla/recentservers.xml
 clash.meta/config.yaml
 raycast/extensions
+clash.meta
 scoop
 zsh/functions/prompt_launchpad_chpwd.zwc
 zsh/functions/prompt_launchpad_precmd.zwc
