@@ -6,8 +6,6 @@ sudo apt -y install fish
 adduser zwyyy # 这里还需要手动输入信息
 usermod -aG sudo zwyyy
 
-
-
 sudo apt install git
 
 su zwyyy
@@ -26,8 +24,8 @@ sudo apt install curl
 
 ## neovim
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+suod mkdir -p /devprog
 tar -xvf nvim-linux.tar.gz
 cp -r nvim-linux/* $HOME/.local
 
 sudo apt install gcc g++ make cmake
-

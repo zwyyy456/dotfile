@@ -2,7 +2,8 @@
 
 cd && mkdir plex
 cd plex
-COMPOSE_CONTENT=$(cat <<EOL
+COMPOSE_CONTENT=$(
+    cat <<EOL
 version: "2.1"
 services:
   plex:
@@ -18,19 +19,16 @@ services:
     volumes:
       - /home/zwyyy/plex/config:/config
       - /home/zwyyy/plex/transcode:/transcode
-      - /home/zwyyy/CloudDrive/115/tv:/tv
-      - /home/zwyyy/CloudDrive/115/show:/show
-      - /home/zwyyy/CloudDrive/115/video:/video
-      - /home/zwyyy/CloudDrive/115/movies:/movies
-      - /home/zwyyy/CloudDrive/115/music:/music
+      - /home/zwyyy/115/:/mnt/115
     restart: unless-stopped
     mem_limit: 700m
     memswap_limit: 2000m
 EOL
 )
 
-echo "$COMPOSE_CONTENT" > docker-compose.yml
+echo "$COMPOSE_CONTENT" >docker-compose.yml
 
 echo "docker-compose.yml has been created!\n"
 
 docker-compose up -d
+
