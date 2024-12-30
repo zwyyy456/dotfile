@@ -109,3 +109,5 @@ clash.meta
 scoop
 lazygit/state.yml
 *.zwc
+fish/fish_variables
+zsh/.zsh_sessions
