@@ -1,6 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     alias lg lazygit
+    alias degtr 'double-entry-generator translate'
 end
 
 
@@ -13,8 +14,8 @@ if uname | grep -q Linux
         eval /root/miniconda3/bin/conda "shell.fish" hook & argv | source
     end
     # <<< conda initialize <<<
-    set -gx GOPATH $HOME/go
-    set -gx PATH  $PATH $HOME/.local/bin $GOPATH/bin
+    #set -gx GOPATH $HOME/.local/go
+    set -gx PATH $PATH $HOME/.local/bin $HOME/.local/go/bin
     set -gx PATH /opt/riscv/bin $PATH
 
 end
