@@ -1,5 +1,4 @@
 # $line_break\
-add_newline=false
 format = """
 $username\
 $hostname\
@@ -8,7 +7,7 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
-$conda\
+$python\
 $character"""
 
 [directory]
@@ -44,6 +43,6 @@ style = "bright-red"
 format = "[$duration]($style) "
 style = "yellow"
 
-[conda]
-format = '[$symbol$environment](dimmed green) '
-ignore_base = true
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
