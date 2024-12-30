@@ -16,7 +16,8 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
 	-- This is where you actually apply your config choices
 
 	-- For example, changing the color scheme:
-	config.default_prog = { "/bin/zsh", "-l" }
+	-- config.default_prog = { "/bin/zsh", "-l" }
+	config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 	-- config.font = wezterm.font_with_fallback({
 	-- "Monaco Nerd Font Mono",
 	-- "Moncao",
