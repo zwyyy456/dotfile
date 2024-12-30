@@ -14,9 +14,9 @@ if uname | grep -q Linux
     end
     # <<< conda initialize <<<
     set -gx GOPATH $HOME/go
-    set -gx PATH  $PATH $HOME/.local/bin $GOPATH/bin
-    set -gx PATH /opt/riscv/bin $PATH
-
+    set -gx PATH $GOPATH/bin $PATH
+    set -gx PATH /myprog/bin $PATH
+    set -gx PATH /home/zwyyy/bin $PATH
 end
 
 if uname | grep -q Darwin
