@@ -30,10 +30,10 @@ fpath=(
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
 autoload -Uz zvm_config
 
-if command -v brew > /dev/null; then
+if command -v /opt/homebrew/bin/brew > /dev/null; then
   # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
   # caching and compilation of <command>'s output, making it 10 times faster.
-  znap eval brew-shellenv 'brew shellenv'
+  znap eval brew-shellenv '/op/homebrew/bin/brew shellenv'
 
   # Add dirs containing completion functions to your $fpath and they will be
   # picked up automatically when the completion system is initialized.
@@ -43,3 +43,11 @@ if command -v brew > /dev/null; then
       $HOMEBREW_PREFIX/share/zsh/site-functions
   )
 fi
+
+# Set PATH, MANPATH, etc., for Homebrew.
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+
+# Added by OrbStack: command-line tools and integration
+# Comment this line if you don't want it to be added again.
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
