@@ -104,3 +104,12 @@ go/telemetry/local
 lazygit/state.yml
 leetcode-questions.json
 lazygit/state.yml
+filezilla/filezilla.xml
+filezilla/layout.xml
+filezilla/recentservers.xml
+clash.meta/config.yaml
+raycast/extensions
+clash.meta
+scoop
+lazygit/state.yml
+*.zwc

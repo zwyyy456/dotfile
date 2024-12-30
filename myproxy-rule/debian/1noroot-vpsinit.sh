@@ -2,12 +2,9 @@ apt update
 apt install sudo
 
 sudo apt -y install fish
-chsh -s /usr/bin/fish
 
 adduser zwyyy # 这里还需要手动输入信息
 usermod -aG sudo zwyyy
-
-
 
 sudo apt install git
 
@@ -26,13 +23,9 @@ git submodule update
 sudo apt install curl
 
 ## neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-sudo apt -y install fuse3
-sudo chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+suod mkdir -p /devprog
+tar -xvf nvim-linux.tar.gz
+cp -r nvim-linux/* $HOME/.local
 
-curl -LO https://github.com/neovim/neovim/releases/download/latest/nvim-linux64.tar.gz
-
-
-cd nvim && git checkout onecloud
-
+sudo apt install gcc g++ make cmake

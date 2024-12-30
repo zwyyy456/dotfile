@@ -14,10 +14,10 @@ if uname | grep -q Linux
         eval /root/miniconda3/bin/conda "shell.fish" hook & argv | source
     end
     # <<< conda initialize <<<
-    #set -gx GOPATH $HOME/.local/go
-    set -gx PATH $PATH $HOME/.local/bin $HOME/.local/go/bin
-    set -gx PATH /opt/riscv/bin $PATH
-
+    set -gx GOPATH $HOME/go
+    set -gx PATH $GOPATH/bin $PATH
+    set -gx PATH /myprog/bin $PATH
+    set -gx PATH /home/zwyyy/bin $PATH
 end
 
 if uname | grep -q Darwin
