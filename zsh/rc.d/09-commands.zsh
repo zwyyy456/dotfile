@@ -93,9 +93,9 @@ alias top='htop'                # 使用更友好的 htop 代替 top
 alias ip='ip -c'                # 显示彩色输出的 ip 命令
 alias flushdns='sudo systemd-resolve --flush-caches' # 刷新 DNS 缓存
 
-alias tarx='tar xvf'            # 快速解压 tar 包
+alias tarx='tar -xvf'            # 快速解压 tar 包
 alias tarz='tar -cvzf'          # 创建 gzip 压缩包
-alias untar='tar xvf'           # 解压任意 tar 格式文件
+alias untar='tar -xvf'           # 解压任意 tar 格式文件
 
 alias zip='zip -r'              # 压缩为 zip 格式
 alias unzip='unzip -d'          # 解压 zip 文件
