@@ -50,6 +50,6 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 
 # Added by OrbStack: command-line tools and integration
 # Comment this line if you don't want it to be added again.
-if [ -f ~/.orbstack/shell/init.zsh]; then
+if [ -f ~/.orbstack/shell/init.zsh ]; then
    . ~/.orbstack/shell/init.zsh 2>/dev/null || :
 fi
