@@ -3,7 +3,6 @@
 set -g hydro_color_pwd green
 set -g hydro_color_git brmagenta
 
-set -g _fisher_plugins (cat $__fish_config_dir/fisher_plugins)
 
 # set hombrew
 if test -f /opt/homebrew/bin/brew
