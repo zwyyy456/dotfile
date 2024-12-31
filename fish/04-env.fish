@@ -11,6 +11,9 @@ if test -f /opt/homebrew/bin/brew
     set -g HOMEBREW_BREW_GIT_REMOTE "https://mirrors.ustc.edu.cn/brew.git"
     set -g HOMEBREW_BOTTLE_DOMAIN "https://mirrors.ustc.edu.cn/homebrew-bottles"
     set -g HOMEBREW_API_DOMAIN "https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+    if test -f $HOMEBREW_PREFIX/bin/conda
+        eval $HOMEBREW_PREFIX/bin/conda "shell.fish" hook $argv | source
+    end
 end
 
 if test -d /devprog/bin
@@ -19,9 +22,7 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f $HOMEBREW_PREFIX/bin/conda
-    eval $HOMEBREW_PREFIX/bin/conda "shell.fish" hook $argv | source
-else if test -f $HOME/miniconda3/bin/conda
+if test -f $HOME/miniconda3/bin/conda
     eval $HOME/miniconda3/bin/conda "shell.fish" hook $argv | source
 end
 # <<< conda initialize <<<

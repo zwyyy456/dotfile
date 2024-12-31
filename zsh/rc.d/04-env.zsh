@@ -42,11 +42,11 @@ if command -v /opt/homebrew/bin/brew > /dev/null; then
   fpath+=(
       $HOMEBREW_PREFIX/share/zsh/site-functions
   )
+  # Set PATH, MANPATH, etc., for Homebrew.
+  export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+  export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 fi
 
-# Set PATH, MANPATH, etc., for Homebrew.
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 
 # Added by OrbStack: command-line tools and integration
 # Comment this line if you don't want it to be added again.
