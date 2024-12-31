@@ -33,7 +33,7 @@ autoload -Uz zvm_config
 if command -v /opt/homebrew/bin/brew > /dev/null; then
   # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
   # caching and compilation of <command>'s output, making it 10 times faster.
-  znap eval brew-shellenv '/op/homebrew/bin/brew shellenv'
+  znap eval brew-shellenv '/opt/homebrew/bin/brew shellenv'
 
   # Add dirs containing completion functions to your $fpath and they will be
   # picked up automatically when the completion system is initialized.
