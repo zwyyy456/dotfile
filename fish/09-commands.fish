@@ -60,3 +60,5 @@ alias less='less -R' # 支持 ANSI 转义序列
 alias lg='lazygit'
 alias deg='double-entry-generator'
 alias degtr='deg translate'
+
+alias bcat='bat'
