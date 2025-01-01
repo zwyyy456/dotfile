@@ -61,4 +61,8 @@ alias lg='lazygit'
 alias deg='double-entry-generator'
 alias degtr='deg translate'
 
-alias bcat='bat'
+if command -v batcat >/dev/null
+    alias bcat='batcat'
+else
+    alias bcat='bat'
+end

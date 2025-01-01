@@ -119,4 +119,8 @@ alias less='less -R'            # 支持 ANSI 转义序列
 alias lg='lazygit'
 alias ccp='clipcopy'
 
-alias bcat='batcat'
+if command -v batcat > /dev/null; then
+    alias bcat='batcat'
+else
+    alias bcat='bat'
+fi
