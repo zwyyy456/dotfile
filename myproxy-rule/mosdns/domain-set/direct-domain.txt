@@ -12,6 +12,8 @@ cc.plusai.me
 cc2.plusai.me
 
 gr-jp.ggll.eu.org
+plex.ggll.eu.org
+alist.ggll.eu.org
 alihk0.ggll.eu.org
 zwyyy456.tech
 

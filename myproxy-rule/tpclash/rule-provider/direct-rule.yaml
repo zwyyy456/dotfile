@@ -44,6 +44,8 @@ payload:
 
   ## my server
   - DOMAIN-SUFFIX,gr-jp.ggll.eu.org
+  - DOMAIN-SUFFIX,plex.ggll.eu.org
+  - DOMAIN-SUFFIX,alist.ggll.eu.org
   - DOMAIN-SUFFIX,alihk0.ggll.eu.org
   - DOMAIN-SUFFIX,plusai.me
 
