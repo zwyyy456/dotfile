@@ -45,6 +45,10 @@ if command -v /opt/homebrew/bin/brew > /dev/null; then
   # Set PATH, MANPATH, etc., for Homebrew.
   export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
   export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+
+  if [[ -f $HOMEBREW_PREFIX/bin/conda ]]; then
+      znap eval conda-init "$HOMEBREW_PREFIX/bin/conda 'shell.zsh' hook $argv"
+  fi
 fi
 
 
@@ -53,3 +57,11 @@ fi
 if [ -f ~/.orbstack/shell/init.zsh ]; then
    . ~/.orbstack/shell/init.zsh 2>/dev/null || :
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if [[ -f $HOME/miniconda3/bin/conda ]]; then
+    znap eval conda-init "$HOME/miniconda3/bin/conda 'shell.zsh' hook $argv"
+
+fi
+# <<< conda initialize <<<
