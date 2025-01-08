@@ -1,0 +1,25 @@
+
+tpclone() {
+        if [[ $# -ne 2 ]]; then
+            echo "Usage: tppush <remote> <branch>"
+            return 1
+        fi
+
+        REMOTE=$1
+        BRANCH=$2
+
+        # restart tpclash 
+        echo "restart tpclash..."
+        sudo systemctl restart tpclash
+
+        # exec git push
+        echo "Executing git push for $1 $2..."
+        git push "$REMOTE" "$BRANCH"
+
+        # stop tpclash
+        echo "stop tpclash..."
+        sudo systemctl stop tpclash
+
+        echo "task completed."
+
+    }

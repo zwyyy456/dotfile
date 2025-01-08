@@ -1,0 +1,21 @@
+tpwget() {
+        if [[ $# -eq 0 ]]; then
+            echo "Usage: tpwget <url>"
+            return 1
+        fi
+
+        # restart tpclash 
+        echo "restart tpclash..."
+        sudo systemctl restart tpclash
+
+        # exec wget
+        echo "Executing wget for $1..."
+        wget "$1"
+
+        # stop tpclash
+        echo "stop tpclash..."
+        sudo systemctl stop tpclash
+
+        echo "task completed."
+
+    }
