@@ -1,0 +1,21 @@
+tpclone() {
+        if [[ $# -eq 0 ]]; then
+            echo "Usage: tpclone <url>"
+            return 1
+        fi
+
+        # restart tpclash 
+        echo "restart tpclash..."
+        sudo systemctl restart tpclash
+
+        # exec git clone
+        echo "Executing git clone for $1..."
+        git clone "$1"
+
+        # stop tpclash
+        echo "stop tpclash..."
+        sudo systemctl stop tpclash
+
+        echo "task completed."
+
+    }
