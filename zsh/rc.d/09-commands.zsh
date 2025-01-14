@@ -33,7 +33,10 @@ alias zcp='zmv -Cv'
 alias zln='zmv -Lv'
 
 # autoload -Uz clipcopy
-
+autoload -Uz tpwget
+autoload -Uz tpclone
+autoload -Uz tppush
+autoload -Uz tpfetch
 
 # Note that, unlike with Bash, you do not need to inform Zsh's completion system
 # of your aliases. It will figure them out automatically.
@@ -124,3 +127,6 @@ if command -v batcat > /dev/null; then
 else
     alias bcat='bat'
 fi
+
+alias deg='double-entry-generator'
+alias degtr='deg translate'
