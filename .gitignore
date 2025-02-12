@@ -116,3 +116,4 @@ lazygit/state.yml
 fish/fish_variables
 zsh/.zsh_sessions
 gopls/prompt/telemetry
+crossnote
