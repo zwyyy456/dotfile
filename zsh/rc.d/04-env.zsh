@@ -60,8 +60,8 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if [[ -f /devprog/miniconda3/bin/conda ]]; then
-    __conda_setup="$(/devprog/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
+if [[ -f $HOME/.local/miniconda3/bin/conda ]]; then
+    __conda_setup="$($HOME/.local/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__conda_setup" # conda 的设置需要直接修改当前 shell 的环境内容，无法使用 znap 缓存加速
     fi
