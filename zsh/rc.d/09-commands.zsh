@@ -101,7 +101,7 @@ alias tarz='tar -cvzf'          # 创建 gzip 压缩包
 alias untar='tar -xvf'           # 解压任意 tar 格式文件
 
 alias zip='zip -r'              # 压缩为 zip 格式
-alias unzip='unzip -d'          # 解压 zip 文件
+# alias unzip='unzip -d'          # 解压 zip 文件
 
 alias 7z='7z x'                 # 解压 7z 文件
 alias 7za='7z a'                # 压缩为 7z 格式
