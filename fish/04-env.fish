@@ -3,7 +3,6 @@
 set -g hydro_color_pwd green
 set -g hydro_color_git brmagenta
 
-
 # set hombrew
 if test -f /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
@@ -22,7 +21,8 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f $HOME/miniconda3/bin/conda
-    eval $HOME/miniconda3/bin/conda "shell.fish" hook $argv | source
+if test -f $HOME/.local/miniconda3/bin/conda
+    eval $HOME/.local/miniconda3/bin/conda "shell.fish" hook $argv | source
 end
 # <<< conda initialize <<<
+
