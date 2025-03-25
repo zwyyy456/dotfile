@@ -15,8 +15,14 @@ if test -f /opt/homebrew/bin/brew
     end
 end
 
-if test -d /devprog/bin
-    fish_add_path /devprog/bin # global default
+if test -d $HOME/.loca/bin
+    fish_add_path $HOME/.local/bin # global default
+end
+
+if not set -q MANPATH
+    set -gx MANPATH (manpath) ~/.config/tool-man
+else
+    set -gx MANPATH $MANPATH ~/.config/tool-man
 end
 
 # >>> conda initialize >>>
@@ -25,4 +31,3 @@ if test -f $HOME/.local/miniconda3/bin/conda
     eval $HOME/.local/miniconda3/bin/conda "shell.fish" hook $argv | source
 end
 # <<< conda initialize <<<
-
