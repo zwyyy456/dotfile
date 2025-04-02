@@ -1,9 +1,0 @@
-[Unit]
-Description=Client Status
-
-[Service]
-ExecStart=/usr/bin/python3 /home/zwyyy/client_status/client-linux.py >/dev/null 2>&1 &
-Restart=always
-
-[Install]
-WantedBy=multi-user.target

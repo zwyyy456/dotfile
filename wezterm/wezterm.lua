@@ -12,6 +12,8 @@ end
 
 config.color_scheme = "Mariana"
 config.font_size = 12.0
+config.hide_tab_bar_if_only_one_tab = true
+-- MACOS_USE_BACKGROUND_COLOR_AS_TITLEBAR_COLOR = true
 if wezterm.target_triple == "aarch64-apple-darwin" then
 	-- This is where you actually apply your config choices
 
