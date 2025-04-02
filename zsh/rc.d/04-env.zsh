@@ -74,3 +74,7 @@ if [[ -f $HOME/.local/miniconda3/bin/conda ]]; then
     unset __conda_setup
 fi
 # <<< conda initialize <<<
+
+if [[ -d $HOME/.cargo ]]; then
+    . $HOME/.cargo/env
+fi

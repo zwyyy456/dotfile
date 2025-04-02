@@ -31,3 +31,7 @@ if test -f $HOME/.local/miniconda3/bin/conda
     eval $HOME/.local/miniconda3/bin/conda "shell.fish" hook $argv | source
 end
 # <<< conda initialize <<<
+#
+if test -f $HOME/.cargo/env.fish
+    source "$HOME/.cargo/env.fish"
+end

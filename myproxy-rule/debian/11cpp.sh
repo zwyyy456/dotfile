@@ -1,1 +1,0 @@
-sudo apt install -y clangd cmake clang lldb unzip
