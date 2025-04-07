@@ -14,18 +14,18 @@ export -UT INFOPATH infopath  # -T creates a "tied" pair; see below.
 # for $HOME in each $path entry.
 path=(
     /home/linuxbrew/.linuxbrew/bin(N)   # (N): null if file doesn't exist
+    $path
     ~/.local/bin
     /devprog/bin(N)
     /devdata/bin(N)
-    $path
 )
 
 # Add your functions to your $fpath, so you can autoload them.
 fpath=(
     $ZDOTDIR/functions
+    $fpath
     $ZDOTDIR/site-functions
     ~/.local/share/zsh/site-functions
-    $fpath
 )
 
 manpath=(
