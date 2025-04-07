@@ -1,7 +1,7 @@
 **/.DS_Store
 
 ## Battle
-Battle.net/
+Battle.net
 
 ## for clash
 **/*.mmdb
@@ -11,31 +11,36 @@ Battle.net/
 **/*.dll
 
 ## clash
-clash-verge/
-clash/
+clash-verge
+clash
+clash.meta
 
 # filezilla
 filezilla/*.sqlite3
 filezilla/lockfile
+filezilla/filezilla.xml
+filezilla/layout.xml
+filezilla/recentservers.xml
 
 # nvim
 nvim/lazy-lock.json
 
 # leetgo
-leetgo/cache/
+leetgo/cache
+leetcode-questions.json
 
 # filen
-.filen.trash.local/
+.filen.trash.local
 
 # siyuan
 siyuan/
 
 # qBitorrent
-qBittorrent/
+qBittorrent
 
 
 ## iterm2
-iterm2/
+iterm2
 
 ## debian, kde
 dolphinrc
@@ -100,20 +105,28 @@ gtk-3.0
 plasma-localerc
 kwinrulesrc
 konquerorrc
-go/telemetry/local
+
+
+# lazygit
 lazygit/state.yml
-leetcode-questions.json
-lazygit/state.yml
-filezilla/filezilla.xml
-filezilla/layout.xml
-filezilla/recentservers.xml
-clash.meta/config.yaml
-raycast/extensions
-clash.meta
+
+
+# scoop
 scoop
-lazygit/state.yml
+
+# zsh
 *.zwc
-fish/fish_variables
 zsh/.zsh_sessions
+
+# fish
+fish_variables
+
+# go
 gopls/prompt/telemetry
+go/telemetry/local
+
+# crossnote
 crossnote
+
+# raycast
+raycast/extensions
