@@ -29,8 +29,8 @@ fpath=(
 )
 
 manpath=(
-    ~/.config/tool-man
     $manpath
+    ~/.config/tool-man
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
