@@ -19,9 +19,3 @@
 # To set a default value that is returned *without* setting X, use ${X:-Y}
 # As in other shells, ~ expands to $HOME _at the beginning of a value only._
 ZDOTDIR=${XDG_CONFIG_HOME:=~/.config}/zsh
-
-# 检查是否在 Neovide 中运行
-if [[ -n "$NVIM_GUI" ]]; then
-    # 仅在 Neovide 中生效的配置
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
