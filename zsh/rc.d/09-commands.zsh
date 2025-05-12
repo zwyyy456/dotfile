@@ -32,7 +32,7 @@ alias zmv='zmv -Mv'
 alias zcp='zmv -Cv'
 alias zln='zmv -Lv'
 
-# autoload -Uz clipcopy
+autoload -Uz clipcopy
 autoload -Uz tpwget
 autoload -Uz tpclone
 autoload -Uz tppush
@@ -69,7 +69,7 @@ alias lr='ls -lR'               # 递归列出所有子目录
 
 alias mkdir='mkdir -pv'         # 自动创建父目录并显示创建路径
 
-alias g='git'                   # 快捷调用 git
+# alias g='git'                   # 快捷调用 git
 alias ga='git add'              # 添加文件到暂存区
 alias gc='git commit'           # 提交代码
 alias gcm='git commit -m'       # 快速提交代码（带消息）
@@ -100,22 +100,22 @@ alias tarx='tar -xvf'            # 快速解压 tar 包
 alias tarz='tar -cvzf'          # 创建 gzip 压缩包
 alias untar='tar -xvf'           # 解压任意 tar 格式文件
 
-alias zip='zip -r'              # 压缩为 zip 格式
+# alias zip='zip -r'              # 压缩为 zip 格式
 # alias unzip='unzip -d'          # 解压 zip 文件
 
-alias 7z='7z x'                 # 解压 7z 文件
-alias 7za='7z a'                # 压缩为 7z 格式
+# alias 7z='7z x'                 # 解压 7z 文件
+# alias 7za='7z a'                # 压缩为 7z 格式
 
 alias grep='grep --color=auto'  # 彩色高亮输出
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias find='find . -iname'      # 快速查找文件（忽略大小写）
+# alias find='find . -iname'      # 快速查找文件（忽略大小写）
 alias locate='locate --regex'   # 使用正则表达式查找
 
 # 快速搜索文本
-alias rg='rg --hidden --follow' # 使用 ripgrep 递归搜索
-alias ag='ag --hidden'          # 使用 silversearcher-ag 搜索
-alias fd='fd --hidden'          # 使用 fd 搜索文件/目录
+# alias rg='rg --hidden --follow' # 使用 ripgrep 递归搜索
+# alias ag='ag --hidden'          # 使用 silversearcher-ag 搜索
+# alias fd='fd --hidden'          # 使用 fd 搜索文件/目录
 
 alias less='less -R'            # 支持 ANSI 转义序列
 
