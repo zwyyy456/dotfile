@@ -56,6 +56,6 @@ if [[ -f "$HOME/.local/cargo/env" ]]; then
 fi
 
 if [[ -f "$HOME/go/bin" ]]; then
-    pathadd $HOME/go/bin
+    pathadd $HOME/go/bin after
 fi
 export PATH
