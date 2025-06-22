@@ -18,6 +18,7 @@ path=(
     ~/.local/bin
     /devprog/bin(N)
     /devdata/bin(N)
+    $HOME/go/bin(N)
 )
 
 # Add your functions to your $fpath, so you can autoload them.

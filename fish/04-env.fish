@@ -15,8 +15,16 @@ if test -f /opt/homebrew/bin/brew
     end
 end
 
-if test -d $HOME/.loca/bin
+if test -d $HOME/.local/bin
     fish_add_path $HOME/.local/bin # global default
+end
+
+if test -d $HOME/.local/go/bin
+    fish_add_path $HOME/.local/go/bin # global default
+end
+
+if test -d $HOME/go/bin
+    fish_add_path $HOME/go/bin # global default
 end
 
 if not set -q MANPATH
