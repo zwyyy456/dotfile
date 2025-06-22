@@ -25,10 +25,6 @@ filezilla/recentservers.xml
 # nvim
 nvim/lazy-lock.json
 
-# leetgo
-leetgo/cache
-leetcode-questions.json
-
 # filen
 .filen.trash.local
 
