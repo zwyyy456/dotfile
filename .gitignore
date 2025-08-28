@@ -128,3 +128,5 @@ crossnote
 # raycast
 raycast/extensions
 configstore/update-notifier-@google/gemini-cli.json
+leetgo/cache/deps.json
+leetgo/cache/state.json
