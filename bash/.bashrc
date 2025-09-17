@@ -45,7 +45,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 pathadd $HOME/.local/bin after
-pathadd $HOME/.local/bin after
 
 if [[ -d "$HOME/.local/go/bin" ]]; then
     pathadd $HOME/.local/go/bin after
@@ -57,5 +56,9 @@ fi
 
 if [[ -d "$HOME/go/bin" ]]; then
     pathadd $HOME/go/bin after
+fi
+
+if [[ -d "/devprog/bin" ]]; then
+    pathadd /devprog/bin after
 fi
 export PATH
