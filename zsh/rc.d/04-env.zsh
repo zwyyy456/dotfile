@@ -35,7 +35,6 @@ manpath=(
     ~/.config/tool-man
 )
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
 autoload -Uz zvm_config
 
 if command -v /opt/homebrew/bin/brew > /dev/null; then

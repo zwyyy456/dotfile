@@ -41,9 +41,12 @@ done
 znap source ohmyzsh/ohmyzsh lib/clipboard
 znap source ohmyzsh/ohmyzsh plugins/colored-man-pages
 znap source ohmyzsh/ohmyzsh plugins/copypath
-znap source ohmyzsh/ohmyzsh plugins/copybuffer
-# znap source ohmyzsh/ohmyzsh plugins/copyfile
+znap source ohmyzsh/ohmyzsh plugins/copybuffer # <C-o> to copy cli content
+znap source ohmyzsh/ohmyzsh plugins/fzf
+# znap source ohmyzsh/ohmyzsh plugins/copyfile # replaced by clipcopy
 
 # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
 # caching and compilation of <command>'s output, making it ~10 times faster.
 znap eval zcolors zcolors   # Extra init code needed for zcolors.
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
