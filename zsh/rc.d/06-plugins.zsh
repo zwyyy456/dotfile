@@ -42,7 +42,7 @@ znap source ohmyzsh/ohmyzsh lib/clipboard
 znap source ohmyzsh/ohmyzsh plugins/colored-man-pages
 znap source ohmyzsh/ohmyzsh plugins/copypath
 znap source ohmyzsh/ohmyzsh plugins/copybuffer # <C-o> to copy cli content
-znap source ohmyzsh/ohmyzsh plugins/fzf
+# znap source ohmyzsh/ohmyzsh plugins/fzf
 # znap source ohmyzsh/ohmyzsh plugins/copyfile # replaced by clipcopy
 
 # `znap eval <name> '<command>'` is like `eval "$( <command> )"` but with
@@ -50,3 +50,10 @@ znap source ohmyzsh/ohmyzsh plugins/fzf
 znap eval zcolors zcolors   # Extra init code needed for zcolors.
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
+
+function load_fzf_plugin() {
+    znap source ohmyzsh/ohmyzsh plugins/fzf
+}
+
+# add func to initial list
+zvm_after_init_commands+=(load_fzf_plugin)
