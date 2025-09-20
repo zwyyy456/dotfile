@@ -53,3 +53,5 @@ deduplicate_var PATH
 deduplicate_var MANPATH
 deduplicate_var LD_LIBRARY_PATH
 deduplicate_var LIBRARY_PATH
+
+set fish_color_autosuggestion brwhite --dim --underline
