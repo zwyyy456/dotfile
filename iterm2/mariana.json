@@ -66,7 +66,7 @@
     "Green Component" : 0.20000000298023224
   },
   "Columns" : 80,
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Ansi 4 Color (Light)" : {
     "Red Component" : 0.15404300391674042,
     "Color Space" : "sRGB",
@@ -176,7 +176,7 @@
     "Green Component" : 0
   },
   "Ambiguous Double Width" : false,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Ansi 3 Color" : {
     "Red Component" : 0.97647058963775635,
     "Color Space" : "sRGB",
@@ -261,11 +261,11 @@
   "Minimum Contrast (Dark)" : 0,
   "Custom Command" : "No",
   "Foreground Color (Light)" : {
-    "Red Component" : 0.062745098039215685,
+    "Red Component" : 0.062745098039215672,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.062745098039215685,
+    "Blue Component" : 0.062745098039215672,
     "Alpha Component" : 1,
-    "Green Component" : 0.062745098039215685
+    "Green Component" : 0.062745098039215672
   },
   "Ansi 9 Color" : {
     "Red Component" : 0.97647058963775635,
@@ -459,11 +459,11 @@
   "Brighten Bold Text (Dark)" : true,
   "Use Underline Color (Dark)" : false,
   "Bold Color (Light)" : {
-    "Red Component" : 0.062745098039215685,
+    "Red Component" : 0.062745098039215672,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.062745098039215685,
+    "Blue Component" : 0.062745098039215672,
     "Alpha Component" : 1,
-    "Green Component" : 0.062745098039215685
+    "Green Component" : 0.062745098039215672
   },
   "Ansi 12 Color (Dark)" : {
     "Red Component" : 0.5215686559677124,
@@ -543,7 +543,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.78039216995239258
   },
-  "Normal Font" : "SFMonoNerdFontComplete-Regular 12",
+  "Normal Font" : "MenloNFM-Regular 12",
   "Unlimited Scrollback" : false,
   "Ansi 12 Color (Light)" : {
     "Red Component" : 0.65349078178405762,
@@ -645,6 +645,6 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.11764705926179886,
     "Alpha Component" : 1,
-    "Green Component" : 0.098039217293262482
+    "Green Component" : 0.098039217293262454
   }
 }
