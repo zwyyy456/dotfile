@@ -1,0 +1,146 @@
+{
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        "editor.action.peekDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "n"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [ // 在有多个 reference 的情况下相当于 peek references
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "R"
+      ],
+      "commands": [ // 在侧边栏中显示所有 reference
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "I"
+      ],
+      "commands": [
+        "editor.action.peekImplementation"
+      ]
+    },
+    {
+      "before": [
+        "r",
+        "n"
+      ],
+      "commands": [ // <-- 修复：改为数组
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "["
+      ],
+      "commands": [ // <-- 修复：改为数组
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "g"
+      ],
+      "commands": [ // <-- 修复：改为数组
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "H"
+      ],
+      "commands": [
+        "references-view.showCallHierarchy"
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-b>": false,
+    "<C-f>": false,
+    "<C-n>": true,
+    "<C-p>": true
+  },
+  "vim.smartRelativeLine": true,
+  "vim.easymotion": true,
+  "vim.sneak": true
+}
