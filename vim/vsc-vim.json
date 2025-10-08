@@ -82,19 +82,10 @@
     {
       "before": [
         "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
-    },
-    {
-      "before": [
-        "g",
         "I"
       ],
       "commands": [
-        "editor.action.peekImplementation"
+        "editor.action.goToImplementation"
       ]
     },
     {
