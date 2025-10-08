@@ -108,8 +108,8 @@
     },
     {
       "before": [
-        "[",
-        "g"
+        "g",
+        "]"
       ],
       "commands": [ // <-- 修复：改为数组
         "editor.action.marker.next"
