@@ -3,13 +3,25 @@
 -- Add any additional keymaps here
 local map = LazyVim.safe_keymap_set
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 map("i", "jk", "<ESC>")
 
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- NOTE: 两次 esc 使终端从 insert 模式切换回 normal 模式
+-- 在某些终端不一定生效
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+-- 将当前文件的 LSP diagnostic 加载到（Location List）中，并显示
+vim.keymap.set("n", "<leader>qf", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
 -- 使用 <Meta> hjkl 来在窗口间移动
-map("n", "<M-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<M-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<M-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", "<M-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+map("n", "<M-h>", "<C-w>H", { desc = "Go to Left Window", remap = true })
+map("n", "<M-j>", "<C-w>J", { desc = "Go to Lower Window", remap = true })
+map("n", "<M-k>", "<C-w>K", { desc = "Go to Upper Window", remap = true })
+map("n", "<M-l>", "<C-w>L", { desc = "Go to Right Window", remap = true })
 
 -- 使用 <Ctrl> hjkl 作为上下左右移动
 map({ "n", "x", "i" }, "<C-h>", "<Left>")
