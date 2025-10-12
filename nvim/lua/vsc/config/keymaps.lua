@@ -67,3 +67,17 @@ map(
   '<Cmd>lua require("vscode").action(""references-view.showCallHierarchy"")<CR>',
   { noremap = true, silent = true }
 )
+
+map(
+  "n",
+  "<leader>ff",
+  '<Cmd>lua require("vscode").action("workbench.action.quickOpen")<CR>',
+  { noremap = true, silent = true }
+)
+
+map(
+  "n",
+  "<leader>fr",
+  '<Cmd>lua require("vscode").action("workbench.action.findInFiles")<CR>',
+  { noremap = true, silent = true }
+)
