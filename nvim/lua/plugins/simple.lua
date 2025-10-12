@@ -1,3 +1,5 @@
+local BasicFunc = require("utils.func.basic")
+local WhichKeyFunc = require("utils.func.whichkey")
 return {
   {
     "nvim-mini/mini.ai",
@@ -6,6 +8,10 @@ return {
       local ai = require("mini.ai")
       return {
         n_lines = 500,
+        mappings = {
+          goto_left = 'm[',
+          goto_right = 'm]'
+        },
         custom_textobjects = {
           -- yao 复制代码块
           o = ai.gen_spec.treesitter({ -- code block
@@ -26,14 +32,14 @@ return {
         },
       }
     end,
-    -- config = function(_, opts)
-    --   require("mini.ai").setup(opts)
-    --   LazyVim.on_load("which-key.nvim", function()
-    --     vim.schedule(function()
-    --       LazyVim.mini.ai_whichkey(opts)
-    --     end)
-    --   end)
-    -- end,
+    config = function(_, opts)
+      require("mini.ai").setup(opts)
+      BasicFunc.on_load("which-key.nvim", function()
+        vim.schedule(function()
+          WhichKeyFunc.ai_whichkey(opts)
+        end)
+      end)
+    end,
   },
   {
     "folke/flash.nvim",
@@ -65,11 +71,11 @@ return {
     },
   },
   {
-    -- Add/delete/replace surroundings (brackets, quotes, etc.)
-    -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-    -- - sd'   - [S]urround [D]elete [']quotes
-    -- - sr)'  - [S]urround [R]eplace [)] [']
-    'nvim-mini/mini.surround',
-    event = "BufReadPost",
+    -- yiw( 为当前单词两侧添加括号，更多功能可以探索
+    -- cs"( 将两侧 " 替换为 ()
+    -- ds" 删除两侧 "
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
   },
 }
