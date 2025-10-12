@@ -137,7 +137,8 @@ if get(g:, 'lf_disable_normal_map', 0) == 0
     nnoremap <leader>fg :<c-u>Leaderf gtags<cr>
     nnoremap <leader>fr :<c-u>Leaderf rg<cr>
     " nnoremap <leader>fw :<c-u>Leaderf window<cr>
-    " nnoremap <leader>fn :<c-u>Leaderf function<cr>
+    nnoremap <leader>fn :<c-u>Leaderf function<cr>
+    nnoremap <leader>fn :<c-u>Leaderf lsp -w --kind=Function<cr>
     nnoremap <leader>ft :<c-u>Leaderf tag<cr>
     nnoremap <leader>fu :<c-u>Leaderf bufTag<cr>
     nnoremap <leader>fs :<c-u>Leaderf self<cr>
