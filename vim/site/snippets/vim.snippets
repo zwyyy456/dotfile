@@ -1,0 +1,89 @@
+snippet head
+    " vim: set ts=4 sw=4 tw=78 noet :
+    "======================================================================
+    "
+    " `expand('%:t')` - ${1}
+    "
+    " Created by `g:snips_author` on `strftime('%Y/%m/%d')`
+    " Last Modified: `strftime('%Y/%m/%d %H:%M:%S')`
+    "
+    "======================================================================
+    ${0}
+
+snippet frame
+    "======================================================================
+    " ${1}
+    "======================================================================
+    ${0}
+
+snippet windows
+    let s:windows = has('win32') || has('win64') || has('win95') || has('win16')
+    ${0}
+
+snippet scripthome
+    let s:scripthome = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+    ${0}
+
+snippet errmsg
+    echohl ErrorMsg
+    echo ${0:"ERROR"}
+    echohl None
+
+snippet try
+    try
+        ${0}
+    catch
+    endtry
+
+snippet while
+    while ${0}
+    endwhile
+
+snippet lsp_clangd
+    let g:lsp_servers.clangd = #{
+                \\ filetype: ['c', 'cpp', 'objc', 'objcpp', 'cuda'],
+                \\ path: 'd:/Linux/clang64/bin/clangd.exe',
+                \\ args: ['--background-index'],
+                \\ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \\ }
+
+snippet lsp_basics
+    let g:lsp_servers.basics = #{
+                \\ filetype: ['vim', 'text', 'bash'],
+                \\ path: 'd:/dev/node/node/basics-language-server.cmd',
+                \\ args: ['--stdio'],
+                \\ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \\ }
+
+snippet lsp_golang
+    let g:lsp_servers.golang = #{
+                \\ filetype: ['go', 'gomod'],
+                \\ path: 'e:/local/go/bin/gopls.exe',
+                \\ args: ['serve'],
+                \\ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \\ options: #{
+                \\     completeUnimported: v:true,
+                \\     matcher: 'fuzzy',
+                \\ },
+                \\ }
+
+snippet lsp_pylsp
+    let g:lsp_servers.pylsp = #{
+                \\ filetype: ['python'],
+                \\ path: 'C:/Share/Python311/Scripts/pylsp.exe',
+                \\ args: [],
+                \\ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \\ workspace: {'param': {'enabled': v:true}},
+                \\ }
+
+snippet lsp_pyright
+    let g:lsp_servers.pyright = #{
+                \\ filetype: ['python'],    
+                \\ path: 'C:/Share/Python311/Scripts/pyright-langserver',
+                \\ args: ['--stdio'],
+                \\ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \\ workspace: {
+                \\   'python': {'analysis': {'useLibraryCodeForTypes': v:true}, },
+                \\ },
+                \\ }
+

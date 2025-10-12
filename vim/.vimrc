@@ -2,7 +2,9 @@ if exists('$TERM_PROGRAM') && $TERM_PROGRAM ==# 'iTerm.app'
     let g:altmeta_delay = 300
 endif
 
-so ~/code/cloned/vim/vim-init/init.vim
+let g:bundle_home = '~/code/cloned/vim/bundles'
+so ~/.config/vim/init.vim
+" so ~/code/cloned/vim/vim-init/init.vim
 " so ~/code/cloned/vim/vim/skywind.vim
 
 let g:bundle_home = '~/code/cloned/vim/bundles'
