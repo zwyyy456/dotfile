@@ -27,7 +27,6 @@ function M.format(component, text, hl_group)
   return component:format_hl(lualine_hl_group) .. text .. component:get_default_hl()
 end
 
-
 -- 用于 lualine.nvim
 function M.root_dir(opts)
   opts = vim.tbl_extend("force", {
@@ -143,3 +142,4 @@ function M.pretty_path(opts)
 end
 
 return M
+
