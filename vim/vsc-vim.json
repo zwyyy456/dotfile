@@ -6,193 +6,31 @@
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBingsNonRecursive": [
-    {
-      "before": [
-        "<M-j>"
-      ],
-      "commands": [
-        "editor.action.moveLinesDownAction"
-      ]
-    },
-    {
-      "before": [
-        "<M-k>"
-      ],
-      "commands": [
-        "editor.action.moveLinesUpAction"
-      ]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "<M-j>"
-      ],
-      "commands": [
-        "editor.action.moveLinesDownAction"
-      ]
-    },
-    {
-      "before": [
-        "<M-k>"
-      ],
-      "commands": [
-        "editor.action.moveLinesUpAction"
-      ]
-    },
-    {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
+    {"before": ["<M-j>"], "commands": ["editor.action.moveLinesDownAction"]},
+    {"before": ["<M-k>"], "commands": [   "editor.action.moveLinesUpAction" ] }  ],
+ "vim.insertModeKeyBindings":[
+    {"before":["<M-j>"],"commands":["editor.action.moveLinesDownAction"]},
+    {"before":["<M-k>"],"commands":["editor.action.moveLinesUpAction"]},
+    {"before":["j", "k"],"after":["<Esc>"]}],
+ "vim.normalModeKeyBindingsNonRecursive": [
     {"before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"]},
-    {"before": ["<leader>", "/"], "commands": ["workbench.action.findInFiles"]},
-    {
-      "before": [
-        "<M-j>"
-      ],
-      "commands": [
-        "editor.action.moveLinesDownAction"
-      ]
-    },
-    {
-      "before": [
-        "<M-k>"
-      ],
-      "commands": [
-        "editor.action.moveLinesUpAction"
-      ]
-    },
-    {
-      "before": [
-        "H"
-      ],
-      "commands": [
-        "workbench.action.previousEditor"
-      ]
-    },
-    {
-      "before": [
-        "L"
-      ],
-      "commands": [
-        "workbench.action.nextEditor"
-      ]
-    },
-    {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "D"
-      ],
-      "commands": [
-        "editor.action.peekDefinition"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "n"
-      ],
-      "commands": [
-        "editor.action.triggerParameterHints"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "s"
-      ],
-      "commands": [
-        "workbench.action.gotoSymbol"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "S"
-      ],
-      "commands": [
-        "workbench.action.showAllSymbols"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [ // 在有多个 reference 的情况下相当于 peek references
-        "editor.action.goToReferences"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "R"
-      ],
-      "commands": [ // 在侧边栏中显示所有 reference
-        "references-view.findReferences"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "I"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
-    },
-    {
-      "before": [
-        "r",
-        "n"
-      ],
-      "commands": [ // <-- 修复：改为数组
-        "editor.action.rename"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "["
-      ],
-      "commands": [ // <-- 修复：改为数组
-        "editor.action.marker.prev"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "]"
-      ],
-      "commands": [ // <-- 修复：改为数组
-        "editor.action.marker.next"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "H"
-      ],
-      "commands": [
-        "references-view.showCallHierarchy"
-      ]
-    }
-  ],
+    {"before": ["<leader>", "f", "r"], "commands": ["workbench.action.findInFiles"]},
+    {"before":["<M-j>"], "commands":["editor.action.moveLinesDownAction"]},
+    {"before":["<M-k>"], "commands":["editor.action.moveLinesUpAction"]},
+    {"before":["H"], "commands":["workbench.action.previousEditor"]},
+    {"before":["L"], "commands":["workbench.action.nextEditor"]},
+    {"before":["K"], "commands":["editor.action.showHover"]},
+    {"before":["g", "D"], "commands":["editor.action.peekDefinition"]},
+    {"before":["g", "n"], "commands":["editor.action.triggerParameterHints"]},
+    {"before":["g", "s"], "commands":["workbench.action.gotoSymbol"]},
+    {"before":["g", "S"], "commands":["workbench.action.showAllSymbols"]},
+    {"before":["g", "r"], "commands":["editor.action.goToReferences"]},
+    {"before":["g", "R"], "commands":["references-view.findReferences"]},
+    {"before":["g", "I"], "commands":["editor.action.goToImplementation"]},
+    {"before":["r", "n"], "commands":["editor.action.rename"]},
+    {"before":["g", "["], "commands":["editor.action.marker.prev"]},
+    {"before":["g", "]"], "commands":["editor.action.marker.next"]},
+    {"before":["g", "H"], "commands":["references-view.showCallHierarchy"]}],
   "vim.handleKeys": {
     "<C-b>": false,
     "<C-f>": false,
