@@ -1,21 +1,21 @@
 return {
   { -- Autocompletion
-    'saghen/blink.cmp',
+    "saghen/blink.cmp",
     event = { "InsertEnter", "CmdlineEnter" },
-    version = '*',
+    version = "*",
     dependencies = {
       -- Snippet Engine
       {
-        'L3MON4D3/LuaSnip',
-        version = '*',
+        "L3MON4D3/LuaSnip",
+        version = "*",
         build = (function()
           -- Build Step is needed for regex support in snippets.
           -- This step is not supported in many windows environments.
           -- Remove the below condition to re-enable on windows.
-          if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
+          if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
             return
           end
-          return 'make install_jsregexp'
+          return "make install_jsregexp"
         end)(),
         dependencies = {
           -- `friendly-snippets` contains a variety of premade snippets.
@@ -30,7 +30,7 @@ return {
         },
         opts = {},
       },
-      'folke/lazydev.nvim',
+      "folke/lazydev.nvim",
     },
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
@@ -45,7 +45,7 @@ return {
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'super-tab',
+        preset = "super-tab",
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -54,7 +54,7 @@ return {
       appearance = {
         -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
         -- Adjusts spacing to ensure icons are aligned
-        nerd_font_variant = 'mono',
+        nerd_font_variant = "mono",
       },
 
       completion = {
@@ -64,18 +64,18 @@ return {
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
+        default = { "lsp", "path", "snippets", "lazydev", "buffer" },
         providers = {
-          lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+          lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
         },
       },
 
-      snippets = { preset = 'luasnip' },
-      
+      snippets = { preset = "luasnip" },
+
       cmdline = {
         enabled = true,
         keymap = {
-          preset = "cmdline",
+          preset = "inherit",
           ["<Right>"] = false, -- 避免左右方向键触发补全
           ["<Left>"] = false,
         },
@@ -93,10 +93,11 @@ return {
       -- blink 默认使用 lua 实现的 fuzzy 匹配，即 implementation 的默认值是 lua
       -- 通过如下设置，可以使用 rust 实现的 fuzzy 匹配
       -- See :h blink-cmp-config-fuzzy for more information
-      fuzzy = { implementation = 'prefer_rust_with_warning' },
+      fuzzy = { implementation = "prefer_rust_with_warning" },
 
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
     },
-  }
+  },
 }
+
