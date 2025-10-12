@@ -40,25 +40,27 @@ return {
     keys = {
       { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
       { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
-      { "<leader>xt", "<cmd>Trouble todo toggle<cr>", desc = "Todo (Trouble)" },
-      { "<leader>xT", "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
-      { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+      { "<leader>Tt", "<cmd>Trouble todo toggle<cr>", desc = "Todo (Trouble)" },
+      { "<leader>TT", "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
+      -- 配置使用 snacks.picker 来搜索 todo 的快捷键
+      { "<leader>st", function() Snacks.picker.todo_comments() end, desc = "Todo" },
+      { "<leader>sT", function () Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end, desc},
       { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
     },
   },
   -- nvim 自带注释语法增强
   {"folke/ts-comments.nvim", event = "VeryLazy", opts = {}},
   {
-    -- 保存会话，可以通过 <leader>qs 来恢复会话
+    -- 保存会话，可以通过 <leader>ps 来恢复会话
     "folke/persistence.nvim",
     event = "BufReadPre",
     opts = {},
     -- stylua: ignore
     keys = {
-      { "<leader>qs", function() require("persistence").load() end, desc = "Restore Session" },
-      { "<leader>qS", function() require("persistence").select() end,desc = "Select Session" },
-      { "<leader>ql", function() require("persistence").load({ last = true }) end, desc = "Restore Last Session" },
-      { "<leader>qd", function() require("persistence").stop() end, desc = "Don't Save Current Session" },
+      { "<leader>ps", function() require("persistence").load() end, desc = "Restore Session" },
+      { "<leader>pS", function() require("persistence").select() end,desc = "Select Session" },
+      { "<leader>pl", function() require("persistence").load({ last = true }) end, desc = "Restore Last Session" },
+      { "<leader>pd", function() require("persistence").stop() end, desc = "Don't Save Current Session" },
     },
   },
   { "nvim-lua/plenary.nvim", lazy = true }
