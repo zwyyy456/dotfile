@@ -3,7 +3,8 @@ if exists('$TERM_PROGRAM') && $TERM_PROGRAM ==# 'iTerm.app'
 endif
 
 let g:bundle_home = '~/code/cloned/vim/bundles'
-so ~/code/cloned/vim/vim-init/init.vim
+so ~/.config/vim/init.vim
+" so ~/code/cloned/vim/vim-init/init.vim
 " so ~/code/cloned/vim/vim/skywind.vim
 
 " let g:bundle_group = ['simple', 'basic', 'inter', 'high', 'opt', 'ale', 'echodoc', 'nerdtree', 'lsp']
