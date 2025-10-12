@@ -76,6 +76,6 @@ if [[ -f $HOME/.local/miniconda3/bin/conda ]]; then
 fi
 # <<< conda initialize <<<
 
-if [[ -d $HOME/.cargo ]]; then
+if [[ -f $HOME/.cargo/env ]]; then
     . $HOME/.cargo/env
 fi
