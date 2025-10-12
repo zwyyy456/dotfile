@@ -16,7 +16,7 @@ return {
   {
     "mason-org/mason.nvim",
     cmd = "Mason",
-    keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
+    -- keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     build = ":MasonUpdate",
     opts_extend = { "ensure_installed" },
     opts = {
@@ -185,6 +185,16 @@ return {
       -- 获取 Neovim 默认的 LSP 客户端功能。
       -- 合并 blink.cmp 及其可能依赖的其他插件（如 luasnip）所增加的新功能（例如对代码片段的完整支持）
       local capabilities = require('blink.cmp').get_lsp_capabilities()
+
+      local filerename_capabilities = {
+        workspace = {
+          fileOperations = {
+            didRename = true,  -- 启用文件重命名完成通知
+            willRename = true, -- 启用文件重命名即将发生通知
+          },
+        },
+      }
+      capabilities = vim.tbl_deep_extend('force', capabilities, filerename_capabilities)
 
       -- servers 列表中的 lsp server 将被自动安装并启用
       -- cmd、filetypes、capabilities、root_markers 等选项可以覆盖 nvim-lspconfig 中的默认配置
