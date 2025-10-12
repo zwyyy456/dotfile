@@ -15,7 +15,7 @@
 let g:Lf_ShortcutF = '<D-p>'
 
 " ALT+n 打开 buffer 模糊匹配
-let g:Lf_ShortcutB = '<m-n>'
+let g:Lf_ShortcutB = '<D-n>'
 let g:Lf_MruMaxFiles = 2048
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 " let g:Lf_PreviewHorizontalPosition = 'center'
@@ -64,7 +64,7 @@ let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PopupColorscheme = 'default'
 let g:Lf_PopupColorscheme = 'gruvbox_default'
 let g:Lf_ShortcutF = '<D-p>'
-let g:Lf_ShortcutB = '<m-n>'
+let g:Lf_ShortcutB = '<D-n>'
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 
 " 禁用 function/buftag 的预览功能，可以手动用 p 预览
