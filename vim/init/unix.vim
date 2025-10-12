@@ -11,7 +11,7 @@ set viewdir=~/.vim/view  " 视图文件目录
 "----------------------------------------------------------------------
 
 " Enable vim-diff-enhanced (Christian Brabandt)
-if has('patch-8.2.0001')
+if has('patch-8.2.0001') && (!has('mac') || $VIM != '/usr/share/vim')
     set diffopt+=internal,algorithm:patience
     set diffopt+=indent-heuristic
 endif
