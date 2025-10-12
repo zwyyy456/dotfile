@@ -5,7 +5,7 @@
   "vim.leader": "<space>",
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
-  "vim.visualModeKeyBingsNonRecursive": [
+  "vim.visualModeKeyBindingsNonRecursive": [
     {"before": ["<M-j>"], "commands": ["editor.action.moveLinesDownAction"]},
     {"before": ["<M-k>"], "commands": [   "editor.action.moveLinesUpAction" ] }  ],
  "vim.insertModeKeyBindings":[
