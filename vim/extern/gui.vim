@@ -142,6 +142,7 @@ if has('gui_running')
         set guioptions=egrmT
     elseif has('gui_macvim')
         color sublimemonokai
+        macmenu File.Print key=<nop>
         hi! link cCustomFunc     SublimeGreen
         " call guifont#SetGuiFontWithFallback(s:my_font_names, 13)
         set guifont=Menlo\ Nerd\ Font\ Mono:h13
