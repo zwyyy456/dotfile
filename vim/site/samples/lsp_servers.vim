@@ -2,6 +2,8 @@
 " LSP
 "----------------------------------------------------------------------
 let g:lsp_servers = get(g:, 'lsp_servers', {})
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = '~/vim-lsp.log'
 
 if executable('clangd')
     let g:lsp_servers.clangd = #{
@@ -11,6 +13,17 @@ if executable('clangd')
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
                 \ }
 endif
+
+if has('mac') && executable('xcodebuild')
+    " let g:sourcekit_lsp_path = trim(system('xcrun --find sourcekit-lsp'))
+    let g:lsp_servers.sourcekit_lsp = #{
+                \ filetype: ['swift', 'objc', 'objcpp'],
+                \ path: 'xcrun',
+                \ args: ['sourcekit-lsp'],
+                \ root: ['.git', '.svn', 'buildServer.json', 'Package.swift']
+                \ }
+endif
+" yegappan 的文档中没有设置 \ root
 
 " installed by npm -g vscode-langservers-extracted
 if executable('vscode-css-language-server')

@@ -411,6 +411,9 @@ if has_key(s:enabled, 'cpp')
     Plug 'skywind3000/vim-cppman'
 endif
 
+if has_key(s:enabled, 'swift')
+    Plug 'keith/swift.vim', { 'for': 'swift' }
+endif
 
 "----------------------------------------------------------------------
 " 结束插件安装
