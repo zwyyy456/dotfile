@@ -135,7 +135,7 @@ if has('gui_running')
         "color desert256
         try
             color sublimemonokai
-            hi! link cCustomFunc    Tag
+            hi! link cCustomFunc    SublimeGreen
         catch
         endtry
         set guioptions-=t
