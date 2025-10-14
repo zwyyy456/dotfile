@@ -42,7 +42,7 @@ let s:lsp_opts = #{
         \   popupBorderSignatureHelp: v:false,
         \   popupHighlightSignatureHelp: 'Pmenu',
         \   popupHighlight: 'Normal',
-        \   semanticHighlight: v:false,
+        \   semanticHighlight: v:true,
         \   showDiagInBalloon: v:true,
         \   showDiagInPopup: v:true,
         \   showDiagOnStatusLine: v:false,

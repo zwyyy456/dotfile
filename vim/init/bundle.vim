@@ -106,7 +106,7 @@ if has_key(s:enabled, 'simple')
     Plug 'skywind3000/vim-terminal-help'
     
     " 安装 sublime 主题
-    Plug 'ErichDonGubler/vim-sublime-monokai'
+    Plug 'zwyyy456/vim-sublime-monokai'
 
 
     IncScript site/bundle/dirvish.vim
