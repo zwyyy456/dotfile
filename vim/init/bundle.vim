@@ -22,7 +22,7 @@ let g:bundle#windows = (s:uname == 'windows')? 1 : 0
 "----------------------------------------------------------------------
 if !exists('g:bundle_group')
     let g:bundle_group = ['simple', 'basic', 'enhanced', 'filetypes', 'textobj']
-    let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
+    let g:bundle_group += ['tags', 'airline', 'nerdtree', 'echodoc']
     let g:bundle_group += ['leaderf', 'stargate', 'navigator']
     let g:bundle_group += ['yegappan', 'grammer', 'asynctasks', 'cpp']
 endif
