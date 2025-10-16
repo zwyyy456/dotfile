@@ -247,6 +247,7 @@ call quickmenu#append('Files including', 'call menu#Escope("i")', 'find (i): fil
 " call quickmenu#append('Reindex', 'Es! build gtags %')
 
 
+
 if has('win32') || has('win64') || has('win16') || has('win95')
     call quickmenu#append('# Tortoise SVN / GIT', '')
     call quickmenu#append('Project update', 'call svnhelp#tp_update()', 'update current repository')
@@ -295,3 +296,21 @@ call quickmenu#append('Open Python Below', 'belowright term ++rows=10 python', '
 call quickmenu#append('# Debug', '')
 
 
+"----------------------------------------------------------------------
+" Lsp menu
+"----------------------------------------------------------------------
+call quickmenu#current(2)
+call quickmenu#reset()
+
+call quickmenu#append('# Lsp', '')
+call quickmenu#append('Goto Definition', ':LspGotoDefinition', '(g)oto (d)efinition')
+call quickmenu#append('Peek Definition', ':LspPeekDefinition', 'peek (D)efinition')
+call quickmenu#append('Peek Definition', ':LspGotoDeclaration', 'goto declaration')
+call quickmenu#append('Show Signature', ':LspShowSignature', 'show (s)ignature')
+call quickmenu#append('Format Document', ':LspFormat', '(f)ormat (d)ocument')
+
+call quickmenu#append('Document Symbol', ':LspDocumentSymbol', '(g)oto document (s)ymbol')
+call quickmenu#append('Workspace Symbol', ':LspSymbolSearch', '(g)oto document (s)ymbol')
+
+call quickmenu#append('Peek References', ':LspPeekReferences', 'peek (r)eferences')   
+call quickmenu#append('Show References', ':LspShowReferences', 'show (R)eferences')   

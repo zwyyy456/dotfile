@@ -1,5 +1,5 @@
 if exists('$TERM_PROGRAM') && $TERM_PROGRAM ==# 'iTerm.app'
-    let g:altmeta_delay = 300
+    let g:altmeta_delay = 360
 endif
 
 let g:bundle_home = '~/code/cloned/vim/bundles'
