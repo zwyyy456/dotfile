@@ -4,6 +4,7 @@
 let g:lsp_servers = get(g:, 'lsp_servers', {})
 let g:lsp_log_verbose = 1
 let g:lsp_log_file = '~/vim-lsp.log'
+let g:lsp_gopls_path = expand('~/go/bin/gopls')
 
 if executable('clangd')
     let g:lsp_servers.clangd = #{
@@ -11,6 +12,14 @@ if executable('clangd')
                 \ path: 'clangd',
                 \ args: ['--background-index'],
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \ }
+endif
+
+if filereadable(g:lsp_gopls_path)
+    let g:lsp_servers.gopls = #{
+                \ filetype: 'go',
+                \ path: g:lsp_gopls_path,
+                \ args: ['serve'],
                 \ }
 endif
 
