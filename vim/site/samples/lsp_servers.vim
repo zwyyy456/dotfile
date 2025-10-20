@@ -20,6 +20,9 @@ if filereadable(g:lsp_gopls_path)
                 \ filetype: 'go',
                 \ path: g:lsp_gopls_path,
                 \ args: ['serve'],
+                \ initopts: {
+                \   'semanticTokens': v:true,
+                \ },
                 \ }
 endif
 
