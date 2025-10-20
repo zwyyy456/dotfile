@@ -54,6 +54,16 @@ opt.shiftwidth = 4
 opt.fileformat = "unix"
 opt.spelllang = { "en", "cjk" }
 
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
+opt.fileencodings = {
+  "ucs-bom",
+  "utf-8",
+  "gbk",
+  "gb18030",
+  "laten1",
+}
+
 function my_paste(reg)
   return function(lines)
     --[ 返回 “” 寄存器的内容，用来作为 p 操作符的粘贴物 ]
