@@ -1,4 +1,4 @@
-if has('gui_macvim')
+if has('mac')
     let $PATH = '/opt/homebrew/bin:' . expand('~/.local/bin:') . $PATH
 endif
 " 设定项目目录标志：除了 .git/.svn 外，还有 .root 文件
