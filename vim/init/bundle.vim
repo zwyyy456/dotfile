@@ -112,6 +112,7 @@ if has_key(s:enabled, 'simple')
     IncScript site/bundle/dirvish.vim
     IncScript site/bundle/cycle.vim
     IncScript site/bundle/auto-pairs.vim
+    IncScript site/bundle/delimitMate.vim
 endif
 
 "----------------------------------------------------------------------
