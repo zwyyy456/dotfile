@@ -110,7 +110,7 @@ set matchtime=1
 " 显示最后一行
 set display=lastline
 
-" 允许下方显示目录
+" 启用可视化的、菜单式补全列表
 set wildmenu
 
 " 延迟绘制（提升性能）

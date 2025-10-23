@@ -221,7 +221,7 @@ call s:Filter_Push("Vim Script", "*.vim")
 
 
 "----------------------------------------------------------------------
-" 补全行为优化与窗口分割优化
+" command 模式的补全行为优化与窗口分割优化
 "----------------------------------------------------------------------
 if has('patch-8.0.0')
     set shortmess+=c
@@ -232,8 +232,10 @@ set cpt=.,w,k
 if has('patch-8.2.4500')
     set wildoptions+=pum,fuzzy
     set wildmode=longest,full
-    " cnoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<cr>"
-    " cnoremap <expr> <esc> pumvisible() ? "\<c-e>" : "\<esc>"
+    " enter 只确认补全，不直接执行命令
+    cnoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<cr>"
+    " esc 只取消补全，不直接退出命令模式
+    cnoremap <expr> <esc> pumvisible() ? "\<c-e>" : "\<esc>"
 endif
 
 if has('patch-9.0.648') || has('nvim-0.9.0')
