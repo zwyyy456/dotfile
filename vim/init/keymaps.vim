@@ -481,3 +481,11 @@ endif
 vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
+
+"--------------------------------------------------------------
+" location list (buffer local quickfix list)
+"--------------------------------------------------------------
+nnoremap <silent> [l :lprevious<CR>
+nnoremap <silent> ]l :lnext<CR>
+nnoremap <silent> [L :lfirst<CR>
+nnoremap <silent> ]L :llast<CR>
