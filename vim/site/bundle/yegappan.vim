@@ -171,7 +171,7 @@ function! s:init_lsp() abort
         " noremap <silent><M-;> :LspPeekDefinition<cr>
         
         " 设置 enter 确认补全但是不换行
-        " inoremap <silent> <expr> <cr> pumvisible()? "\<c-y>\<C-e>" : "\<cr>"
+        " inoremap <silent> <expr> <cr> pumvisible()? "\<c-y>" : "\<cr>"
     endif
     set noshowmode
 endfunc
