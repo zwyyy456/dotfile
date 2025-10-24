@@ -15,10 +15,10 @@ if executable('clangd')
                 \ }
 endif
 
-if filereadable(g:lsp_gopls_path)
+if executable('gopls')
     let g:lsp_servers.gopls = #{
                 \ filetype: 'go',
-                \ path: g:lsp_gopls_path,
+                \ path: 'gopls',
                 \ args: ['serve'],
                 \ initopts: {
                 \   'semanticTokens': v:true,
