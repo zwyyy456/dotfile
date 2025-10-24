@@ -120,13 +120,14 @@ function! s:init_lsp() abort
         noremap <silent> K :LspHover<cr>
         " show call hierarchy
         noremap <silent> gH :LspIncomingCalls<cr>
-        noremap <silent> g< :LspIncomingCalls<cr>
 
         " 在弹出的窗口中预览函数定义
         " noremap <silent><M-;> :LspPeekDefinition<cr>
         
         " 设置 enter 确认补全但是不换行
-        " inoremap <silent> <expr> <cr> pumvisible()? "\<c-y>" : "\<cr>"
+        " 通过 SkipTextChangedI 函数，
+        " 避免 <c-y> 接受补全之后马上又因为 TextChangedI 事件触发自动补全反复弹窗
+        inoremap <silent><expr> <cr> pumvisible() ? "\<c-r>=completefunc#SkipTextChangedI()\<cr>\<c-y>" : "\<Plug>delimitMateCR"
     endif
     set noshowmode
 endfunc
