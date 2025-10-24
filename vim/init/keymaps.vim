@@ -39,16 +39,23 @@ inoremap <c-_> <c-k>
 "----------------------------------------------------------------------
 " 设置 CTRL+HJKL 移动光标（INSERT 模式偶尔需要移动的方便些）
 " 使用 SecureCRT/XShell 等终端软件需设置：Backspace sends delete
+" 设置 <c-n> 与 <c-p> 为上下移动
+" 设置 insert 模式下 <c-b> 为左方向键，<c-f> 为右方向键
 " 详见：http://www.skywind.me/blog/archives/2021
 "----------------------------------------------------------------------
 noremap <C-h> <left>
 noremap <C-j> <down>
 noremap <C-k> <up>
 noremap <C-l> <right>
+noremap <C-n> <down>
+noremap <C-p> <up>
+
 inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
+inoremap <C-n> <down>
+inoremap <C-p> <up>
 
 "----------------------------------------------------------------------
 " 通过 tab 组合键实现向前向后跳转（类似 vscode 的 alt+ left/right）
