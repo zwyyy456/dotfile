@@ -16,12 +16,6 @@ if has('patch-8.2.0001') && (!has('mac') || $VIM != '/usr/share/vim')
     set diffopt+=indent-heuristic
 endif
 
-" complete option
-if has('patch-8.0.1000')
-    set completeopt=menuone,popup,noinsert
-else
-    set completeopt=menu,menuone
-endif
 
 " new blowfish2 
 if has('patch-7.4.500') || v:version >= 800

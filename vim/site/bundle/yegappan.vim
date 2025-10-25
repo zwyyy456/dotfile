@@ -11,7 +11,7 @@
 " configuration
 "----------------------------------------------------------------------
 let s:lsp_opts = #{
-        \   autoComplete: v:true,
+        \   autoComplete: v:false,
         \   echoSignature: v:true,
         \   noNewlineInCompletion: v:true,
         \   omniComplete: v:true,
@@ -123,11 +123,13 @@ function! s:init_lsp() abort
 
         " 在弹出的窗口中预览函数定义
         " noremap <silent><M-;> :LspPeekDefinition<cr>
+
+        set cpt+=o
         
         " 设置 enter 确认补全但是不换行
         " 通过 SkipTextChangedI 函数，
         " 避免 <c-y> 接受补全之后马上又因为 TextChangedI 事件触发自动补全反复弹窗
-        inoremap <silent><expr> <cr> pumvisible() ? "\<c-r>=completefunc#SkipTextChangedI()\<cr>\<c-y>" : "\<Plug>delimitMateCR"
+        " inoremap <silent><expr> <cr> pumvisible() ? "\<c-r>=completefunc#SkipTextChangedI()\<cr>\<c-y>" : "\<Plug>delimitMateCR"
     endif
     set noshowmode
 endfunc
@@ -141,8 +143,8 @@ augroup YegappanLspInit
     autocmd User LspSetup call s:init_lsp()
 augroup END
 
-augroup LspSetup
-  au!
-  au User LspAttached set completeopt-=noselect
-augroup END
+" augroup LspSetup
+"   au!
+"   au User LspAttached set cot=menuone,popup,noinsert
+" augroup END
 
