@@ -103,7 +103,7 @@ if has_key(s:enabled, 'simple')
     Plug 'chrisbra/vim-diff-enhanced'
     
     " 通过配置快捷键等方式增强 vim 自带终端的使用体验
-    Plug 'skywind3000/vim-terminal-help'
+    Plug 'zwyyy456/vim-terminal-help'
     
     " 安装 sublime 主题
     Plug 'zwyyy456/vim-sublime-monokai'
