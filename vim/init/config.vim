@@ -275,3 +275,4 @@ inoremap <silent> <c-y> <c-r>=SkipTextChangedI()<cr><c-y>
 
 inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+inoremap <silent><expr> <cr> pumvisible() ? "\<c-r>=SkipTextChangedI()\<cr>\<c-y>" : "\<cr>"
