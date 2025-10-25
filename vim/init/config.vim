@@ -268,7 +268,20 @@ inoremap ; ;<C-G>u
 " 插入模式：完善补全设置
 "----------------------------------------------------------------------
 
-set completeopt=menuone,popup,noinsert
+if has('patch-9.1.1590')
+    set autocomplete
+    " set completeopt=menu,popup,preinsert
+    set cot=popup,preinsert
+    hi link PreInsert LineNr
+else
+    set completeopt=menuone,popup,noinsert
+endif
+
+if exists('&pumborder')
+  set pb=shadow
+endif
+
+set cpt=.^5,w^5,b^5,u^5,k^5
 
 inoremap <silent> <c-e> <c-r>=SkipTextChangedI()<cr><c-e>
 inoremap <silent> <c-y> <c-r>=SkipTextChangedI()<cr><c-y>

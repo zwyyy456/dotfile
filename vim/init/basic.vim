@@ -55,6 +55,9 @@ set nopaste
 " 搜索时忽略大小写
 set ignorecase
 
+" 插入模式下补全时推断大小
+set infercase
+
 " 智能搜索大小写判断，默认忽略大小写，除非搜索内容包含大写字母
 set smartcase
 
