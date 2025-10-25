@@ -124,7 +124,8 @@ function! s:init_lsp() abort
         " 在弹出的窗口中预览函数定义
         " noremap <silent><M-;> :LspPeekDefinition<cr>
 
-        set cpt^=o
+        set cpt-=.^5
+        set cpt^=.^5,o^7
         
         " 设置 enter 确认补全但是不换行
         " 通过 SkipTextChangedI 函数，

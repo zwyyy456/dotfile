@@ -1,6 +1,9 @@
 vim9script
 
-au TextChangedI * InsComplete()
+if !has('patch-9.1.1590')
+  au TextChangedI * InsComplete()
+endif
+
 def InsComplete()
   if getcharstr(1) == '' && getline('.')->strpart(0, col('.') - 1) =~ '\k$'
     g:SkipTextChangedI()
