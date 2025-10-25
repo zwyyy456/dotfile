@@ -227,7 +227,7 @@ let g:quickui_context_foot = [
 "----------------------------------------------------------------------
 nnoremap <silent><leader><leader> :call quickui#menu#open()<cr>
 
-nnoremap <silent><leader>K :QuickUI context<cr>
+nnoremap <silent>K :QuickUI context<cr>
 
 if has('gui_running') || has('nvim')
     " noremap <c-f10> :TaskFinder<cr>
