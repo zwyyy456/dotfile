@@ -262,3 +262,16 @@ endif
 inoremap , ,<C-G>u
 inoremap . .<C-G>u
 inoremap ; ;<C-G>u
+
+
+"----------------------------------------------------------------------
+" 插入模式：完善补全设置
+"----------------------------------------------------------------------
+
+set completeopt=menuone,popup,noinsert
+
+inoremap <silent> <c-e> <c-r>=SkipTextChangedI()<cr><c-e>
+inoremap <silent> <c-y> <c-r>=SkipTextChangedI()<cr><c-y>
+
+inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
