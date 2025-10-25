@@ -117,7 +117,7 @@ function! s:init_lsp() abort
         noremap <silent> g[ :LspDiag prevWrap<cr>
         " 跳转到下一个错误处，循环跳转
         noremap <silent> g] :LspDiag nextWrap<cr>
-        noremap <silent> K :LspHover<cr>
+        noremap <silent> <leader>K :LspHover<cr>
         " show call hierarchy
         noremap <silent> gH :LspIncomingCalls<cr>
 
