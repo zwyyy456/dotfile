@@ -281,7 +281,9 @@ if exists('&pumborder')
   set pb=shadow
 endif
 
-set cpt=.^5,w^5,b^5,u^5,k^5
+if has('patch-9.1.1590')
+    set cpt=.^5,w^5,b^5,u^5,k^5
+endif
 
 inoremap <silent> <c-e> <c-r>=SkipTextChangedI()<cr><c-e>
 inoremap <silent> <c-y> <c-r>=SkipTextChangedI()<cr><c-y>
@@ -289,3 +291,7 @@ inoremap <silent> <c-y> <c-r>=SkipTextChangedI()<cr><c-y>
 inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 inoremap <silent><expr> <cr> pumvisible() ? "\<c-r>=SkipTextChangedI()\<cr>\<c-y>" : "\<cr>"
+
+if has('gui_macvim')
+    let $PATH = '/opt/homebrew/bin:' . expand('~/.local/bin:') . expand('~/go/bin:') . $PATH
+endif
