@@ -60,7 +60,7 @@ inoremap <C-p> <up>
 "----------------------------------------------------------------------
 " 通过 tab 组合键实现向前向后跳转（类似 vscode 的 alt+ left/right）
 "----------------------------------------------------------------------
-nnoremap <silent><tab> <nop>
+" nnoremap <silent><tab> <nop>
 nnoremap <silent><tab>f <c-i>
 nnoremap <silent><tab>b <c-o>
 
