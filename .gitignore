@@ -132,3 +132,8 @@ leetgo/cache/deps.json
 leetgo/cache/state.json
 uv/uv-receipt.json
 nvim/lazyvim.json
+
+# swiftpm
+swiftpm/cache
+swiftpm/configuration
+swiftpm/security
