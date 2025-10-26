@@ -140,6 +140,8 @@ if has_key(s:enabled, 'basic')
     " 使用 ALT+e 会在不同窗口/标签上显示 A/B/C 等编号，然后字母直接跳转
     Plug 't9md/vim-choosewin'
 
+    " 彩虹高亮括号、大括号等
+    Plug 'luochen1990/rainbow'
 
     " 使用 ALT+E 来选择窗口
     nmap <m-e> <Plug>(choosewin)
@@ -153,18 +155,8 @@ if has_key(s:enabled, 'basic')
     nnoremap <silent> <leader>cm :ErrorAtCursor<CR>
     nnoremap <silent> <leader>cM :RemoveErrorMarkers<cr>
 
-    " signify 调优
-    let g:signify_vcs_list = ['git', 'svn']
-    let g:signify_sign_add               = '+'
-    let g:signify_sign_delete            = '_'
-    let g:signify_sign_delete_first_line = '‾'
-    let g:signify_sign_change            = '~'
-    let g:signify_sign_changedelete      = g:signify_sign_change
+    IncScript site/bundle/signify.vim
 
-    " git 仓库使用 histogram 算法进行 diff
-    let g:signify_vcs_cmds = {
-            \ 'git': 'git diff --no-color --diff-algorithm=histogram --no-ext-diff -U0 -- %f',
-            \}
 endif
 
 
