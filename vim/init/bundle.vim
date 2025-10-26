@@ -156,6 +156,7 @@ if has_key(s:enabled, 'basic')
     nnoremap <silent> <leader>cM :RemoveErrorMarkers<cr>
 
     IncScript site/bundle/signify.vim
+    IncScript site/bundle/rainbow.vim
 
 endif
 
