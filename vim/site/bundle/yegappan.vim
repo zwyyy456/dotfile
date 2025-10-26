@@ -15,6 +15,7 @@ let s:lsp_opts = #{
         \   echoSignature: v:true,
         \   noNewlineInCompletion: v:true,
         \   omniComplete: v:true,
+        \   semanticHighlight: v:true,
         \   filterCompletionDuplicates: v:true,
         \ }
 
@@ -124,8 +125,12 @@ function! s:init_lsp() abort
         " 在弹出的窗口中预览函数定义
         " noremap <silent><M-;> :LspPeekDefinition<cr>
 
-        set cpt-=.^5
-        set cpt^=.^5,o^7
+        if has('patch-9.1.1590')
+            set cpt-=.^5
+            set cpt^=.^5,o^7
+        else
+            set cpt^=o^7
+        endif
         
         " 设置 enter 确认补全但是不换行
         " 通过 SkipTextChangedI 函数，
