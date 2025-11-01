@@ -122,14 +122,14 @@ function! s:init_lsp() abort
         " show call hierarchy
         noremap <silent> gH :LspIncomingCalls<cr>
 
+        noremap <silent> <leader>LS :LspDiagShow<cr>
+
         " 在弹出的窗口中预览函数定义
         " noremap <silent><M-;> :LspPeekDefinition<cr>
 
-        if has('patch-9.1.1590')
+        if has('patch-9.1.1301')
             set cpt-=.^5
             set cpt^=.^5,o^7
-        else
-            set cpt^=o^7
         endif
         
         " 设置 enter 确认补全但是不换行
