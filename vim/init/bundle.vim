@@ -359,13 +359,11 @@ if has_key(s:enabled, 'leaderf')
         IncScript site/bundle/leaderf.vim
 
     else
-        " 不支持 python ，使用 CtrlP 代替
-        Plug 'ctrlpvim/ctrlp.vim'
+        " 不支持 python ，使用 fzf.vim 代替
+        Plug 'junegunn/fzf.vim'
 
-        " 显示函数列表的扩展插件
-        Plug 'tacahiroy/ctrlp-funky'
         
-        IncScript site/bundle/ctrlp.vim
+        IncScript site/bundle/fzf.vim
 
     endif
 endif
