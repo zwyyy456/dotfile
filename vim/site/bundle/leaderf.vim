@@ -73,6 +73,8 @@ let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 let g:Lf_MruEnableFrecency = 1
 
+let g:Lf_CommandMap = {'<C-k>': ['<C-p>', '<C-k>'], '<C-j>': ['<C-n>', '<C-j>']}
+
 " 使用 ESC 键可以直接退出 leaderf 的 normal 模式
 let g:Lf_NormalMap = {
         \ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
