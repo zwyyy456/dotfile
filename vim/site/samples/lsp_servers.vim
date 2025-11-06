@@ -15,6 +15,15 @@ if executable('clangd')
                 \ }
 endif
 
+if executable('pyrefly')
+    let g:lsp_servers.pyrefly = #{
+                \ filetype: 'python',
+                \ path: 'pyrefly',
+                \ args: ['lsp'],
+                \ root: ['pyrefly.toml', 'pyproject.toml', '.git'],
+                \ }
+endif
+
 if executable('gopls')
     let g:lsp_servers.gopls = #{
                 \ filetype: 'go',
