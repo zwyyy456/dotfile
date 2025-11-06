@@ -116,6 +116,8 @@ function! s:init_lsp() abort
         noremap <silent> g[ :LspDiag prevWrap<cr>
         " 跳转到下一个错误处，循环跳转
         noremap <silent> g] :LspDiag nextWrap<cr>
+        " 显示当前光标位置的诊断信息
+        noremap <silent> gh :LspDiagHere<cr>
         noremap <silent> <leader>K :LspHover<cr>
         " show call hierarchy
         noremap <silent> gH :LspIncomingCalls<cr>

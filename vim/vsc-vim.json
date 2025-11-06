@@ -28,7 +28,7 @@
     {"before":["g", "r"], "commands":["editor.action.goToReferences"]},
     {"before":["g", "R"], "commands":["references-view.findReferences"]},
     {"before":["g", "I"], "commands":["editor.action.goToImplementation"]},
-    {"before":["r", "n"], "commands":["editor.action.rename"]},
+    {"before":["<leader>", "r", "n"], "commands":["editor.action.rename"]},
     {"before":["g", "["], "commands":["editor.action.marker.prev"]},
     {"before":["g", "]"], "commands":["editor.action.marker.next"]},
     {"before":["g", "H"], "commands":["references-view.showCallHierarchy"]}],
