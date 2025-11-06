@@ -292,6 +292,6 @@ inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 inoremap <silent><expr> <cr> pumvisible() ? "\<c-r>=SkipTextChangedI()\<cr>\<c-y>" : "\<cr>"
 
-if has('gui_macvim')
+if has('mac')
     let $PATH = '/opt/homebrew/bin:' . expand('~/.local/bin:') . expand('~/go/bin:') . $PATH
 endif
