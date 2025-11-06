@@ -137,3 +137,4 @@ nvim/lazyvim.json
 swiftpm/cache
 swiftpm/configuration
 swiftpm/security
+configstore/update-notifier-@qwen-code/qwen-code.json
