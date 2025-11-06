@@ -260,7 +260,7 @@ endif
 " 插入模式：强制在标点符号后创建撤销断点 (Undo Breakpoint)
 "----------------------------------------------------------------------
 inoremap , ,<C-G>u
-inoremap . .<C-G>u
+" inoremap . .<C-G>u
 inoremap ; ;<C-G>u
 
 
