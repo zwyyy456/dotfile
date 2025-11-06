@@ -13,8 +13,6 @@
 let s:lsp_opts = #{
         \   autoComplete: v:false,
         \   echoSignature: v:true,
-        \   noNewlineInCompletion: v:true,
-        \   omniComplete: v:true,
         \   semanticHighlight: v:true,
         \   filterCompletionDuplicates: v:true,
         \ }
