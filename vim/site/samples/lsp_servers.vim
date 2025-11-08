@@ -41,7 +41,7 @@ if has('mac') && executable('xcodebuild')
                 \ filetype: ['swift', 'objc', 'objcpp'],
                 \ path: 'xcrun',
                 \ args: ['sourcekit-lsp'],
-                \ root: ['.git', '.svn', 'buildServer.json', 'Package.swift']
+                \ root: ['.git', '.svn', 'buildServer.json', 'Package.swift'],
                 \ }
 endif
 " yegappan 的文档中没有设置 \ root

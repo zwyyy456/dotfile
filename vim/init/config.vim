@@ -271,7 +271,8 @@ inoremap ; ;<C-G>u
 if has('patch-9.1.1590')
     set autocomplete
     " set completeopt=menu,popup,preinsert
-    set cot=popup,preinsert
+    " set cot=popup,preinsert
+    set cot=popup,longest
     hi link PreInsert LineNr
 else
     set completeopt=menuone,popup,noinsert
