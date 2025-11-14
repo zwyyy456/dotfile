@@ -80,6 +80,9 @@ function! s:init_lsp() abort
         if has_key(info, 'initopts')
             let ni.initializationOptions = info.initopts
         endif
+        if has_key(info, 'features')
+            let ni.features = info.features
+        endif
         if has_key(info, 'root')
             let rootmarkers = []
             for marker in info.root
@@ -128,7 +131,7 @@ function! s:init_lsp() abort
 
         if has('patch-9.1.1301')
             set cpt-=.^5
-            set cpt^=.^5,o^7
+            set cpt^=o^7,.^5
         endif
         
         " 设置 enter 确认补全但是不换行
