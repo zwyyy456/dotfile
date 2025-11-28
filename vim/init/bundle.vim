@@ -169,14 +169,8 @@ if has_key(s:enabled, 'enhanced')
     " 用 v 选中一个区域后，ALT_+/- 按分隔符扩大/缩小选区
     Plug 'terryma/vim-expand-region'
 
-    " 快速文件搜索
-    Plug 'junegunn/fzf'
-
     " 给不同语言提供字典补全，插入模式下 c-x c-k 触发
     Plug 'asins/vim-dict'
-
-    " 使用 :FlyGrep 命令进行实时 grep
-    Plug 'wsdjeg/FlyGrep.vim'
 
     " 使用 :CtrlSF 命令进行模仿 sublime 的 grep
     Plug 'dyng/ctrlsf.vim'
@@ -192,6 +186,12 @@ if has_key(s:enabled, 'enhanced')
     
     " 使用 Plug 管理 commentary.vim 插件
     Plug 'tpope/vim-commentary'
+
+    " 添加 sql 补全支持
+    Plug 'vim-scripts/dbext.vim'
+
+    " 添加 tasklist
+    Plug 'vim-scripts/TaskList.vim'
     
     
     " ALT_+/- 用于按分隔符扩大缩小 v 选区
