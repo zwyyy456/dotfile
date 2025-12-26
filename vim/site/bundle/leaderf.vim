@@ -139,8 +139,8 @@ if get(g:, 'lf_disable_normal_map', 0) == 0
     nnoremap <leader>fb :<c-u>Leaderf buffer<cr>
     nnoremap <leader>fM :<c-u>Leaderf mru<cr>
     nnoremap <leader>fg :<c-u>Leaderf gtags<cr>
-    nnoremap <leader>fr :<c-u>Leaderf rg<cr>
-    nnoremap <leader>fR :<c-u>Leaderf rg --live<cr>
+    nnoremap <leader>fR :<c-u>Leaderf rg<cr>
+    nnoremap <leader>fr :<c-u>Leaderf rg -i --live<cr>
     " nnoremap <leader>fw :<c-u>Leaderf window<cr>
     nnoremap <leader>fn :<c-u>Leaderf function<cr>
     nnoremap <leader>ft :<c-u>Leaderf tag<cr>

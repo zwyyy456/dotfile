@@ -184,7 +184,7 @@ inoremap <silent><M-d> <c-\><c-o>:call asclib#window#scroll('#', 7)<cr>
 "----------------------------------------------------------------------
 " leader + h : fast open files
 " 定义了一系列基于 commands.vim  快速打开文件的快捷键
-" Todo 可以改造，不太用得上
+" TODO 可以改造，不太用得上
 "----------------------------------------------------------------------
 nnoremap <silent><leader>hp :FileSwitch ~/.vim/project.txt<cr>
 nnoremap <silent><leader>hf <c-w>gf
