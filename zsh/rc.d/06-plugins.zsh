@@ -51,6 +51,12 @@ znap eval zcolors zcolors   # Extra init code needed for zcolors.
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#bcbcbc,bg=#444444,underline"
 
+if [[ -d /usr/share/doc/fzf/examples ]]; then
+  export FZF_BASE=/usr/share/doc/fzf/examples
+elif [[ -d $HOME/.fzf ]]; then
+  export FZF_BASE=$HOME/.fzf/shell
+fi
+
 function load_fzf_plugin() {
     znap source ohmyzsh/ohmyzsh plugins/fzf
 }
