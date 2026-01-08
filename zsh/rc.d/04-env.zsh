@@ -28,11 +28,7 @@ fpath=(
     $fpath
     $ZDOTDIR/site-functions
     ~/.local/share/zsh/site-functions
-)
-
-manpath=(
-    $manpath
-    ~/.config/tool-man
+    /devprog/autocomplete
 )
 
 autoload -Uz zvm_config
