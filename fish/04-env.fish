@@ -31,12 +31,6 @@ if test -d $HOME/go/bin
     fish_add_path $HOME/go/bin # global default
 end
 
-if not set -q MANPATH
-    set -gx MANPATH (manpath) ~/.config/tool-man
-else
-    set -gx MANPATH $MANPATH ~/.config/tool-man
-end
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f $HOME/.local/miniconda3/bin/conda
@@ -55,3 +49,7 @@ deduplicate_var LD_LIBRARY_PATH
 deduplicate_var LIBRARY_PATH
 
 set fish_color_autosuggestion brwhite --dim --underline
+
+if test -d /devprog/autocomplete
+    set -g -a fish_complete_path /devprog/autocomplete
+end
