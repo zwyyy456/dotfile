@@ -62,3 +62,9 @@ if [[ -d "/devprog/bin" ]]; then
     pathadd /devprog/bin after
 fi
 export PATH
+
+if [ -d "/devprog/autocomplete" ]; then
+    for f in /devprog/autocomplete/*bash*; do
+        [ -f "$f" ] && source "$f"
+    done
+fi
