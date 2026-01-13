@@ -17,6 +17,7 @@ path=(
     $path
     ~/.local/bin
     /devprog/bin(N)
+    /devprog/go/bin(N)
     /devdata/bin(N)
     $HOME/go/bin(N)
     $HOME/.local/go/bin(N)

@@ -27,6 +27,10 @@ if test -d $HOME/.local/go/bin
     fish_add_path $HOME/.local/go/bin # global default
 end
 
+if test -d /devprog/go/bin
+    fish_add_path /devprog/go/bin # global default
+end
+
 if test -d $HOME/go/bin
     fish_add_path $HOME/go/bin # global default
 end

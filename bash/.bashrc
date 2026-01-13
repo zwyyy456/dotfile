@@ -50,6 +50,10 @@ if [[ -d "$HOME/.local/go/bin" ]]; then
     pathadd $HOME/.local/go/bin after
 fi
 
+if [[ -d "/devprog/go/bin" ]]; then
+    pathadd /devprog/go/bin after
+fi
+
 if [[ -f "$HOME/.local/cargo/env" ]]; then
     . $HOME/.local/cargo/env
 fi
