@@ -57,29 +57,42 @@ if executable('vscode-css-language-server')
                 \ args: ['--stdio'],
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
                 \ }
+endif
+
+if executable('vscode-eslint-language-server')
     let g:lsp_servers.eslint = #{
                 \ filetype: ['javascript'],
                 \ path: "vscode-eslint-language-server",
                 \ args: ['--stdio'],
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
                 \ }
+endif
+
+if executable('vscode-html-language-server')
     let g:lsp_servers.html = #{
                 \ filetype: ['html'],
                 \ path: "vscode-html-language-server",
                 \ args: ['--stdio'],
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
                 \ }
+endif
+
+if executable('vscode-json-language-server')
     let g:lsp_servers.json = #{
                 \ filetype: ['json'],
                 \ path: "vscode-json-language-server",
                 \ args: ['--stdio'],
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
                 \ }
+endif
+
+if executable('vscode-markdown-language-server')
     let g:lsp_servers.markdown = #{
                 \ filetype: ['markdown'],
                 \ path: "vscode-markdown-language-server",
                 \ args: ['--stdio'],
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
+                \ omnicompl: v:false,
                 \ }
 endif
 
@@ -91,5 +104,3 @@ if get(g:, 'lsp', '') == 'yegappan'
                 \ root: ['.git', '.svn', '.root', '.project', '.hg'],
                 \ }
 endif
-
-

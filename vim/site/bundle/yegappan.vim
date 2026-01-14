@@ -83,6 +83,9 @@ function! s:init_lsp() abort
         if has_key(info, 'features')
             let ni.features = info.features
         endif
+        if has_key(info, 'omnicompl')
+            let ni.omnicompl = info.omnicompl
+        endif
         if has_key(info, 'root')
             let rootmarkers = []
             for marker in info.root
@@ -155,4 +158,3 @@ augroup END
 "   au!
 "   au User LspAttached set cot=menuone,popup,noinsert
 " augroup END
-
