@@ -54,6 +54,10 @@ if [[ -d "/devprog/go/bin" ]]; then
     pathadd /devprog/go/bin after
 fi
 
+if [[ -d "/devprog/swift/bin" ]]; then
+    pathadd /devprog/swift/bin after
+fi
+
 if [[ -f "$HOME/.local/cargo/env" ]]; then
     . $HOME/.local/cargo/env
 fi
