@@ -106,6 +106,27 @@ silent! call mkdir(expand('~/.vim/tmp'), "p", 0755)
 " 配置微调
 "----------------------------------------------------------------------
 
+function! s:sql_omni_default_by_dbext() abort
+    if &filetype !=# 'sql'
+        return
+    endif
+    let l:default = 'syntax'
+    if exists('g:loaded_dbext') && exists('*dbext#DB_listOption')
+        let l:bufs = dbext#DB_listOption('buffers_connected')
+        if type(l:bufs) == type([]) && index(l:bufs, bufnr('%')) >= 0
+            let l:default = 'table'
+        endif
+    endif
+    let g:omni_sql_default_compl_type = l:default
+endfunction
+
+augroup SqlOmniDefault
+    au!
+    autocmd FileType sql call s:sql_omni_default_by_dbext()
+    autocmd BufEnter *.sql call s:sql_omni_default_by_dbext()
+    autocmd User dbextPreConnection call s:sql_omni_default_by_dbext()
+augroup END
+
 " 修正 ScureCRT/XShell 以及某些终端乱码问题，主要原因是不支持一些
 " 终端控制命令，比如 cursor shaping 这类更改光标形状的 xterm 终端命令
 " 会令一些支持 xterm 不完全的终端解析错误，显示为错误的字符，比如 q 字符
@@ -181,6 +202,7 @@ augroup InitFileTypesGroup
 
     " markdown 允许自动换行
     au FileType markdown setlocal wrap
+
 
     " lisp 进行微调
     au FileType lisp setlocal ts=8 sts=2 sw=2 et
